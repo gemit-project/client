@@ -1,6 +1,3 @@
-export const Exemple = () => {
-    return(
-        <>
-        </>
-    )
-}
+export const Exemple: React.FC = () => {
+  return <></>;
+};

@@ -1,3 +1,3 @@
-export const ExemplePage = () => {
+export const ExemplePage: React.FC = () => {
   return <></>;
 };
