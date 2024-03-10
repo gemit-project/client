@@ -1,0 +1,12 @@
+button {
+    border-radius: 6px;
+    color: white;
+    width: 7%;
+    margin-left: 3%;
+    border-color: white;
+    /* font-weight:bold; */
+}
+.rightButton{
+    color: black;
+    width: auto;
+}
