@@ -8,19 +8,14 @@ import setting from '../assets/icons/settings.svg';
 import logOut from '../assets/icons/log-out.svg';
 import logo from'../assets/logo/logo.svg';
 import { Outlet, Link, useLocation } from "react-router-dom";
-import Box from '@mui/material/Box';
-import { Search } from './Search';
 
 
 
 
-export const SideBar = (props: { top: any; topTo: any; }) => {
+export const SideBar = () => {
 
   const [isExpanded, setIsExpanded] = useState(false);
-  const whiteSideLine=[true,false,false,false,false,false];
 
-  let top=props.top;
-  let topTo=props.topTo;
 
   const handleMouseEnter = () => {
       setIsExpanded(true);
@@ -78,7 +73,7 @@ export const SideBar = (props: { top: any; topTo: any; }) => {
 
     const location = useLocation();
     const myLocation=location.pathname;
-    debugger
+    
   return (
     <>
       <div 
@@ -91,7 +86,6 @@ export const SideBar = (props: { top: any; topTo: any; }) => {
           </div>
       {icons.map((icon ,i) => (
         <div key={i} className='myDiv'>
-        {/* <div className={`side ${whiteSideLine[i] ? 'true':''}`} style={icon.styleSide} /> */}
         <div className={`side ${myLocation ==`/${icon.to}` ? 'true':''}`} style={icon.styleSide} />
         <img className="img" src={icon.src} style={icon.style} />
         <div style={icon.stylelink}>

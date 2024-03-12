@@ -13,14 +13,14 @@ export const Routing: React.FC =()=> {
     return (
       <>
         <Router>
-          <SideBar top={63} topTo={142} />
+          <SideBar/>
           <Routes>
-            <Route path="/Dashboard" element={< Dashboard />} key={1}/>
-            <Route path="/Search" element={< Search/>} key={2}/>
-            <Route path="/CheckOut" element={< CheckOut />} key={3}/>
-            <Route path="/LogOut" element={< LogOut />} key={4}/>
-            <Route path="/Setting" element={< Setting />} key={5}/>
-            <Route path="/Chat" element={< Chat />} key={6}/>
+            <Route path="/Dashboard" element={< Dashboard />} />
+            <Route path="/Search" element={< Search/>} />
+            <Route path="/CheckOut" element={< CheckOut />} />
+            <Route path="/LogOut" element={< LogOut />} />
+            <Route path="/Setting" element={< Setting />}/>
+            <Route path="/Chat" element={< Chat />}/>
           </Routes>
       </Router>
      </>
