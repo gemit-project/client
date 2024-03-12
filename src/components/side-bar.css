@@ -1,5 +1,5 @@
 .sidebar {
-    width: 45px;
+    width: 52px;
     height: 590px;
     flex-shrink: 0;
     border-radius: 0px 48px 48px 0px;
@@ -19,9 +19,15 @@
     margin-top: 50px;
     margin-left: 20px;
   }
-  .side{
+  .side.true{
     border-radius: 0px 16px 16px 0px;
     background: #FFF;
+    width: 4px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+  .side{
+    background: var(--main-blue, #00F);
     width: 4px;
     height: 50px;
     flex-shrink: 0;
@@ -36,11 +42,12 @@
   }
   .name{
     color:#FFF;
-    margin-left: 20px;
+    margin-left: 10px;
     display: flex;
     align-items: flex-end;
+    text-decoration: none;
   }
-  .my{
+  .myDiv{
     display:flex;   
   } 
   
