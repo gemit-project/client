@@ -1,3 +1,3 @@
 export const Exemple: React.FC = () => {
-  return <></>;
+  return (<></>);
 };

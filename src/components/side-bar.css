@@ -1,0 +1,53 @@
+.sidebar {
+    width: 52px;
+    height: 590px;
+    flex-shrink: 0;
+    border-radius: 0px 48px 48px 0px;
+    background: var(--main-blue, #00F);
+    box-shadow: 8px 8px 16px 0px rgba(0, 0, 255, 0.15);
+    transition: width 0.3s ease; /* Add a smooth transition effect on width change */
+  }
+  
+  .sidebar.expanded {
+    width: 200px; /* Set the expanded width */
+  }
+  .logo{
+    fill: #FFF;
+    width: 147px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  .side.true{
+    border-radius: 0px 16px 16px 0px;
+    background: #FFF;
+    width: 4px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+  .side{
+    background: var(--main-blue, #00F);
+    width: 4px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+  .img{
+    fill: #FFF;
+    width: 17px;
+    margin-left: 15px;
+  }
+  .allDiv{
+    width: 50px;
+  }
+  .name{
+    color:#FFF;
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+  }
+  .myDiv{
+    display:flex;   
+  } 
+  
