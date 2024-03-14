@@ -1,0 +1,58 @@
+.word {
+  margin-left: 30px;
+}
+
+.circle {
+  margin-left: -8px;
+  margin-bottom: 28px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 750px;
+}
+
+.hb {
+  display: flex;
+  gap: 40px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  height: 20px;
+  width: 129px;
+  border: 1px black solid;
+  margin-bottom: 53px;
+}
+
+.hbic {
+  display: flex;
+  gap: 37px;
+  align-items: center;
+
+}
+
+.hbicl {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+}
+
+.bos {
+  height: 20px;
+  width: 129px;
+  border: 1px black solid;
+  margin-top: -50px;
+}
+
+.ll {
+  display: flex;
+  flex-direction: column;
+}
