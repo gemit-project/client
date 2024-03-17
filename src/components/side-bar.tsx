@@ -25,50 +25,32 @@ export const SideBar = () => {
       setIsExpanded(false);
     };
 
-  const icons = [
+  const TopIcons = [
     {
     src: Dashoard,
-    style: {marginTop:  isExpanded ? 80 : 165 , height: 14.3},
     to: "Dashboard",
-    stylelink:{marginTop:  isExpanded ? 74 : 142 },
-    styleSide:{marginTop:  isExpanded ? 60 : 146 },
     },
     {
     src: search,
-    style:{marginTop: 31 , height: 17.078},
     to: "Search",
-    stylelink:{marginTop:  27 },
-    styleSide:{marginTop:  12 },
     },
     {
       src: checkOut,
-      style:{marginTop: 31 , height: 17},
       to: "CheckOut",
-      stylelink:{marginTop: 27},
-      styleSide:{marginTop: 12 },
     },
     {
       src: chat,
-      style:{marginTop: 31, height: 14.841},
       to: "Chat",
-      stylelink:{marginTop: 27},
-      styleSide:{marginTop: 12 },
-    },
+    }]
+    const buttomIcons=[ 
     {
       src: setting,
-      style:{marginTop: 92 , height: 17},
       to: "Setting",
-      stylelink:{marginTop: 90},
-      styleSide:{marginTop: 75 },
     },
     {
       src: logOut,
-      style:{marginTop: 31 , height: 17},
       to: "LogOut",
-      stylelink:{marginTop: 27 },
-      styleSide:{marginTop: 12 },
-      },
-    
+    },
     ]
 
     const location = useLocation();
@@ -76,7 +58,40 @@ export const SideBar = () => {
     
   return (
     <>
-      <div 
+         <div 
+          className={`sidebar ${isExpanded ? 'expanded' : ''}`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+      >
+          <div>
+             { isExpanded ? <img src={logo} className='logo'/> : <div style={{height: "27vh"}}/> } 
+          </div>
+    <div className={`oneDiv ${isExpanded ? 'expanded' : ''}`}>
+      {TopIcons.map((icon ,i) => (
+        <div key={i} className='myDiv'>
+        <div className={`side ${myLocation ==`/${icon.to}` ? 'true':''}`} />
+        <img className="img" src={icon.src}  />
+        <div >
+           { isExpanded ?  <Link to={`/${icon.to}`} className="name">{icon.to}</Link> : null }
+        </div>
+        </div>
+         
+      ))}
+      <div className='buttom'>
+        {buttomIcons.map((icon ,i) => (
+        <div key={i} className='myDiv'>
+        <div className={`side ${myLocation ==`/${icon.to}` ? 'true':''}`} />
+        <img className="img" src={icon.src}  />
+        <div >
+           { isExpanded ?  <Link to={`/${icon.to}`} className="name">{icon.to}</Link> : null }
+        </div>
+        </div>
+        
+      ))}
+</div>
+</div>
+      </div>
+      {/* <div 
           className={`sidebar ${isExpanded ? 'expanded' : ''}`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -87,14 +102,14 @@ export const SideBar = () => {
       {icons.map((icon ,i) => (
         <div key={i} className='myDiv'>
         <div className={`side ${myLocation ==`/${icon.to}` ? 'true':''}`} style={icon.styleSide} />
-        <img className="img" src={icon.src} style={icon.style} />
+        <img className="img" src={icon.src}  />
         <div style={icon.stylelink}>
           { isExpanded ?  <Link to={`/${icon.to}`} className="name">{icon.to}</Link> : null }
         </div>
         </div> 
       ))}
 
-      </div>
+      </div> */}
       <Outlet/>
     </>
     );
