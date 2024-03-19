@@ -13,6 +13,7 @@ export const Routing: React.FC =()=> {
     return (
       <>
         <Router>
+         <div style={{display: 'flex', flexDirection: 'row'}}> 
           <SideBar/>
           <Routes>
             <Route path="/Dashboard" element={< Dashboard />} />
@@ -22,6 +23,7 @@ export const Routing: React.FC =()=> {
             <Route path="/Setting" element={< Setting />}/>
             <Route path="/Chat" element={< Chat />}/>
           </Routes>
+         </div> 
       </Router>
      </>
     );
