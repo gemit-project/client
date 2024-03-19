@@ -1,8 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter,BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SideBar from '../components/side-bar';
-import { Dashboard } from '../components/Dashboard';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Dashboard } from "../components/Dashboard";
 import { Search } from "../components/Search";
 import { CheckOut } from "../components/CheckOut";
 import { LogOut } from "../components/LogOut";
