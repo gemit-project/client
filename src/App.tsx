@@ -1,15 +1,13 @@
-import React from 'react';
-import { TopHeader } from './components/TopHeader';
-import logo from './logo.svg';
-import './App.css';
-import SideBar from './components/side-bar';
-import { Routing } from './utils/routing';
+import React from "react";
+import { BaseScreen } from "./components/base-screen";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <TopHeader></TopHeader>
-      <Routing></Routing>
+      <BrowserRouter>
+        <BaseScreen />
+      </BrowserRouter>
     </div>
   );
 }

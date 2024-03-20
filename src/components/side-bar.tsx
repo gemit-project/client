@@ -1,29 +1,24 @@
-import React, { useState } from 'react';
-import './side-bar.css';
-import Dashoard from '../assets/icons/Dashoard.svg';
-import search from '../assets/icons/search.svg';
-import checkOut from '../assets/icons/check-out.svg';
-import chat from '../assets/icons/chat.svg';
-import setting from '../assets/icons/settings.svg';
-import logOut from '../assets/icons/log-out.svg';
-import logo from'../assets/logo/logo.svg';
+import React, { useState } from "react";
+import "./side-bar.css";
+import Dashoard from "../assets/icons/Dashoard.svg";
+import search from "../assets/icons/search.svg";
+import checkOut from "../assets/icons/check-out.svg";
+import chat from "../assets/icons/chat.svg";
+import setting from "../assets/icons/settings.svg";
+import logOut from "../assets/icons/log-out.svg";
+import logo from "../assets/logo/logo.svg";
 import { Outlet, Link, useLocation } from "react-router-dom";
 
-
-
-
 export const SideBar = () => {
-
   const [isExpanded, setIsExpanded] = useState(false);
 
-
   const handleMouseEnter = () => {
-      setIsExpanded(true);
-    };
-  
+    setIsExpanded(true);
+  };
+
   const handleMouseLeave = () => {
-      setIsExpanded(false);
-    };
+    setIsExpanded(false);
+  };
 
   const TopIcons = [
     {
@@ -53,9 +48,9 @@ export const SideBar = () => {
     },
     ]
 
-    const location = useLocation();
-    const myLocation=location.pathname;
-    
+  const location = useLocation();
+  const myLocation = location.pathname;
+
   return (
     <>
          <div 
@@ -95,26 +90,32 @@ export const SideBar = () => {
           className={`sidebar ${isExpanded ? 'expanded' : ''}`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+      <div
+        className={`sidebar ${isExpanded ? "expanded" : ""}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-          <div>
-            { isExpanded ? <img src={logo} className='logo'/> : null } 
+        <div>{isExpanded ? <img src={logo} className="logo" /> : null}</div>
+        {icons.map((icon, i) => (
+          <div key={i} className="myDiv">
+            <div
+              className={`side ${myLocation === `/${icon.to}` ? "true" : ""}`}
+              style={icon.styleSide}
+            />
+            <img className="img" src={icon.src}  />
+            <div style={icon.stylelink}>
+              {isExpanded ? (
+                <Link to={`/${icon.to}`} className="name">
+                  {icon.to}
+                </Link>
+              ) : null}
+            </div>
           </div>
-      {icons.map((icon ,i) => (
-        <div key={i} className='myDiv'>
-        <div className={`side ${myLocation ==`/${icon.to}` ? 'true':''}`} style={icon.styleSide} />
-        <img className="img" src={icon.src}  />
-        <div style={icon.stylelink}>
-          { isExpanded ?  <Link to={`/${icon.to}`} className="name">{icon.to}</Link> : null }
-        </div>
-        </div> 
-      ))}
-
+        ))}
       </div> */}
-      <Outlet/>
+      <Outlet />
     </>
-    );
-    };
-
-
+  );
+};
 
 export default SideBar;

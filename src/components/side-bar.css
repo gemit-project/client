@@ -6,6 +6,7 @@
     background: var(--main-blue, #00F);
     box-shadow: 8px 8px 16px 0px rgba(0, 0, 255, 0.15);
     transition: width 0.3s ease; /* Add a smooth transition effect on width change */
+    z-index: 20;
   }
   
   .sidebar.expanded {
