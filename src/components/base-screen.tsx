@@ -8,7 +8,7 @@ export const BaseScreen: React.FC = () => {
         <div style={{ display: "flex", flexDirection: "row" }}>
           <SideBar />
           <div style={{ display: "flex", flexDirection: "column", marginLeft:'52px', position:'fixed'}}>
-            <TopHeader />
+            {/* <TopHeader /> */}
             <Routing/>
           </div>
         </div>
