@@ -13,7 +13,7 @@ export const TopHeader: React.FC = () => {
 
   return (
     <div className='top-header'>
-      <div className='logo'>
+      <div className='top-header-logo'>
         <img src={groupg.toString()} className='gemit'></img>
         <br />
         <img src={groupd.toString()}></img>
@@ -31,7 +31,7 @@ export const TopHeader: React.FC = () => {
             </div>
           </div>
           {userName && <div className='labels'>
-            <label className='name'>{userName}</label>
+            <label className='user-name'>{userName}</label>
             <label className='buyer-or-seller'>{userName}</label>
           </div>}
         </div>
