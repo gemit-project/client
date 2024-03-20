@@ -2,9 +2,20 @@
   margin-left: 30px;
 }
 
+.top-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .circle {
   margin-left: -8px;
   margin-bottom: 28px;
+}
+
+.heart-bell {
+  display: flex;
+  gap: 40px;
 }
 
 .right-icons {
@@ -13,36 +24,10 @@
   margin-left: 750px;
 }
 
-.heart-bell {
-  display: flex;
-  gap: 40px;
-}
-
-.top-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.name {
-  height: 20px;
-  width: 129px;
-  border: 1px black solid;
-  margin-bottom: 53px;
-}
-
 .heart-bell-imag-circle {
   display: flex;
   gap: 37px;
   align-items: center;
-
-}
-
-.the-whole-page {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-
 }
 
 .buyer-or-seller {
@@ -52,7 +37,26 @@
   margin-top: -50px;
 }
 
+.the-whole-page {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
 .labels {
   display: flex;
   flex-direction: column;
+}
+
+.user-name {
+  height: 20px;
+  width: 129px;
+  border: 1px black solid;
+  margin-bottom: 53px;
+}
+
+.top-header-logo {
+  margin-left: 30vh;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
