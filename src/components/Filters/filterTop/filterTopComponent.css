@@ -1,15 +1,14 @@
 button {
-    border-radius: 6px;
+    border-radius: 0.4vi;
     color: white;
-    width: 7%;
-    margin-left: 3%;
+    width: 7vw;
+    margin-left: 3vi;
     border-color: white;
 }
 
 .rightButton {
     color: black;
     width: auto;
-
 }
 
 .reka {
@@ -19,24 +18,26 @@ button {
 
 .block1 {
     background-color: #F3F3F3;
-    padding: 24px;
-    width: 39vw;
-    height: 32vh;
-    border-radius: 1dvi;
-    border:  solid #D200FF;
+    padding: 1vi;
+    width: 38vw;
+    height: 30vh;
+    border-radius: 1vi;
+    border: 1px solid #D200FF;
     gap: 5px;
-    margin-left: 3%;
+    margin-left: 3vi;
 }
-.block1Input{
+
+.block1Input {
     display: flex;
     flex-direction: row;
 }
+
 .block2 {
     background-color: #F3F3F3;
-    padding: 24px;
-    width: 588px;
-    height: 244px;
-    border-radius: 16px;
+    padding: 1vi;
+    width: 38vw;
+    height: 28vh;
+    border-radius: 1vi;
     border: 1px solid #D200FF;
     gap: 3px;
     margin-left: 3%;
@@ -44,13 +45,13 @@ button {
 
 .block3 {
     background-color: #F3F3F3;
-    padding: 24px;
-    width: 680px;
-    height: 244px;
-    border-radius: 16px;
+    padding: 1vi;
+    width: 38vw;
+    height: 30h;
+    border-radius: 1vi;
     border: 1px solid #D200FF;
     gap: 5px;
-    margin-left: 3%;
+    margin-left: 3vi;
 
 }
 
@@ -66,10 +67,11 @@ button {
     display: inline;
     padding-inline-start: 15px;
     padding-inline-end: 15px;
-    margin-left: 3%;
-    border:1px solid black;
-
+    margin-left:2vi;
+    border: 1px solid black;
+ 
 }
-input{
-    /* margin-left: 3%; */
+
+input {
+    margin-left: 3vi;
 }

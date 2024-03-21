@@ -1,7 +1,7 @@
 import React from 'react'
 import './filterTopComponent.css';
 import { CiFilter } from "react-icons/ci";
-import{IconCol, IconsArr}from '../icons/constants'
+import{ClarityArr, IconCol, IconsArr}from '../searchIcons/constants'
 
 import FilterBasicComponent, { FilterAdvancedComponent, FilterGeneralComponent } from '../typeFilter/typeFilterComponent';
 
@@ -34,30 +34,23 @@ export default function FilterTopComponent() {
             </div>
             <br />
             <div className='block1Input'>
-            <div className='block1'>
-                Shape<br/><br/>
-                {/* <div className="inside" >first</div>
-                <div className="inside" >first</div>
-                <div className="inside" >first</div>
-                <div className="inside" >first</div> */}
-       </div>
-
-               {IconsArr.map((element:IconCol) => 
-                <div>{element.param}</div>
+                <div className='block1'>
+                    Shape<br/><br/>
+                    {IconsArr.map((element:IconCol) => 
+                <div className='inside'>{element.param} </div>                
                )}
-
-            <div>
-                <input></input>
-                <input></input>
-            </div>
+                </div>
+                <div>
+                    <input></input>
+                    <input></input>
+                </div>
             </div><br />
             <div className='block12'>
             <div className='block2'>
                 Clarity<br/><br/>
-                <div className="inside">second</div>
-                <div className="inside">second</div>
-                <div className="inside">second</div>
-                <div className="inside">second</div>
+                {ClarityArr.map((element:string) => 
+                <div className='inside'>{element} </div>              
+               )}
 
             </div><br />
    
@@ -77,3 +70,5 @@ export default function FilterTopComponent() {
 }
 //כשלוחצים על כפתור שיציג את הקומפוננטה שלו וכשלוחצים 
 //על כפתור אחר שיסגור את הקומפוננטה הקודמת ויפתח את זאת
+
+

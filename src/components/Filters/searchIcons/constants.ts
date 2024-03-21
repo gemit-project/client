@@ -1,14 +1,13 @@
-import cusion from "./icons/cusion.svg";
-import princess from "./icons/princes.svg";
-import Asscher from "./icons/Asscher.svg";
-import round from "./icons/round.svg";
-import pear1 from "./icons/pear1.svg";
-import oval from "./icons/oval.svg";
-import Emerald from "./icons/Emerald.svg";
-import heart from "./icons/heart.svg";
-import radiant from "./icons/radiant.svg";
-import marquise from "./icons/marquise.svg";
-
+import cusion from "./Shapes/cusion.svg";
+import princess from "./Shapes/princes.svg";
+import Asscher from "./Shapes/Asscher.svg";
+import round from "./Shapes/round.svg";
+import pear1 from "./Shapes/pear1.svg";
+import oval from "./Shapes/oval.svg";
+import Emerald from "./Shapes/Emerald.svg";
+import heart from "./Shapes/heart.svg";
+import radiant from "./Shapes/radiant.svg";
+import marquise from "./Shapes/marquise.svg";
 
 
 // interface DiamondsParemeters {
@@ -74,3 +73,7 @@ export const IconsArr: IconCol[] = [
     param: "marquise",
     icon: marquise
   }]
+
+export const ClarityArr:string[]= [
+  "FL","IF","VVS1","VVS2","VS1","VS2","SI1","SI2","SI3"
+] 
