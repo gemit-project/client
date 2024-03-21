@@ -4,9 +4,72 @@ button {
     width: 7%;
     margin-left: 3%;
     border-color: white;
-    /* font-weight:bold; */
 }
-.rightButton{
+
+.rightButton {
     color: black;
     width: auto;
+
+}
+
+.reka {
+    /* background-color: F3F3F3; */
+    background-color: #F3F3F3;
+}
+
+.block1 {
+    background-color: #F3F3F3;
+    padding: 24px;
+    width: 40vw;
+    height: 32vh;
+    border-radius: 1dvi;
+    border: 1px solid #D200FF;
+    gap: 5px;
+    margin-left: 3%;
+}
+.block1Input{
+    display: flex;
+    flex-direction: row;
+}
+.block2 {
+    background-color: #F3F3F3;
+    padding: 24px;
+    width: 588px;
+    height: 244px;
+    border-radius: 16px;
+    border: 1px solid #D200FF;
+    gap: 3px;
+    margin-left: 3%;
+}
+
+.block3 {
+    background-color: #F3F3F3;
+    padding: 24px;
+    width: 680px;
+    height: 244px;
+    border-radius: 16px;
+    border: 1px solid #D200FF;
+    gap: 5px;
+    margin-left: 3%;
+
+}
+
+.block12 {
+    display: flex;
+    flex-direction: row;
+}
+
+.inside {
+    color: #D200FF;
+    width: max-content;
+    border-radius: 5px;
+    display: inline;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+    margin-left: 3%;
+    border:1px solid black;
+
+}
+input{
+    /* margin-left: 3%; */
 }
