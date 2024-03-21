@@ -1,7 +1,11 @@
 import React from 'react'
 import './filterTopComponent.css';
 import { CiFilter } from "react-icons/ci";
+import{IconCol, IconsArr}from '../icons/constants'
+
 import FilterBasicComponent, { FilterAdvancedComponent, FilterGeneralComponent } from '../typeFilter/typeFilterComponent';
+
+
 export default function FilterTopComponent() {
     return (
         <>
@@ -32,12 +36,16 @@ export default function FilterTopComponent() {
             <div className='block1Input'>
             <div className='block1'>
                 Shape<br/><br/>
+                {/* <div className="inside" >first</div>
                 <div className="inside" >first</div>
                 <div className="inside" >first</div>
-                <div className="inside" >first</div>
-                <div className="inside" >first</div>
+                <div className="inside" >first</div> */}
+       </div>
 
-            </div>
+               {IconsArr.map((element:IconCol) => 
+                <div>{element.param}</div>
+               )}
+
             <div>
                 <input></input>
                 <input></input>

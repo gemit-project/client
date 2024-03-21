@@ -20,10 +20,10 @@ button {
 .block1 {
     background-color: #F3F3F3;
     padding: 24px;
-    width: 40vw;
+    width: 39vw;
     height: 32vh;
     border-radius: 1dvi;
-    border: 1px solid #D200FF;
+    border:  solid #D200FF;
     gap: 5px;
     margin-left: 3%;
 }
