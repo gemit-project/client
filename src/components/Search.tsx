@@ -145,7 +145,7 @@ export const Search: React.FC = () => {
          <div className='blueButton' style={{backgroundColor:SideButton[diamond.sideButton]?.color, border:SideButton[diamond.sideButton]?.border }}>
           <div className='blueButtomText' 
            style={{color:SideButton[diamond.sideButton]?.wordColor}} 
-           >{SideButton[diamond.sideButton]?.word}</div>
+          >{SideButton[diamond.sideButton]?.word}</div>
          </div>
          </div>
          <img className='diamondImg' src={diamond.dianomdImg}/>
