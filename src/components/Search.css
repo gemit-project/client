@@ -1,0 +1,102 @@
+.scrollBar{
+    scroll-snap-type: y mandatory;
+    scrollbar-color: #662ff3 #6f7073;
+    height: 85vh;
+    width: 96vw;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.section{
+    height: 100vh;
+}
+.allView{
+ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-content: baseline;
+    flex-wrap: wrap;
+    margin-left: 4vw;
+    }
+.allDiv{
+    flex-direction: column;
+    justify-content: flex-start; 
+    margin-left:2vw; 
+    margin-top: 15vh;
+    width: 15vw;
+    height: 30vh;
+}
+.greyDiv{
+    display: flex;
+    height:100%;
+    width: 100%; 
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    border-radius: 12px 12px 0px 0px;
+    background: rgba(230, 230, 230, 0.60);
+    box-shadow: 4px 4px 8px 0px rgba(144, 144, 144, 0.15);
+}
+.among{
+    display: flex;
+    padding: 0px 8px;
+    align-items: center;
+    gap: 79px;
+    align-self: stretch;
+}
+.blueButton{
+    height: 3vh;
+    display: flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 4px;
+}
+.blueButtomText{
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+    text-transform: capitalize;
+}
+.diamondImg{
+    width: 15vw;
+    height: 15vh;
+    align-items: center;
+    padding-top: 4vh;
+}
+.centerDiv{
+    
+    
+}
+.bottomDiv{
+    display: flex;
+    width:88%;
+    height: 7vh;
+    padding: 0px 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 12px 12px;
+    background: rgba(170, 230, 230, 0.60);
+    box-shadow: 4px 4px 8px 0px rgba(144, 144, 144, 0.15);
+}
+.diamondName{
+    color: #000;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 18px */
+    flex: 1 0 0;
+}
+.loveImg{
+    width: 17px;
+    height: 15px;
+    flex-shrink: 0;
+}

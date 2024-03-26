@@ -37,7 +37,8 @@ export const SideBar = () => {
       src: chat,
       to: "Chat",
     }]
-    const buttomIcons=[ 
+
+  const buttomIcons=[ 
     {
       src: setting,
       to: "Setting",
