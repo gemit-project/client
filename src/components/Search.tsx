@@ -135,8 +135,10 @@ const SideButton=[
 ]
 
 export const Search: React.FC = () => {
-    return(<>
-<div className='allView'>
+return(<>
+<div className='scrollBar'>
+<section className='section' >
+ <div className='allView'>
   {Diamonds.map((diamond,i) => (
     <div className='allDiv' key={i}>
       <div className="greyDiv">
@@ -155,7 +157,9 @@ export const Search: React.FC = () => {
         <img className='loveImg' src={love}/>
       </div>
     </div>
-  ))};
+))}
+</div>
+</section>
 </div>   
-    </>) ;
+</>);
 };

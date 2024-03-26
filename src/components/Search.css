@@ -1,4 +1,16 @@
+.scrollBar{
+    scroll-snap-type: y mandatory;
+    scrollbar-color: #662ff3 #6f7073;
+    height: 85vh;
+    width: 96vw;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.section{
+    height: 100vh;
+}
 .allView{
+ 
     width: 100%;
     display: flex;
     flex-direction: row;
