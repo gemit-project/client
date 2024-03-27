@@ -3,19 +3,19 @@
     display: inline-flex;
     padding: 36px 0px 12px 0px;
     align-items: flex-start;
-    gap: 23px;
+    gap: 1vw;
     flex-direction: row;
 }
 .leftDiv{
     margin-left: 6vw;
     display: flex;
-    width: 21vw;
+    width: 16vw;
     height: 10vh;
     flex-direction: column;
     justify-content: center;
     color: #000;
     font-family: Assistant;
-    font-size: 20px;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 24px */
@@ -26,16 +26,17 @@
     background: #F6F6F6;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
     display: flex;
-    width: 192px;
-    height: 40px;
+    width: 9vw;
+    height: 6vh;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 0.1vw;
     flex-shrink: 0; 
+    font-size: 1vw;
 }
 .compareImg{
-    width: 22px;
-    height: 22px;
+    width: 3vw;
+    height: 3vh;
     flex-shrink: 0;
 }
 .view{
@@ -44,23 +45,24 @@
     background: #F6F6F6;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
     display: flex;
-    width: 84px;
-    height: 40px;
+    width: 6vw;
+    height: 6vh;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 0.2vw;
     flex-shrink: 0;
+    font-size: 1vw;
 }
 .viewImg{
     display: flex;
-    height: 20px;
+    height: 3vh;
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
 }
 .amongDiv{
     display: flex;
-    width: 127px;
+    width: 28vw;
     align-items: center;
     gap: 672px;
 }
@@ -70,17 +72,18 @@
     background: #F6F6F6;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
     display: flex;
-    width: 84px;
-    height: 40px;
+    width: 6vw;
+    height: 6vh;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 0.01vw;
     flex-shrink: 0;
+    font-size: 1vw;
 }
 .resetImg{
     fill: var(--black, #030406);
-    width: 20px;
-    height: 20px;
+    width: 2vw;
+    height: 3vh;
     flex-shrink: 0;
 }
 .sort{
@@ -89,35 +92,37 @@
     background: #F6F6F6;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
     display: flex;
-    width: 84px;
-    height: 40px;
+    width: 6vw;
+    height: 6vh;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 0.1vw;
     flex-shrink: 0;
+    font-size: 1vw;
 }
 .sortImg{
     fill: var(--black, #030406);
-    width: 21px;
-    height: 18.364px;
+    width: 2vw;
+    height: 3vh;
     flex-shrink: 0;
 }
 .filter{
     display: flex;
-    width: 84px;
-    height: 40px;
+    width: 6vw;
+    height: 6vh;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 0.1vw;
     flex-shrink: 0;
     border-radius: 8px;
     border: 1px solid var(--black, #030406);
     background: #F6F6F6;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
+    font-size: 1vw;
 }
 .filterImg{
-    width: 14px;
-    height: 14px;
+    width: 2vw;
+    height: 3vh;
     flex-shrink: 0;
     fill: var(--black, #030406);
 }
