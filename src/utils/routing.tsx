@@ -6,20 +6,22 @@ import { CheckOut } from "../components/CheckOut";
 import { LogOut } from "../components/LogOut";
 import { Setting } from "../components/Setting";
 import { Chat } from "../components/Chat";
-import SignIn from "../pages/SignIn";
+import SignIn from "../components/SignIn";
+import { Register } from "../components/Register";
 
 export const Routing: React.FC = () => {
-    return (
-      <>
-                  <Routes>
-                    <Route path='/' element={<SignIn/>}/>
-            <Route path="/Dashboard" element={< Dashboard />} />
-            <Route path="/Search" element={< Search/>} />
-            <Route path="/CheckOut" element={< CheckOut />} />
-            <Route path="/LogOut" element={< LogOut />} />
-            <Route path="/Setting" element={< Setting />}/>
-            <Route path="/Chat" element={< Chat />}/>
-          </Routes>
-              </>
-    );
-  };
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<SignIn />} />        
+        <Route path="/Dashboard" element={< Dashboard />} />
+        <Route path='/Register' element={<Register />} />
+        <Route path="/Search" element={< Search />} />
+        <Route path="/CheckOut" element={< CheckOut />} />
+        <Route path="/LogOut" element={< LogOut />} />
+        <Route path="/Setting" element={< Setting />} />
+        <Route path="/Chat" element={< Chat />} />
+      </Routes>
+    </>
+  );
+};

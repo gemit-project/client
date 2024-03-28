@@ -1,15 +1,15 @@
 import React from "react"
 
-export type User={
+export type User = {
 
-    email: string,
+  email: string,
   password: string,
   firstName: string,
   lastName: string,
   displayName: string,
   bio?: string,
   publicData?: {
-    age?:number
+    age?: number
   },
   protectedData?: {
     phoneNumber?: string
