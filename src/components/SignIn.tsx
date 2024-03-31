@@ -16,7 +16,7 @@ import { Outlet, useNavigate } from 'react-router';
 import diamond from "../assets/icons/app-icons/diamond.svg";
 import gemit from "../assets/icons/app-icons/gemit.svg";
 import { useDispatch } from 'react-redux';
-import { setCurrentUser } from '../app/slices/UserSlice/userSlice';
+import { setCurrentUser } from '../app/slices/userSlice';
 
 const defaultTheme = createTheme();
 
@@ -27,7 +27,6 @@ export default function SignIn() {
   const [flag, setFlag] = useState<boolean>(false);
   const [dissable, setDissable] = useState<boolean>(false);
   const [showPassword, setShowPassword] = React.useState<boolean>(false);
-  const [closeSignIn, setClose] = useState<boolean>(true);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -39,14 +38,11 @@ export default function SignIn() {
           dispatch(setCurrentUser(res.data))
           rout("Dashboard")
         });
-
-
       })
       .catch((error: any) => {
         console.log("you have to register");
         setFlag(true)
          rout("Register")
-
       });;
   };
   //Email Validation
@@ -61,7 +57,6 @@ export default function SignIn() {
   //Password validation
   const validatePass = (event: any) => {
     var passw = /^[A-Za-z0-9!-*]\w{7,256}$/;
-
     if (event.target.value.match(passw)) {
       if (!dissable) {
         setDissable(true)
@@ -79,14 +74,11 @@ export default function SignIn() {
     event.preventDefault();
   };
 
-  function handlClose() {
-    rout("Register")
-  }
   return (
     <>
       <Dialog
         fullWidth
-        open={closeSignIn}
+        open={flag}
       >
         <DialogContent>
           <ThemeProvider theme={defaultTheme}>
@@ -102,7 +94,6 @@ export default function SignIn() {
                 }}
                 boxShadow={'revert'}
               >
-
                 <circle className='pic'>
                   <img src={gemit} style={{ width: "53px", height: "25px" }}></img>
 
@@ -111,7 +102,6 @@ export default function SignIn() {
                 <Typography component="h1" variant="h5" sx={{ color: 'darkblue' }}>
                   Sign in
                 </Typography>
-
                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                   <TextField
                     margin="normal"
@@ -122,7 +112,6 @@ export default function SignIn() {
                     name="email"
                     autoComplete="email"
                     autoFocus
-
                     onChange={(e) => { validateEmail(e) }}
                   />
                   <TextField
@@ -156,40 +145,12 @@ export default function SignIn() {
                   >
                     Sign In
                   </Button>
-
                 </Box>
               </Box>
             </Container>
           </ThemeProvider>
         </DialogContent>
-      </Dialog>
-      {/* <Dialog
-        fullWidth
-        open={flag}
-      >
-        <DialogTitle>Sorry We Didn't Found you</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            You Have To Register Or Come Back For Try Again...
-          </DialogContentText>
-
-          <Register ></Register>
-        </DialogContent>
-        <DialogActions>
-          <IconButton
-            aria-label="close"
-            onClick={() => setFlag(false)}
-            sx={{
-              position: 'absolute',
-              right: 8,
-              top: 8,
-              fontSize: '15px'
-            }}>
-            Back
-            <ArrowForwardIcon />
-          </IconButton>
-        </DialogActions>
-      </Dialog> */}
+      </Dialog>    
       <Outlet></Outlet>
 
     </>);

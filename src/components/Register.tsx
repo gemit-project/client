@@ -12,15 +12,16 @@ import { VisibilityOff, Visibility } from '@mui/icons-material';
 import { InputAdornment, IconButton, createTheme, Select, MenuItem, Dialog } from '@mui/material';
 import { sdk } from '../config/sharetribeSDK.config';
 import { Outlet, useNavigate } from 'react-router';
-import { useState} from 'react';
+import { useState } from 'react';
 import diamond from "../assets/icons/app-icons/diamond.svg";
 import gemit from "../assets/icons/app-icons/gemit.svg";
 import MuiPhoneNumber from 'material-ui-phone-number';
 import { useDispatch } from 'react-redux';
-import { setCurrentUser } from '../app/slices/UserSlice/userSlice';
-
+import { setCurrentUser } from '../app/slices/userSlice';
+import InputLabel from '@mui/material/InputLabel';
 
 const defaultTheme = createTheme();
+
 export function Register(props: any) {
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -36,15 +37,12 @@ export function Register(props: any) {
   })
 
   const create = () => {
-    debugger
     sdk.currentUser.create(user, {
       expand: true
-    }).then((res: any) => {debugger
-     
+    }).then((res: any) => {
       dispatch(setCurrentUser(res.data))
       navigate("/Dashboard")
     }).catch((err: any) => {
-      debugger
       console.log(err)
     })
   }
@@ -121,7 +119,7 @@ export function Register(props: any) {
         <ThemeProvider theme={defaultTheme}>
           <Container component="main" maxWidth="xs">
             <CssBaseline />
-            <Box 
+            <Box
               sx={{
                 marginTop: 8,
                 display: 'flex',
@@ -171,10 +169,9 @@ export function Register(props: any) {
                   }}
                   label="Password"
                   onChange={(e) => { validatePass(e) }}
-
                 />
                 {StyleErrors.stylePass == 'red' && <small style={{ color: StyleErrors.stylePass }}>{Errors.PassError}</small>}
-                <br></br>
+                <InputLabel id="demo-simple-select-label">Age</InputLabel>
                 <Select
                   labelId="demo-simple-select-required-label"
                   id="demo-simple-select-required"
@@ -217,7 +214,6 @@ export function Register(props: any) {
                   onChange={(e) => { setUser({ ...user, displayName: e.target.value }) }}
                   value={user?.displayName}
                 />
-
                 <MuiPhoneNumber variant='outlined' fullWidth defaultCountry={'us'} onChange={(e: any) => { }}
                   onBlur={(e: any) => { setUser({ ...user, protectedData: { phoneNumber: convertPhoneNumber(e.target.value) } }) }} />
                 <TextField
@@ -231,7 +227,6 @@ export function Register(props: any) {
                 />
                 <TextField
                   margin="normal"
-
                   fullWidth
                   id="bio"
                   label="bio"
@@ -247,7 +242,6 @@ export function Register(props: any) {
                 >
                   Sign In
                 </Button>
-                <button onClick={()=>create()}>aaaaa</button>
               </Box>
             </Box>
           </Container>
