@@ -142,7 +142,8 @@ const SideButton=[
 
 export const Search: React.FC = () => {
 
-    const [data, setData] = useState<any>([]);
+    const [data, setData] = useState<Array<any>>([]);
+    const [images, setImages] = useState<Array<any>>([]);
 
     
     useEffect(()=>{
@@ -150,13 +151,19 @@ export const Search: React.FC = () => {
         getData()
     },[])
 
+    useEffect(()=>{
+        console.log('datat and im', data, images)
+    },[data, images])
+
     var listingId = new UUID("6603113e-e43a-4797-8c80-83b36ade2700");
     const getData = () => {
         debugger
-    sdk.listings.query({include: ["images"]
+    sdk.listings.query({include: ["images"],
+    
     }).then((res:any) => {
         debugger
         setData(res.data.data)
+        setImages(res.data.included)
     }).catch((err:any)=> {
         debugger
     });
@@ -182,9 +189,27 @@ return(<>
           >{SideButton[diamond.sideButton]?.word}</div> */}
          {/* </div> */}
          </div>
+
+         {images.map((img:any) => {
+                if (listing?.relationships?.images?.data[0]?.id?.uuid === img.id.uuid) {
+                    return (
+                        <img
+                            key={img.id.uuid}
+                            className='diamondImg'
+                            src={img.attributes.variants.default.url}
+                        />
+                    );
+                }
+                return null;
+            })}
+         {/* {images && data && images.find((img:any)=>{
+            debugger
+            return  listing?.relationships?.images?.data[0]?.id?.uuid == img?.id?.uuid 
+            ?
          <img className='diamondImg' 
-              src={`https://sharetribe.imgix.net/65d71a1c-be1c-478a-9364-c3dccc096406/${data[0]?.included?.id?.uuid}?auto=format&crop=edges&fit=crop&h=240&w=240&s=fb3ac8b9c762bf879984f417f5d7cf38`}
-              />
+              src={img?.attributes?.variants?.default?.url}
+         />
+         : ""})} */}
       </div>
       <div className='bottomDiv'>
         <div className='diamondName'>{`TOTAL PRICE $${listing?.attributes?.price?.amount} `}</div>
