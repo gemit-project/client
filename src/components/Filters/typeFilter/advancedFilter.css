@@ -1,0 +1,46 @@
+label {
+    margin-left: 3.5vw;
+}
+
+.box {
+    width: 39vw;
+    margin-Left: 10vh;
+    height: 30vh
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.grayBox {
+    width: 39vw;
+    margin-Left: 10vh;
+    height: 30vh;
+    border: 1px solid black;
+    border-radius: 1vi;
+    padding-left: 1vi;
+    padding-top: 1vi;
+    background-color: #f8f8f8;
+}
+
+.word {
+    border: 1px solid #FF00FF;
+    border-radius: 0.3vi;
+    width: 40px;
+    /* padding-left: 1vi;
+    padding-top: 3px;
+    padding-right: 1vi;
+    margin-left: 3vi; */
+}
+
+.input {
+    margin-left: 6vw;
+    margin-top: 3vi;
+}
+
+input {
+    border: 1px solid #FF00FF;
+    border-radius: 0.3vi;
+    padding: 0.5vi;
+}

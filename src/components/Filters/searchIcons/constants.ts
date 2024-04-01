@@ -52,7 +52,7 @@ export const IconsArr: IconCol[] = [
   {
     param: "oval",
     icon: oval
-  }, 
+  },
   {
     param: "asscher",
     icon: Asscher
@@ -74,6 +74,12 @@ export const IconsArr: IconCol[] = [
     icon: marquise
   }]
 
-export const ClarityArr:string[]= [
-  "FL","IF","VVS1","VVS2","VS1","VS2","SI1","SI2","SI3"
-] 
+export const ClarityArr: string[] = [
+  "FL", "IF", "VVS1", "VVS2", "VS1", "VS2", "SI1", "SI2", "SI3"
+]
+
+export const ABCArr: string[] = [
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
+  'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+]
+
