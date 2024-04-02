@@ -6,11 +6,15 @@ import { CheckOut } from "../components/CheckOut";
 import { LogOut } from "../components/LogOut";
 import { Setting } from "../components/Setting";
 import { Chat } from "../components/Chat";
+import SignIn from "../components/SginIn";
+import { Register } from "../components/Register";
 
 export const Routing: React.FC = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<SignIn/>}/>
+        <Route path="/Register" element={<Register/>}/>
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/CheckOut" element={<CheckOut />} />
