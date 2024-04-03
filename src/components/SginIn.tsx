@@ -8,8 +8,8 @@ import Container from '@mui/material/Container';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { LogInUser } from "../Types/LoginUser";
 import 'sharetribe-flex-sdk';
-import { VisibilityOff, Visibility } from '@mui/icons-material';
-import { InputAdornment, IconButton, Dialog,  DialogContent, } from '@mui/material';
+import { VisibilityOff, Visibility, ArrowForwardIos } from '@mui/icons-material';
+import { InputAdornment, IconButton, Dialog, DialogContent, DialogActions, DialogContentText, DialogTitle } from '@mui/material';
 import { sdk } from '../config/sharetribeSDK.config';
 import { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router';
@@ -17,14 +17,17 @@ import diamond from "../assets/icons/app-icons/diamond.svg";
 import gemit from "../assets/icons/app-icons/gemit.svg";
 import { useDispatch } from 'react-redux';
 import { setCurrentUser } from '../app/slices/UserSlice';
+import { Link } from '@mui/material';
+import { PasswordReset } from './ResetPassword';
+import { useEffect } from 'react';
 
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  let rout = useNavigate()
+  let navigate = useNavigate()
   const dispatch = useDispatch()
-  const [myUser, setUser] = useState<LogInUser>({email:"",pass:""});
-  const [flag, setFlag] = useState<boolean>(false);
+  const [myUser, setUser] = useState<LogInUser>({ email: "", pass: "" });
+  const [flag, setFlag] = useState<boolean>(true);
   const [dissable, setDissable] = useState<boolean>(false);
   const [showPassword, setShowPassword] = React.useState<boolean>(false);
 
@@ -36,14 +39,15 @@ export default function SignIn() {
         sdk.currentUser.show().then((res: any) => {
           console.log(res)
           dispatch(setCurrentUser(res.data))
-          rout("Dashboard")
+          setFlag(false)
+          navigate("Dashboard")
         });
       })
       .catch((error: any) => {
         console.log("you have to register");
         setFlag(true)
-         rout("Register")
-      });;
+        navigate("Register")
+      });
   };
   //Email Validation
   function validateEmail(event: any) {
@@ -74,6 +78,16 @@ export default function SignIn() {
     event.preventDefault();
   };
 
+  function resetPassword() {
+
+    sdk.passwordReset.request({
+      email: myUser.email
+    }, {}).then((res: any) => {
+      console.log(res)
+      alert(`we sent  an email to ${myUser.email}`)
+    });
+
+  }
   return (
     <>
       <Dialog
@@ -136,6 +150,7 @@ export default function SignIn() {
                     label="Password"
                     onChange={(e) => validatePass(e)}
                   />
+                  <Link onClick={resetPassword}>Forgot Password?</Link>
                   <Button
                     type="submit"
                     fullWidth
@@ -150,9 +165,11 @@ export default function SignIn() {
             </Container>
           </ThemeProvider>
         </DialogContent>
-      </Dialog>    
+      </Dialog>
       <Outlet></Outlet>
 
     </>);
 
 }
+
+

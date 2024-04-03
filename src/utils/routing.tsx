@@ -8,6 +8,7 @@ import { Setting } from "../components/Setting";
 import { Chat } from "../components/Chat";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
+import { PasswordReset } from "../components/ResetPassword";
 
 export const Routing: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ export const Routing: React.FC = () => {
       <Routes>
         <Route path="/" element={<SignIn/>}/>
         <Route path="/Register" element={<Register/>}/>
+        <Route  path="/Reset_Password/:email/:token" element={<PasswordReset/>}/>
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/CheckOut" element={<CheckOut />} />
