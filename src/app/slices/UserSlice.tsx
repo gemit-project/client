@@ -12,11 +12,8 @@ export const UserSlice = createSlice({
         setCurrentUser: (state, action)=> {
             state.currentUser = action.payload
         },
-        editCurrentUser: (state, action) => {
-
-        }
     }
 })
-export const {setCurrentUser, editCurrentUser} = UserSlice.actions;
+export const {setCurrentUser} = UserSlice.actions;
 
 
