@@ -1,0 +1,16 @@
+.wrap{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vw;
+    background-color: #EDFAFF;
+    height: 10vh;
+}
+.switch{
+    margin-left: 10vw;
+}
+.wrap2Input{
+    margin-left: 1vw;
+}
+.select{
+    margin-left: 10vw;
+}

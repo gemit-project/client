@@ -1,6 +1,7 @@
 import React from 'react'
 import FilterTopComponent from './filterTop/filterTopComponent'
 import RangeSlider from './typeFilter/advancedFilter'
+import GeneralFilter from './typeFilter/generalFilter'
 
 
 //app הדף הזה נטען ב
@@ -11,6 +12,7 @@ export default function Filter() {
         {/* כדי לראות את הדף השני שיצרתי - תפתחי כאן את הקומפוננטה השניה*/}
             <FilterTopComponent />
             {/* <RangeSlider/> */}
+            {/* <GeneralFilter/> */}
         </>
     )
 }
