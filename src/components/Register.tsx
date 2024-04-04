@@ -33,7 +33,7 @@ export function Register() {
   const dispatch = useDispatch()
   const [flag, setFlag] = useState<boolean>(true);
   const [user, setUser] = useState<User>({
-    firstName: '', email: '', password: '', lastName: '', displayName: '', privateData: {}, protectedData: { phoneNumber: '' }, publicData: { age: 0, type:"" }, bio: ''
+    firstName: '', email: '', password: '', lastName: '', displayName: '', privateData: {}, protectedData: { phoneNumber: '' }, publicData: { age: 0, type: "" }, bio: ''
   })
 
   const create = () => {
@@ -179,7 +179,7 @@ export function Register() {
                   required
                   fullWidth
                   defaultValue={''}
-                  onChange={(e) => { setUser({ ...user, publicData: {...user.publicData, type: e.target.value } }) }}
+                  onChange={(e) => { setUser({ ...user, publicData: { ...user.publicData, type: e.target.value } }) }}
 
                 >
                   <MenuItem value={'Buyer'}>Buyer</MenuItem>
@@ -225,7 +225,7 @@ export function Register() {
                   label="age"
                   name="age"
                   type="number"
-                  onChange={(e) => { setUser({ ...user, publicData: {...user.publicData, age: parseInt(e.target.value) } }) }}
+                  onChange={(e) => { setUser({ ...user, publicData: { ...user.publicData, age: parseInt(e.target.value) } }) }}
                 />
                 <TextField
                   margin="normal"
