@@ -40,7 +40,7 @@ export function Register() {
     sdk.currentUser.create(user, {
       expand: true
     }).then((res: any) => {
-      dispatch(setCurrentUser(res.data))
+      dispatch(setCurrentUser(res.data.data))
       navigate("/Dashboard")
     }).catch((err: any) => {
       console.log(err)
