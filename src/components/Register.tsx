@@ -22,8 +22,8 @@ import InputLabel from '@mui/material/InputLabel';
 
 const defaultTheme = createTheme();
 
-export function Register(props: any) {
-  const [showPassword, setShowPassword] = React.useState(false);
+export function Register() {
+  const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   //validation
   const [Errors, setErrors] = useState({ Emailerror: "Required!", PassError: "Required", FirstNameError: 'Required!!', LastNameError: "Required" })
@@ -171,7 +171,7 @@ export function Register(props: any) {
                   onChange={(e) => { validatePass(e) }}
                 />
                 {StyleErrors.stylePass == 'red' && <small style={{ color: StyleErrors.stylePass }}>{Errors.PassError}</small>}
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">Type</InputLabel>
                 <Select
                   labelId="demo-simple-select-required-label"
                   id="demo-simple-select-required"
