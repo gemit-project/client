@@ -9,7 +9,8 @@ export type User = {
   displayName: string,
   bio?: string,
   publicData?: {
-    age?: number
+    age?: number,
+    type?:string
   },
   protectedData?: {
     phoneNumber?: string
