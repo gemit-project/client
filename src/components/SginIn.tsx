@@ -38,7 +38,7 @@ export default function SignIn() {
         console.log("Login successful.");
         sdk.currentUser.show().then((res: any) => {
           console.log(res)
-          dispatch(setCurrentUser(res.data))
+          dispatch(setCurrentUser(res.data.data))
           setFlag(false)
           navigate("Dashboard")
         });

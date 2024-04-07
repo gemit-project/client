@@ -22,8 +22,8 @@ import InputLabel from '@mui/material/InputLabel';
 
 const defaultTheme = createTheme();
 
-export function Register(props: any) {
-  const [showPassword, setShowPassword] = React.useState(false);
+export function Register() {
+  const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   //validation
   const [Errors, setErrors] = useState({ Emailerror: "Required!", PassError: "Required", FirstNameError: 'Required!!', LastNameError: "Required" })
@@ -33,14 +33,14 @@ export function Register(props: any) {
   const dispatch = useDispatch()
   const [flag, setFlag] = useState<boolean>(true);
   const [user, setUser] = useState<User>({
-    firstName: '', email: '', password: '', lastName: '', displayName: '', privateData: {}, protectedData: { phoneNumber: '' }, publicData: { age: 0 }, bio: ''
+    firstName: '', email: '', password: '', lastName: '', displayName: '', privateData: {}, protectedData: { phoneNumber: '' }, publicData: { age: 0, type: "" }, bio: ''
   })
 
   const create = () => {
     sdk.currentUser.create(user, {
       expand: true
     }).then((res: any) => {
-      dispatch(setCurrentUser(res.data))
+      dispatch(setCurrentUser(res.data.data))
       navigate("/Dashboard")
     }).catch((err: any) => {
       console.log(err)
@@ -171,7 +171,7 @@ export function Register(props: any) {
                   onChange={(e) => { validatePass(e) }}
                 />
                 {StyleErrors.stylePass == 'red' && <small style={{ color: StyleErrors.stylePass }}>{Errors.PassError}</small>}
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">Type</InputLabel>
                 <Select
                   labelId="demo-simple-select-required-label"
                   id="demo-simple-select-required"
@@ -179,6 +179,8 @@ export function Register(props: any) {
                   required
                   fullWidth
                   defaultValue={''}
+                  onChange={(e) => { setUser({ ...user, publicData: { ...user.publicData, type: e.target.value } }) }}
+
                 >
                   <MenuItem value={'Buyer'}>Buyer</MenuItem>
                   <MenuItem value={'Vendor'}>Vendor</MenuItem>
@@ -223,7 +225,7 @@ export function Register(props: any) {
                   label="age"
                   name="age"
                   type="number"
-                  onChange={(e) => { setUser({ ...user, publicData: { age: parseInt(e.target.value) } }) }}
+                  onChange={(e) => { setUser({ ...user, publicData: { ...user.publicData, age: parseInt(e.target.value) } }) }}
                 />
                 <TextField
                   margin="normal"
