@@ -1,13 +1,13 @@
 
-.block1 {
+.shape {
     background-color: #F3F3F3;
     padding: 1vi;
-    width: 38vw;
-    height: 30vh;
+    width: 35vw;
+    height: 28vh;
     border-radius: 1vi;
     border: 1px solid #D200FF;
     gap: 5px;
-    margin-left: 3vi;
+    margin-left: 3vw;
 }
 
 .block1Input {
@@ -15,27 +15,27 @@
     flex-direction: row;
 }
 
-.block2 {
+.clarity {
     background-color: #F3F3F3;
     padding: 1vi;
-    width: 38vw;
+    width: 35vw;
     height: 28vh;
     border-radius: 1vi;
     border: 1px solid #D200FF;
     gap: 3px;
-    margin-left: 3vi;
+    margin-left: 3vw;
     
 }
 
-.block3 {
+.color {
     background-color: #F3F3F3;
     padding: 1vi;
-    width: 38vw;
-    height: 30h;
+    width: 35vw;
+    height: 28vh;
     border-radius: 1vi;
     border: 1px solid #D200FF;
     gap: 5px;
-    margin-left: 3vi;
+    margin-left: 5vw;
 }
 
 .block12 {
@@ -65,8 +65,9 @@
     /* margin-left:2vi; */
 }
 
-input {
-    margin-left: 3vi;
+.inputs {
+    margin-left: 6vw;
+    margin-top: 30vh;
 }
 
 .inside3 {

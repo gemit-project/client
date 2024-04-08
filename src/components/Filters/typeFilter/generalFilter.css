@@ -1,16 +1,34 @@
-.wrap{
+/* .wrap {
     display: flex;
     flex-direction: row;
-    margin-left: 10vw;
+    margin-left: 4vw;
     background-color: #EDFAFF;
-    height: 10vh;
+    height: 15vh;
+} */
+
+.switch {
+    margin-left: 5vw;
+    margin-top: 12vh;
 }
-.switch{
-    margin-left: 10vw;
-}
-.wrap2Input{
+
+.wrap2Input {
     margin-left: 1vw;
 }
-.select{
-    margin-left: 10vw;
+input{
+    margin-left: 1vw;
+    border: 2px solid #00B2FF;
+    border-radius: 0.3vi;
+    padding: 0.5vi;
+    width: 10vw;
+}
+label{
+    color: rgb(108, 106, 106);
+}
+.inputs {
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: row;
+}
+.buttomInputs{
+    margin-left: 15vw;
 }

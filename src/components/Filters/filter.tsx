@@ -9,10 +9,9 @@ import GeneralFilter from './typeFilter/generalFilter'
 export default function Filter() {
     return (
         <>
-        {/* כדי לראות את הדף השני שיצרתי - תפתחי כאן את הקומפוננטה השניה*/}
+        
             <FilterTopComponent />
-            {/* <RangeSlider/> */}
-            {/* <GeneralFilter/> */}
         </>
     )
 }
+

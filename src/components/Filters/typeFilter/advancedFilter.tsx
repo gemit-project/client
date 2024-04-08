@@ -1,3 +1,6 @@
+
+//ניסוי 1 slider
+
 // import * as React from 'react';
 // import Box from '@mui/material/Box';
 // import Stack from '@mui/material/Stack';
@@ -9,8 +12,13 @@
 // export default function ContinuousSlider() {
 //     const [value, setValue] = React.useState<number>(0);
 
-//     const handleChange = (event: Event, newValue: number | number[]) => {
+//     const handleChange = (event: Event, newValue: number | number[]) => {      
 //         setValue(newValue as number);
+//         switch(newValue){
+//             case 5: alert("hnnbgffd");break;
+//             case 0: alert("hnnbgffd");break;
+//             case 100: alert("hnnbgffd");break;
+//         }
 //     };
 
 //     return (
@@ -31,7 +39,7 @@
 //     );
 // }
 
-//חלוקת העמוד לפי 6 חלקים שווים
+// חלוקת העמוד לפי 6 חלקים שווים
 
 // import * as React from 'react';
 // import { styled } from '@mui/material/styles';
@@ -77,11 +85,24 @@
 // }
 
 
+// <div className='grayBox' style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', padding: '5px' }}>
+//     <b>Lab</b>
+//     <br />
+//     {wordsArr.map((element: string) =>
+//         <div style={{ width: '40px', height: '5px' }}>
+//             <label className='word' >{element} </label>
+//         </div>
+//     )}
+// </div>
 
-//slideBar
+
+
+
+//ניסוי 4 slider
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
+import Slider, { SliderValueLabel } from '@mui/material/Slider';
 import './advancedFilter.css';
 
 
@@ -103,9 +124,19 @@ export default function RangeSlider() {
     const [value3, setValue3] = React.useState<number[]>([0, 100]);
     const [value4, setValue4] = React.useState<number[]>([0, 100]);
 
+    const updateValue = (num: number | number[]) => {
+        switch(num){
+            case 0:alert("0");break;
+            case 100:alert("100");break;
+            case 50:alert("50");break;
+
+        }
+    }
 
     const handleChange1 = (event: Event, newValue: number | number[]) => {
         setValue1(newValue as number[]);
+        updateValue(newValue);
+        alert(newValue)
     };
     const handleChange2 = (event: Event, newValue: number | number[]) => {
         setValue2(newValue as number[]);
@@ -119,7 +150,7 @@ export default function RangeSlider() {
     return (
         <>
             <br />
-            <div className='wrap'>
+            <div className='IWrap'>
                 <Box className="box" >
                     <b>Cut</b>
                     <Slider
@@ -129,20 +160,10 @@ export default function RangeSlider() {
                         style={{ 'color': '#FF00FF' }}
                         getAriaValueText={valuetext}
                     />
-                    {/* <Slider
-                        size="small"
-                        getAriaLabel={() => 'Temperature range'}
-                        value={value1}
-                        onChange={handleChange1}
-                        valueLabelDisplay="auto"
-                        getAriaValueText={valuetext}
-                        style={{ 'color': '#FF00FF' }}
 
-                    /> */}
                     {itemsArr.map((element: string) =>
                         <label >{element} </label>
                     )}
-                    
                 </Box>
                 <Box className="box">
                     <b>Flourance</b>
@@ -160,8 +181,8 @@ export default function RangeSlider() {
                     <label>VERY STRONG</label>
                 </Box>
             </div>
-            <div className='wrap'>
-                <Box className="box">
+            <div className='IWrap'>
+                <Box className="box" style={{ marginTop: '4vh' }}>
                     <b>Symetry</b>
                     <Slider
                         size="small"
@@ -174,17 +195,15 @@ export default function RangeSlider() {
                         <label >{element} </label>
                     )}
                 </Box>
-                <div className='grayBox' style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', padding: '5px' }}>
+                <div className='grayBox'>
                     <b>Lab</b>
                     <br />
                     {wordsArr.map((element: string) =>
-                        <div style={{ width: '40px', height: '5px' }}>
-                            <label className='word' >{element} </label>
-                        </div>
+                        <label className='word' >{element} </label>
                     )}
                 </div>
             </div>
-            <div className='wrap'>
+            <div className='IWrap'>
                 <Box className="box">
                     <b>Polish</b>
                     <Slider
@@ -198,9 +217,9 @@ export default function RangeSlider() {
                         <label >{element} </label>
                     )}
                 </Box>
-                <div className='input'>
+                <div className='inputWrap'>
                     <b>Inscription</b><br /><br />
-                    <input placeholder='Inscription (e.g. GIA7241171554)'></input>
+                    <input placeholder='Inscription (e.g. GIA7241171554)' className='input'></input>
                 </div>
             </div>
         </>
