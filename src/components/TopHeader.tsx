@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import groupd from "../assets/icons/app-icons/diamond.svg"
 import groupg from "../assets/icons/app-icons/gemit.svg"
 import heart from "../assets/icons/personal-area-icons/heart.svg"
 import bell from "../assets/icons/personal-area-icons/bell.svg"
-import imag from "./icons/imag.svg";
 import circle from "../assets/icons/personal-area-icons/circle.svg"
 import "./TopHeader.css";
+import { PersonalArea } from "./PersonalArea";
+import { useSelector } from "react-redux";
+import { Profil } from "./Profile";
+
 
 export const TopHeader: React.FC = () => {
+const [flag,setFlag]=useState(false);
+  const currentUser = useSelector((state: any) => state.user.currentUser);
   const userName = "";
+  useEffect(() => { console.log('current user', currentUser) }, [currentUser])
 
   return (
     <div className="top-header">
@@ -25,7 +31,7 @@ export const TopHeader: React.FC = () => {
               <img src={bell.toString()} className="bell" alt="bell"></img>
             </div>
             <div className="imag-circle">
-              <img src={imag.toString()} className="imag" alt="img"></img>
+              <img style={{height:"50px",width:"50px",borderRadius:"90%"}}  src={currentUser.included?currentUser.included[0].attributes.variants.default.url:""} className="imag" alt="img"></img>
               <img
                 src={circle.toString()}
                 className="circle"
@@ -41,6 +47,9 @@ export const TopHeader: React.FC = () => {
           )}
         </div>
       </div>
+      <button onClick={()=>setFlag(true)}>Edit Profil</button>
+      {flag && <Profil flagD={true} setFlegD={setFlag} />}
     </div>
+
   );
 };
