@@ -24,7 +24,7 @@ export const Map: React.FC<mapProps> = ({ name, list }) => {
       <div className={className}>
         {list.map((l: any) => (
           <div style={{ display: "inline-flex", marginRight: 20 }}>
-            <Square text={l.text}></Square>
+            <Square text={l}></Square>
           </div>
         ))}
       </div>

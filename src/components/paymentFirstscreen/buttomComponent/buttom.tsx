@@ -3,84 +3,13 @@ import { Map } from './map'
 import { Button, Grid } from '@mui/material'
 import './cssFirstScreen.css'
 export const Buttom: React.FC = () => {
-  const personalDetails = [
-    {
-      text: 'First name'
-    },
-    {
-      text: 'Second name'
-    },
-    {
-      text: 'Phone number'
-    },
-    {
-      text: 'Email Addreess'
-    }
-  ]
+  
+  const personalDetails = [ 'First name','Second name', 'Phone number', 'Email Addreess'];
+  const companyDetails = ['Company Details', 'Company ID','Company ID Desc'];
+  const contactDetails = ['Phone number','Email Addreess'];
+  const address = [ 'City','State','Company name','Street','Number','Zip code'];
+  const shippingAddress = [ 'City','State','Company name','Street','Number','Zip code'];
 
-  const companyDetails = [
-    {
-      text: 'Company Details'
-    },
-    {
-      text: 'Company ID'
-    },
-    {
-      text: 'Company ID Desc'
-    }]
-
-
-  const contactDetails = [
-    {
-      text: 'Phone number'
-    },
-    {
-      text: 'Email Addreess'
-    }
-
-  ]
-
-  const address = [
-    {
-      text: 'City'
-    },
-    {
-      text: 'State'
-    },
-    {
-      text: 'Company name'
-    },
-    {
-      text: 'Street'
-    },
-    {
-      text: 'Number'
-    },
-    {
-      text: 'Zip code'
-    }
-  ]
-
-  const shippingAddress = [
-    {
-      text: 'City'
-    },
-    {
-      text: 'State'
-    },
-    {
-      text: 'Company name'
-    },
-    {
-      text: 'Street'
-    },
-    {
-      text: 'Number'
-    },
-    {
-      text: 'Zip code'
-    }
-  ]
   return (
     <div className='first-screen'>
       <div style={{ textAlign: 'left', color: '#030406', fontSize: 36, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word' }}>General Details</div>
