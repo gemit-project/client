@@ -117,19 +117,19 @@ export function Register() {
   return (
     <>
       <Dialog open={flag}>
-      <DialogTitle>
-                <IconButton
-                    aria-label="close"
-                    onClick={() => navigate("/")}
-                    sx={{
-                        position: 'absolute',
-                        right: 8,
-                        top: 2,
-                        fontSize: '15px'
-                    }}>
-                    Back
-                    <ArrowForwardIcon />
-                </IconButton></DialogTitle>
+        <DialogTitle>
+          <IconButton
+            aria-label="close"
+            onClick={() => navigate("/")}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 2,
+              fontSize: '15px'
+            }}>
+            Back
+            <ArrowForwardIcon />
+          </IconButton></DialogTitle>
         <ThemeProvider theme={defaultTheme}>
           <Container component="main" maxWidth="xs">
             <CssBaseline />

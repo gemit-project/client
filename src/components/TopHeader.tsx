@@ -5,13 +5,12 @@ import heart from "../assets/icons/personal-area-icons/heart.svg"
 import bell from "../assets/icons/personal-area-icons/bell.svg"
 import circle from "../assets/icons/personal-area-icons/circle.svg"
 import "./TopHeader.css";
-import { PersonalArea } from "./PersonalArea";
 import { useSelector } from "react-redux";
 import { Profil } from "./Profile";
 
 
 export const TopHeader: React.FC = () => {
-const [flag,setFlag]=useState(false);
+  const [flag, setFlag] = useState(false);
   const currentUser = useSelector((state: any) => state.user.currentUser);
   const userName = "";
   useEffect(() => { console.log('current user', currentUser) }, [currentUser])
@@ -31,7 +30,7 @@ const [flag,setFlag]=useState(false);
               <img src={bell.toString()} className="bell" alt="bell"></img>
             </div>
             <div className="imag-circle">
-              <img style={{height:"50px",width:"50px",borderRadius:"90%"}}  src={currentUser.included?currentUser.included[0].attributes.variants.default.url:""} className="imag" alt="img"></img>
+              <img style={{ height: "50px", width: "50px", borderRadius: "90%" }} src={currentUser.included ? currentUser.included[0].attributes.variants.default.url : ""} className="imag" alt="img"></img>
               <img
                 src={circle.toString()}
                 className="circle"
@@ -47,7 +46,7 @@ const [flag,setFlag]=useState(false);
           )}
         </div>
       </div>
-      <button onClick={()=>setFlag(true)}>Edit Profil</button>
+      <button onClick={() => setFlag(true)}>Edit Profil</button>
       {flag && <Profil flagD={true} setFlegD={setFlag} />}
     </div>
 

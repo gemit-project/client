@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCurrentUser } from "../app/slices/UserSlice";
 import { sdk } from "../config/sharetribeSDK.config";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { FitScreen } from "@mui/icons-material";
-import { Edit, Check } from '@mui/icons-material';
+import { Edit } from '@mui/icons-material';
 const defaultTheme = createTheme();
 
 export const Profil = (props: any) => {
@@ -13,18 +12,35 @@ export const Profil = (props: any) => {
     const [file, setfile] = useState<any>();
     const [user, setUser] = useState({
         firstName: currentUser.data?.attributes.profile.firstName,
-           lastName: currentUser.data?.attributes.profile.lastName,
-            displayName: currentUser.data?.attributes.profile.displayName,
-             privateData: currentUser.data?.attributes.profile.privateData,
-              protectedData:currentUser.data?.attributes.profile.protectedData,
-               publicData: currentUser.data?.attributes.profile.publicData,
-                bio: currentUser.data?.attributes.profile.bio
-      });
+        lastName: currentUser.data?.attributes.profile.lastName,
+        displayName: currentUser.data?.attributes.profile.displayName,
+        privateData: currentUser.data?.attributes.profile.privateData,
+        protectedData: currentUser.data?.attributes.profile.protectedData,
+        publicData: currentUser.data?.attributes.profile.publicData,
+        bio: currentUser.data?.attributes.profile.bio
+    });
     const dispatch = useDispatch();
     const [flag, setFleg] = useState<boolean>(false);
+    const [flagEmail, setFlegEmail] = useState<boolean>(true);
     const [ff, setF] = useState<boolean>(true);
     const { flagD, setFlegD } = (props);
+    const [email, setEmail] = useState("");
+    const [password, setaPssword] = useState("");
 
+    const changeEmail = (e: any) => {
+        sdk.currentUser.changeEmail({
+            currentPassword: password,
+            email: email
+        }, {
+            expand: true
+        }, {
+            expand: true,
+            include: ["profileImage"]
+        }).then((res: any) => {
+            dispatch(setCurrentUser(res.data))
+
+        });
+    }
     const uploadImage = async (file: any) => {
 
         if (file) {
@@ -58,14 +74,14 @@ export const Profil = (props: any) => {
             } catch { }
         }
     }
-    const saveProfil=()=>{
+    const saveProfil = () => {
         sdk.currentUser.updateProfile(user, {
             expand: true,
             include: ["profileImage"]
-          }).then((res:any) => {
+        }).then((res: any) => {
             dispatch(setCurrentUser(res.data))
             setF((ff) => !ff)
-          });
+        });
     }
     return (<>
         <Dialog open={flagD} sx={{
@@ -108,7 +124,39 @@ export const Profil = (props: any) => {
                                 <img style={{ height: "50px", width: "50px", borderRadius: "90%" }} src={currentUser.included ? currentUser.included[0].attributes.variants.default.url : ""} className="imag" alt="Change"></img>
                             </button>
                             <h6>{currentUser.data?.attributes.profile.displayName}</h6>
+                            <TextField
+                                variant="standard"
+                                disabled={flagEmail}
+                                id="Email"
+                                label="Email"
+                                defaultValue={currentUser.data?.attributes.email}
+                                onChange={(e) => { setEmail(e.target.value) }}
 
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end" >
+                                            <IconButton
+                                                aria-label="toggl"
+                                                onClick={() => setFlegEmail((flagEmail) => !flagEmail)}
+                                                edge="end"
+                                            >
+                                                <Edit />
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
+                            {!flagEmail &&
+                                <Box>
+                                    <TextField
+                                        variant="standard"
+                                        disabled={flagEmail}
+                                        id="password"
+                                        label="password"
+                                        onChange={(e) => { setaPssword(e.target.value) }}
+                                    />
+                                    <button disabled={flagEmail} onClick={changeEmail}>save email</button>
+                                </Box>}
                             <Typography component="h1" variant="h3" sx={{ color: 'darkblue' }}>
                                 Profil
                             </Typography>
@@ -116,10 +164,9 @@ export const Profil = (props: any) => {
                                 aria-label="edit"
                                 size="large"
                                 onClick={() => setF((ff) => !ff)}
-                               sx={{color: !ff? "primary" : "green"}}
+                                sx={{ color: !ff ? "primary" : "green" }}
                             >
-
-                                 <Edit  /> 
+                                <Edit />
                             </IconButton>
                             <br />
                             <br />
@@ -129,6 +176,7 @@ export const Profil = (props: any) => {
                                 <button onClick={() => uploadImage(file)}>save image</button>
                             </div>}
                             <TextField
+                                variant="standard"
                                 disabled={ff}
                                 id="outlined-disabled"
                                 label="displayName"
@@ -136,6 +184,7 @@ export const Profil = (props: any) => {
                                 onChange={(e) => { setUser({ ...user, displayName: e.target.value }) }}
                             />
                             <TextField
+                                variant="standard"
                                 disabled={ff}
                                 id="firstName"
                                 label="firstName"
@@ -143,24 +192,28 @@ export const Profil = (props: any) => {
                                 onChange={(e) => { setUser({ ...user, firstName: e.target.value }) }}
                             />
                             <TextField
+                                variant="standard"
                                 disabled={ff}
                                 id="lastName"
                                 label="lastName"
                                 defaultValue={user.lastName}
                                 onChange={(e) => { setUser({ ...user, lastName: e.target.value }) }}
                             />  <TextField
+                                variant="standard"
                                 disabled={ff}
                                 id="bio"
                                 label="bio"
                                 defaultValue={user.bio}
                                 onChange={(e) => { setUser({ ...user, bio: e.target.value }) }}
                             />  <TextField
+                                variant="standard"
                                 disabled={ff}
                                 id="age"
                                 label="age"
                                 defaultValue={user.publicData.age}
                                 onChange={(e) => { setUser({ ...user, publicData: { ...user.publicData, age: e.target.value } }) }}
                             />  <TextField
+                                variant="standard"
                                 disabled={ff}
                                 id="phoneNumber"
                                 label="phoneNumber"
@@ -170,7 +223,6 @@ export const Profil = (props: any) => {
                         </Box>
                     </Container>
                 </ThemeProvider>
-
             </DialogContent>
             <DialogActions>
                 <Button sx={{
@@ -178,7 +230,7 @@ export const Profil = (props: any) => {
                     left: 8,
                     right: 8,
                 }}
-                onClick={saveProfil}>save changes</Button>
+                    onClick={saveProfil}>save changes</Button>
             </DialogActions>
         </Dialog>
 
