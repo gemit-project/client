@@ -8,6 +8,18 @@ import Emerald from "./Shapes/Emerald.svg";
 import heart from "./Shapes/heart.svg";
 import radiant from "./Shapes/radiant.svg";
 import marquise from "./Shapes/marquise.svg";
+import Briolette from "./Shapes/Briolette.svg";
+import Fladers from "./Shapes/Flanders.svg";
+import Haxagonal from "./Shapes/Hexagonal.svg";
+import KiteShield from "./Shapes/Kite Shield.svg";
+import Pentagon from "./Shapes/Pentagon.svg";
+import Quadrillion from "./Shapes/Quadrillion.svg";
+import Roase from "./Shapes/Roase.svg";
+import Shield from "./Shapes/Shield.svg";
+import star from "./Shapes/star.svg";
+import Trilliant from "./Shapes/Trilliant.svg";
+import { Hexagon } from "@mui/icons-material";
+
 
 
 // interface DiamondsParemeters {
@@ -72,7 +84,48 @@ export const IconsArr: IconCol[] = [
   {
     param: "marquise",
     icon: marquise
-  }]
+  },
+  {
+    param: "Trilliant",
+    icon: Trilliant
+  },
+  {
+    param: "Kite",
+    icon: KiteShield
+  },
+  {
+    param: "Haxa",
+    icon: Haxagonal
+  },
+  {
+    param: "Roase",
+    icon: Roase
+  },
+  {
+    param: "Fladers",
+    icon: Fladers
+  },
+  {
+    param: "Quad",
+    icon: Quadrillion
+  },
+  {
+    param: "Briolette",
+    icon: Briolette
+  },
+  {
+    param: "Shield",
+    icon: Shield
+  },
+  {
+    param: "star",
+    icon: star
+  },
+  {
+    param: "Pentagon",
+    icon: Pentagon
+  },
+]
 
 export const ClarityArr: string[] = [
   "FL", "IF", "VVS1", "VVS2", "VS1", "VS2", "SI1", "SI2", "SI3"

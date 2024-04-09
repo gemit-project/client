@@ -71,7 +71,7 @@ export default function GeneralFilter() {
                             height: '30px'
                         }}>
                         <MenuItem value="">
-                            <em>All</em>
+                            <em>ALL</em>
                         </MenuItem>
                         {arr.map((element: number) =>
                             <MenuItem value={element}>{element}</MenuItem>
@@ -90,7 +90,7 @@ export default function GeneralFilter() {
                             height: '30px',
                         }}>
                         <MenuItem value="">
-                            <em>All</em>
+                            <em>ALL</em>
                         </MenuItem>
                         {arr.map((element: number) =>
                             <MenuItem value={element}>{element}</MenuItem>
@@ -109,7 +109,7 @@ export default function GeneralFilter() {
                             height: '30px',
                         }}>
                         <MenuItem value="">
-                            <em>All</em>
+                            <em>ALL</em>
                         </MenuItem>
                         {arr.map((element: number) =>
                             <MenuItem value={element}>{element}</MenuItem>

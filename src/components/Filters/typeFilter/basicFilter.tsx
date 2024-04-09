@@ -4,6 +4,7 @@ import { ABCArr, ClarityArr, IconCol, IconsArr } from '../searchIcons/constants'
 import { RxTriangleUp } from 'react-icons/rx'
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Button from '@mui/material/Button';
 
 export default function BasicFilter() {
     const [num1, setNum1] = React.useState('');
@@ -21,12 +22,22 @@ export default function BasicFilter() {
         <>
             <div className='block1Input'>
                 <div className='shape'>
-                    Shape<br /><br />
+                    Shape<br />
                     {IconsArr.map((element: IconCol) =>
-                        <div >
-                            <img src={element.icon.toString()} className='inside1'></img> <br />
-                            <label>{element.param}</label>
-                        </div>
+                        <Button variant="contained" size="small"
+                        style={{
+                            color:'black',
+                            backgroundColor:'#F3F3F3',
+                            borderWidth: '0px',
+                            marginLeft: '1.5vw',
+                            marginTop:'2vh',
+                            flexDirection:'column',
+                            boxShadow:'none'
+                            
+                        }}>
+                            <img src={element.icon.toString()} className='img'></img>
+                            {element.param}
+                        </Button>
                     )}
                 </div>
                 <div className='inputs'><br />
@@ -40,7 +51,6 @@ export default function BasicFilter() {
                             width: '9vw',
                             color: 'black',
                             //צבע מסגרת לא עובד
-                            borderColor: 'red',
                             height: '30px'
                         }}
                     >
@@ -61,7 +71,7 @@ export default function BasicFilter() {
                             width: '9vw',
                             color: 'black',
                             //צבע מסגרת לא עובד
-                            borderColor: 'red',
+                            border: 'red',
                             height: '30px',
                             marginLeft:'1vw'
                         }}
@@ -77,12 +87,21 @@ export default function BasicFilter() {
             </div><br />
             <div className='block12'>
                 <div className='clarity'>
-                    Clarity<br /><br />
-                    {/* {ClarityArr.map((element:string) => 
-                <div className='inside'>{element} </div>              
-               )} */}
+                    Clarity<br />
+                    {ClarityArr.map((element:string) => 
+                        <Button variant="contained" size="small"
+                        style={{
+                            color:'black',
+                            backgroundColor:'#F3F3F3',
+                            border: '1px solid #D200FF',
+                            marginLeft: '1.5vw',
+                            marginTop:'2vh',
+                            height: '30px',
+                            width: '5vw'
+                        }} >{element} </Button>              
+                     )}
 
-                    <div className='ini'>
+                    {/* <div className='ini'>
                         <label className='inside'>{ClarityArr[0]}</label>
                         <label className='inside'>{ClarityArr[1]}</label>
                     </div>
@@ -90,13 +109,28 @@ export default function BasicFilter() {
                         <label >
                             <label className='inside'>{element}</label>
                         </label>
-                    )}
+                    )} */}
                 </div><br />
 
                 <div className='color'>
-                    Color<br /><br />
+                    Color<br />
+                    <div className='wrap2Buttons'>
+                        <button>White</button>
+                        <button>Fancy</button>
+                    </div>
                     {ABCArr.map((element: string) =>
-                        <div className='inside3'>{element} </div>
+                        // <Button >{element} </Button>
+                        <Button variant="contained" size="small"
+                        style={{
+                            color:'black',
+                            backgroundColor:'#F3F3F3',
+                            border: '1px solid #D200FF',
+                            marginLeft: '1.5vw',
+                            marginTop:'2vh',
+                            height: '25px',
+                            width: '4vw'
+                        }} >{element}</Button>
+
                     )}
                     <button><RxTriangleUp /></button>
                 </div><br />

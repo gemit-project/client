@@ -104,7 +104,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider, { SliderValueLabel } from '@mui/material/Slider';
 import './advancedFilter.css';
-
+import Button from '@mui/material/Button';
 
 function valuetext(value: number) {
     return `${value}°C`;
@@ -199,7 +199,16 @@ export default function RangeSlider() {
                     <b>Lab</b>
                     <br />
                     {wordsArr.map((element: string) =>
-                        <label className='word' >{element} </label>
+                        <Button variant="contained" size="small"
+                        style={{
+                            color:'#FF00FF',
+                            backgroundColor:'#F3F3F3',
+                            marginLeft: '1.5vw',
+                            marginTop:'2vh',
+                            border:'1px solid black'
+                            
+                        }}>
+                       {element} </Button>
                     )}
                 </div>
             </div>
