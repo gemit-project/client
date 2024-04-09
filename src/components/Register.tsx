@@ -9,7 +9,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { User } from "../Types/User";
 import 'sharetribe-flex-sdk';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
-import { InputAdornment, IconButton, createTheme, Select, MenuItem, Dialog } from '@mui/material';
+import { InputAdornment, IconButton, createTheme, Select, MenuItem, Dialog, DialogTitle } from '@mui/material';
 import { sdk } from '../config/sharetribeSDK.config';
 import { Outlet, useNavigate } from 'react-router';
 import { useState } from 'react';
@@ -19,6 +19,7 @@ import MuiPhoneNumber from 'material-ui-phone-number';
 import { useDispatch } from 'react-redux';
 import { setCurrentUser } from '../app/slices/UserSlice';
 import InputLabel from '@mui/material/InputLabel';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const defaultTheme = createTheme();
 
@@ -116,6 +117,19 @@ export function Register() {
   return (
     <>
       <Dialog open={flag}>
+      <DialogTitle>
+                <IconButton
+                    aria-label="close"
+                    onClick={() => navigate("/")}
+                    sx={{
+                        position: 'absolute',
+                        right: 8,
+                        top: 2,
+                        fontSize: '15px'
+                    }}>
+                    Back
+                    <ArrowForwardIcon />
+                </IconButton></DialogTitle>
         <ThemeProvider theme={defaultTheme}>
           <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -132,7 +146,7 @@ export function Register() {
                 <img src={diamond} style={{ width: "80px", height: "50px" }}></img>
               </circle>
               <Typography component="h1" variant="h5">
-                Sign in
+                Sign Up
               </Typography>
               <Box sx={{ mt: 1 }}>
                 <TextField
