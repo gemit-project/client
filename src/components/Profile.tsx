@@ -199,21 +199,6 @@ export const Profil = (props: any) => {
                 </IconButton>
                 <br />
                 <br />
-                {/* {flag && (
-                  <div>
-                    <input
-                      id="my-file"
-                      type="File"
-                      onChange={(e) => {
-                        setfile(e.target.files ? e.target.files[0] : null);
-                      }}
-                    />
-
-                    <button onClick={() => uploadImage(file)}>
-                      save image
-                    </button>
-                  </div>
-                )} */}
                 <TextField
                   variant="standard"
                   disabled={ff}

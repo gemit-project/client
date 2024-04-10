@@ -141,7 +141,7 @@ export const PersonalArea = () => {
         </Menu>
         {flag && <Profil flagD={flag} setFlegD={setFlag} />}
       </React.Fragment>
-      .
+      
     </>
   );
 };
