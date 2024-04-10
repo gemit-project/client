@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { setCurrentUser } from "../app/slices/UserSlice";
 import { sdk } from "../config/sharetribeSDK.config";
-import { Button, Dialog } from "@mui/material";
+import { Button, Dialog, DialogTitle, IconButton } from "@mui/material";
 import { useDispatch } from "react-redux";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export const ChangeImage = (props: any) => {
   const [file, setfile] = useState<any>();
@@ -48,6 +49,21 @@ export const ChangeImage = (props: any) => {
   return (
     <>
       <Dialog open={flag}>
+        <DialogTitle>
+          <IconButton
+            aria-label="close"
+            onClick={() => setFlag(false)}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 2,
+              fontSize: "15px",
+            }}
+          >
+            Back
+            <ArrowForwardIcon />
+          </IconButton>
+        </DialogTitle>
         <input
           id="my-file"
           type="File"
