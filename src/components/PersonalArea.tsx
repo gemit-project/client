@@ -41,7 +41,10 @@ export const PersonalArea = () => {
       navigate("/");
     });
   };
-
+  const handleAddAcount = () => {
+    dispatch(setCurrentUser({}));
+    navigate("Register");
+  };
   return (
     <>
       <React.Fragment>
@@ -117,7 +120,7 @@ export const PersonalArea = () => {
             <Avatar /> My account
           </MenuItem>
           <Divider />
-          <MenuItem onClick={handleClose}>
+          <MenuItem onClick={handleAddAcount}>
             <ListItemIcon>
               <PersonAdd fontSize="small" />
             </ListItemIcon>

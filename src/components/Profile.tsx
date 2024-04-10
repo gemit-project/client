@@ -20,6 +20,7 @@ import { setCurrentUser } from "../app/slices/UserSlice";
 import { sdk } from "../config/sharetribeSDK.config";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Edit } from "@mui/icons-material";
+import { ChangeImage } from "./AddOrChangeImage";
 
 const defaultTheme = createTheme();
 
@@ -36,12 +37,12 @@ export const Profil = (props: any) => {
     bio: currentUser.data?.attributes.profile.bio,
   });
   const dispatch = useDispatch();
-  const [flag, setFleg] = useState<boolean>(false);
-  const [flagEmail, setFlegEmail] = useState<boolean>(true);
+  const [flagImage, setFlagImage] = useState<boolean>(false);
+  const [flagEmail, setFlagEmail] = useState<boolean>(true);
   const [ff, setF] = useState<boolean>(true);
   const { flagD, setFlegD } = props;
-  const [email, setEmail] = useState("");
-  const [password, setaPssword] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setaPssword] = useState<string>("");
 
   const changeEmail = (e: any) => {
     sdk.currentUser
@@ -62,42 +63,7 @@ export const Profil = (props: any) => {
         dispatch(setCurrentUser(res.data));
       });
   };
-  const uploadImage = async (file: any) => {
-    if (file) {
-      try {
-        const res = await sdk.images.upload(
-          {
-            image: file,
-          },
-          {
-            expand: true,
-          }
-        );
-        sdk.currentUser
-          .updateProfile(
-            {
-              profileImageId: res.data.data.id.uuid,
-            },
-            {
-              expand: true,
-              include: ["profileImage"],
-            }
-          )
-          .then((res: any) => {
-            console.log(res);
-            setFleg(false);
-            sdk.currentUser
-              .show({
-                expand: true,
-                include: ["profileImage"],
-              })
-              .then((ress: any) => {
-                dispatch(setCurrentUser(ress.data));
-              });
-          });
-      } catch {}
-    }
-  };
+
   const saveProfil = () => {
     sdk.currentUser
       .updateProfile(user, {
@@ -155,7 +121,7 @@ export const Profil = (props: any) => {
               >
                 <button
                   onClick={() => {
-                    setFleg(true);
+                    setFlagImage((flagImage)=>!flagImage);
                   }}
                 >
                   <img
@@ -190,7 +156,7 @@ export const Profil = (props: any) => {
                         <IconButton
                           aria-label="toggl"
                           onClick={() =>
-                            setFlegEmail((flagEmail) => !flagEmail)
+                            setFlagEmail((flagEmail) => !flagEmail)
                           }
                           edge="end"
                         >
@@ -233,7 +199,7 @@ export const Profil = (props: any) => {
                 </IconButton>
                 <br />
                 <br />
-                {flag && (
+                {/* {flag && (
                   <div>
                     <input
                       id="my-file"
@@ -247,7 +213,7 @@ export const Profil = (props: any) => {
                       save image
                     </button>
                   </div>
-                )}
+                )} */}
                 <TextField
                   variant="standard"
                   disabled={ff}
@@ -323,6 +289,7 @@ export const Profil = (props: any) => {
         </DialogContent>
         <DialogActions>
           <Button
+            disabled={ff}
             sx={{
               position: "absolute",
               left: 8,
@@ -334,6 +301,7 @@ export const Profil = (props: any) => {
           </Button>
         </DialogActions>
       </Dialog>
+      {flagImage && <ChangeImage flag={flagImage} setFlag={setFlagImage}/>}
     </>
   );
 };
