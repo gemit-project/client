@@ -14,7 +14,8 @@ import { ShippingAndInsurance } from "../components/shipping&insurance";
 import { Payment } from "@mui/icons-material";
 import { Confirmation } from "../components/confirmation";
 import { FundingOptions } from "../components/fundingOptions";
-import { General } from "../components/general";
+import { Buttom } from "../components/paymentFirstscreen/buttomComponent/buttom";
+import { Top } from "../components/topComponent/tc";
 
 export const Routing: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ export const Routing: React.FC = () => {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/CheckOut" element={< CheckOut />}>
-          <Route path="General" element={< General />} />
+          <Route path="General" element={< Buttom />} />
           <Route path="ShippingAndInsurance" element={< ShippingAndInsurance />} />
           <Route path="FundingOptions" element={< FundingOptions />} />
           <Route path="Payment" element={< Payment />} />

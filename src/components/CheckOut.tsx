@@ -5,12 +5,11 @@ import boldCircle from './icons/boldCircle.svg'
 import simpleCircle from './icons/simpleCircle.svg'
 
 export const CheckOut: React.FC = () => {
-    const checkoutpPages = ['General', 'ShippingAndInsurance', 'FundingOptions', 'Payment', 'Confirmation']
     const checkoutPages = [
 
-        { text: 'General', nav: 'General' },
-        { text: 'Shipping&Insurance', nav: 'ShippingAndInsurance' },
-        { text: 'FundingOptions', nav: 'FundingOptions' },
+        { text: 'General Details', nav: 'General' },
+        { text: 'Shipping & Insurance', nav: 'ShippingAndInsurance' },
+        { text: 'Funding Options', nav: 'FundingOptions' },
         { text: 'Payment', nav: 'Payment' },
         { text: 'Confirmation', nav: 'Confirmation' }
     ]
@@ -24,8 +23,8 @@ export const CheckOut: React.FC = () => {
     return (
 
         <><div>
-            <div style={{ marginLeft: '5.2vw', width: '83vw', height: '4vh', justifyContent: 'space-between', alignItems: 'center', display: 'inline-flex' }}>
-                <div style={{ marginLeft: '0.8vw', zIndex: -1, width: '80vw', position: 'absolute', border: '0.5vh #0000FF solid' }}></div>
+            <div style={{ marginLeft: '5.1vw', width: '87vw', height: '4vh', justifyContent: 'space-between', alignItems: 'center', display: 'inline-flex', alignContent: 'center' }}>
+                <div style={{ marginLeft: '3vw', zIndex: -1, width: '81vw', position: 'absolute', border: '0.5vh #0000FF solid' }}></div>
                 {
                     checkoutPages.map((page, i) => (
                         <Link to={page.nav}>
@@ -49,8 +48,8 @@ const Circle: React.FC<{ current: boolean, text: string, def: boolean }> = ({ cu
             </div> :
                 <img src={simpleCircle.toString()}></img>}
             <div style={{ display: 'flex', alignItems: 'center' }}>
-                {current || def ? <div style={{ textAlign: 'center', color: 'black', fontSize: '17px', fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word' }}>{text}</div> :
-                    <div style={{ marginTop: '0.7vh', textAlign: 'center', color: 'black', fontSize: '15px', fontFamily: 'Poppins', fontWeight: '450', wordWrap: 'break-word', position: 'relative' }}>{text}</div>
+                {current || def ? <div style={{ marginTop: '0.6vh', textAlign: 'center', color: 'black', fontSize: '20px', fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word' }}>{text}</div> :
+                    <div style={{ marginTop: '1.3vh', textAlign: 'center', color: 'black', fontSize: '18px', fontFamily: 'Poppins', fontWeight: '450', wordWrap: 'break-word', position: 'relative' }}>{text}</div>
                 }
             </div>
         </div>
