@@ -37,7 +37,6 @@ export const PersonalArea = () => {
   const handleLogOut = () => {
     sdk.logout().then((loginRes: any) => {
       dispatch(setCurrentUser({}));
-      console.log("Logout successful.");
       navigate("/");
     });
   };

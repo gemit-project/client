@@ -32,7 +32,6 @@ export const ChangeImage = (props: any) => {
             }
           )
           .then((res: any) => {
-            console.log(res);
             setFlag(false);
             sdk.currentUser
               .show({

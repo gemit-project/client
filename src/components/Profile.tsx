@@ -26,7 +26,6 @@ const defaultTheme = createTheme();
 
 export const Profil = (props: any) => {
   const currentUser = useSelector((state: any) => state.user.currentUser);
-  const [file, setfile] = useState<any>();
   const [user, setUser] = useState({
     firstName: currentUser.data?.attributes.profile.firstName,
     lastName: currentUser.data?.attributes.profile.lastName,
@@ -39,7 +38,7 @@ export const Profil = (props: any) => {
   const dispatch = useDispatch();
   const [flagImage, setFlagImage] = useState<boolean>(false);
   const [flagEmail, setFlagEmail] = useState<boolean>(true);
-  const [ff, setF] = useState<boolean>(true);
+  const [flagEdit, setFlagEtid] = useState<boolean>(true);
   const { flagD, setFlegD } = props;
   const [email, setEmail] = useState<string>("");
   const [password, setaPssword] = useState<string>("");
@@ -72,7 +71,7 @@ export const Profil = (props: any) => {
       })
       .then((res: any) => {
         dispatch(setCurrentUser(res.data));
-        setF((ff) => !ff);
+        setFlagEtid((flagEdit) => !flagEdit);
       });
   };
 
@@ -192,8 +191,8 @@ export const Profil = (props: any) => {
                 <IconButton
                   aria-label="edit"
                   size="large"
-                  onClick={() => setF((ff) => !ff)}
-                  sx={{ color: !ff ? "primary" : "green" }}
+                  onClick={() => setFlagEtid((flagEdit) => !flagEdit)}
+                  sx={{ color: !flagEdit ? "primary" : "blue" }}
                 >
                   <Edit />
                 </IconButton>
@@ -201,7 +200,7 @@ export const Profil = (props: any) => {
                 <br />
                 <TextField
                   variant="standard"
-                  disabled={ff}
+                  disabled={flagEdit}
                   id="outlined-disabled"
                   label="displayName"
                   defaultValue={user.displayName}
@@ -211,7 +210,7 @@ export const Profil = (props: any) => {
                 />
                 <TextField
                   variant="standard"
-                  disabled={ff}
+                  disabled={flagEdit}
                   id="firstName"
                   label="firstName"
                   defaultValue={user.firstName}
@@ -221,7 +220,7 @@ export const Profil = (props: any) => {
                 />
                 <TextField
                   variant="standard"
-                  disabled={ff}
+                  disabled={flagEdit}
                   id="lastName"
                   label="lastName"
                   defaultValue={user.lastName}
@@ -231,7 +230,7 @@ export const Profil = (props: any) => {
                 />{" "}
                 <TextField
                   variant="standard"
-                  disabled={ff}
+                  disabled={flagEdit}
                   id="bio"
                   label="bio"
                   defaultValue={user.bio}
@@ -241,7 +240,7 @@ export const Profil = (props: any) => {
                 />{" "}
                 <TextField
                   variant="standard"
-                  disabled={ff}
+                  disabled={flagEdit}
                   id="age"
                   label="age"
                   defaultValue={user?.publicData.age}
@@ -254,7 +253,7 @@ export const Profil = (props: any) => {
                 />{" "}
                 <TextField
                   variant="standard"
-                  disabled={ff}
+                  disabled={flagEdit}
                   id="phoneNumber"
                   label="phoneNumber"
                   defaultValue={user?.protectedData.phoneNumber}
@@ -274,7 +273,7 @@ export const Profil = (props: any) => {
         </DialogContent>
         <DialogActions>
           <Button
-            disabled={ff}
+            disabled={flagEdit}
             sx={{
               position: "absolute",
               left: 8,
