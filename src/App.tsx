@@ -6,10 +6,7 @@ import { useDispatch } from "react-redux";
 import { setCurrentUser } from "./app/slices/UserSlice";
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(setCurrentUser({}))
-  }, [])
+
   return (
     <div>
       <BrowserRouter>

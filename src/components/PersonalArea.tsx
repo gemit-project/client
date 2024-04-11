@@ -113,7 +113,7 @@ export const PersonalArea = () => {
                   : ""
               }
             />{" "}
-            Profile
+             {currentUser.data?.attributes.profile.abbreviatedName} Profile
           </MenuItem>
           <MenuItem onClick={handleClose}>
             <Avatar /> My account

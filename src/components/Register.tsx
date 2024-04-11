@@ -39,9 +39,10 @@ export function Register() {
 
   const create = () => {
     sdk.currentUser.create(user, {
-      expand: true
+      expand: true,
+      include: ["profileImage"]
     }).then((res: any) => {
-      dispatch(setCurrentUser(res.data.data))
+      dispatch(setCurrentUser(res.data))
       navigate("/Dashboard")
     }).catch((err: any) => {
       console.log(err)
