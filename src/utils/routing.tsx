@@ -9,6 +9,9 @@ import { Chat } from "../components/Chat";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
+import { Buttom } from "../components/paymentFirstscreen/buttomComponent/buttom";
+import { FundingOptions } from "../components/paymentThirdscreen/FundingOptions";
+import { ButtomSC } from "../components/paymentSecondscreen/buttomComponent/buttomSC";
 
 export const Routing: React.FC = () => {
   return (
@@ -23,6 +26,9 @@ export const Routing: React.FC = () => {
         <Route path="/LogOut" element={<LogOut />} />
         <Route path="/Setting" element={<Setting />} />
         <Route path="/Chat" element={<Chat />} />
+        <Route path="/Shipping&inssurance" element={<ButtomSC />} />
+        <Route path="/GeneralDetails" element={<Buttom />} />
+        <Route path="/FundingOptions" element={<FundingOptions/>} />
       </Routes>
     </>
   );

@@ -1,13 +1,22 @@
 .first-screen {
   width: 90vw;
   height: 70vh;
+  /* size: 80%; */
   margin-left: 80px;
 }
 
-.container {
+.container1 {
   width: 52vw;
 }
-
+.general-details {
+    text-align: left;
+    color: #030406;
+    font-size: 36px;
+    font-family: Poppins;
+    font-weight: 600;
+    word-wrap: break-word;
+    
+}
 .company-details {
   text-align: "left";
   color: #0000ff;
@@ -19,7 +28,7 @@
   word-wrap: "break-word";
 }
 
-.title {
+.title1 {
   font-family: Poppins;
   font-size: 20px;
   font-weight: 600;
@@ -28,16 +37,16 @@
   margin-top: 30px;
 }
 
-.table {
+.table1 {
   display: grid;
   grid-template-columns: auto auto;
 }
 
-.right-culomn {
+.right-culomn1 {
   margin-top: auto;
 }
 
-.left-culomn {
+.left-culomn1 {
   margin-top: auto;
 }
 
@@ -52,7 +61,7 @@
   margin-top: 1px;
 }
 
-.button-next {
-  margin-left: 78vw;
+.button-next1 {
+  margin-left: 160vh;
   margin-top: 20px;
 }

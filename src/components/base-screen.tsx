@@ -14,6 +14,8 @@ export const BaseScreen: React.FC = () => {
             flexDirection: "column",
             marginLeft: "52px",
             position: "fixed",
+            height:'100vh',
+            width:'100vw'
           }}
         >
           <TopHeader />

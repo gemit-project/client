@@ -19,8 +19,8 @@ export const Map: React.FC<mapProps> = ({ name, list }) => {
   }
 
   return (
-    <div className="container">
-      <div className="title">{name}</div>
+    <div className="container1">
+      <div className="title1">{name}</div>
       <div className={className}>
         {list.map((l: any) => (
           <div style={{ display: "inline-flex", marginRight: 20 }}>
