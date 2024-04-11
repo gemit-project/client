@@ -29,7 +29,7 @@ export const Buttom: React.FC = () => {
       </div>
       <div className='button-next1'>
         <Link to='/Shipping&inssurance'>
-        <Button  variant="contained" sx={{ width: '11vw' }}>Next</Button>
+        <Button  variant="contained" sx={{ width: '10vw' }}>Next</Button>
         </Link>
         </div>
         <Outlet/>

@@ -1,5 +1,6 @@
 .second-screen {
   margin-left: 50px;
+
 }
 .shipping {
   text-align: left;
@@ -25,7 +26,7 @@
   font-weight: 00;
   line-height: 28.8px;
   text-align: left;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .up {
@@ -50,7 +51,7 @@
   grid-template-columns: 400px 80px;
 }
 .right-culomn2 {
-  margin-bottom: 110px;
+  margin-bottom: 130px;
 }
 .pic {
   margin-top: "35px";

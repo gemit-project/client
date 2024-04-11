@@ -1,6 +1,7 @@
 .first-screen {
-  width: 90vw;
-  height: 70vh;
+    display: 30%;
+  /* width: 90vw;
+  height: 70vh; */
   /* size: 80%; */
   margin-left: 80px;
 }
@@ -11,7 +12,7 @@
 .general-details {
     text-align: left;
     color: #030406;
-    font-size: 36px;
+    font-size: 34px;
     font-family: Poppins;
     font-weight: 600;
     word-wrap: break-word;
@@ -20,7 +21,7 @@
 .company-details {
   text-align: "left";
   color: #0000ff;
-  font-size: 12;
+  font-size: 12px;
   font-family: "Poppins";
   font-weight: "600";
   line-height: 2.4;
@@ -30,29 +31,35 @@
 
 .title1 {
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 28.8px;
   text-align: left;
-  margin-top: 30px;
+  margin-top: 10px;
 }
-
+.check-text{
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 100;
+  text-align: left;
+  margin-top: 10px;
+}
 .table1 {
   display: grid;
   grid-template-columns: auto auto;
 }
 
-.right-culomn1 {
-  margin-top: auto;
+/* .right-culomn1 {
+  margin-top: 10px;
 }
 
 .left-culomn1 {
-  margin-top: auto;
-}
+  margin-top: 2px;
+} */
 
 .box1 {
   display: grid;
-  grid-template-columns: 12.5vw 12.5vw 12.5vw;
+  grid-template-columns: 11.5vw 11.5vw 11.5vw;
   grid-row-gap: 1px;
   margin-top: 1px;
 }
@@ -62,6 +69,6 @@
 }
 
 .button-next1 {
-  margin-left: 160vh;
-  margin-top: 20px;
+  margin-left: 155vh;
+  margin-top: 40px;
 }
