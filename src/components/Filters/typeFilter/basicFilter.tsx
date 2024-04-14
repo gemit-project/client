@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './basicFilter.css';
 import { ABCArr, ClarityArr, IconCol, IconsArr } from '../searchIcons/constants'
 import { RxTriangleUp } from 'react-icons/rx'
@@ -9,6 +9,8 @@ import Button from '@mui/material/Button';
 export default function BasicFilter() {
     const [num1, setNum1] = React.useState('');
     const [num2, setNum2] = React.useState('');
+    const [color, setColor] = React.useState('#F3F3F3');
+
 
     const arr = [1, 2, 3, 4, 5];
     const handleChange1 = (event: SelectChangeEvent) => {
@@ -17,7 +19,10 @@ export default function BasicFilter() {
     const handleChange2 = (event: SelectChangeEvent) => {
         setNum2(event.target.value);
     };
-
+    const colorFunc = (event:IconCol) => {
+        setColor('red');
+    }
+ 
     return (
         <>
             <div className='block1Input'>
@@ -27,14 +32,14 @@ export default function BasicFilter() {
                         <Button variant="contained" size="small"
                         style={{
                             color:'black',
-                            backgroundColor:'#F3F3F3',
+                            backgroundColor:color,
                             borderWidth: '0px',
                             marginLeft: '1.5vw',
                             marginTop:'2vh',
                             flexDirection:'column',
                             boxShadow:'none'
                             
-                        }}>
+                        }} onClick={y=>colorFunc(element)}>
                             <img src={element.icon.toString()} className='img'></img>
                             {element.param}
                         </Button>
@@ -86,32 +91,34 @@ export default function BasicFilter() {
                 </div>
             </div><br />
             <div className='block12'>
-                <div className='clarity'>
-                    Clarity<br />
-                    {ClarityArr.map((element:string) => 
-                        <Button variant="contained" size="small"
-                        style={{
-                            color:'black',
-                            backgroundColor:'#F3F3F3',
-                            border: '1px solid #D200FF',
-                            marginLeft: '1.5vw',
-                            marginTop:'2vh',
-                            height: '30px',
-                            width: '5vw'
-                        }} >{element} </Button>              
-                     )}
+                {/* <div className="overflow-auto ..."> */}
+                    <div className='clarity'>
+                        Clarity<br />
+                        {ClarityArr.map((element:string) => 
+                            <Button variant="contained" size="small"
+                            style={{
+                                color:'black',
+                                backgroundColor:'#F3F3F3',
+                                border: '1px solid #D200FF',
+                                marginLeft: '1.5vw',
+                                marginTop:'2vh',
+                                height: '30px',
+                                width: '5vw',
+                                // overflowX: 'visible'
+                            }} >{element} </Button>              
+                        )}
 
-                    {/* <div className='ini'>
-                        <label className='inside'>{ClarityArr[0]}</label>
-                        <label className='inside'>{ClarityArr[1]}</label>
-                    </div>
-                    {ClarityArr.map((element: string) =>
-                        <label >
-                            <label className='inside'>{element}</label>
-                        </label>
-                    )} */}
-                </div><br />
-
+                        {/* <div className='ini'>
+                            <label className='inside'>{ClarityArr[0]}</label>
+                            <label className='inside'>{ClarityArr[1]}</label>
+                        </div>
+                        {ClarityArr.map((element: string) =>
+                            <label >
+                                <label className='inside'>{element}</label>
+                            </label>
+                        )} */}
+                    </div><br />
+                {/* </div> */}
                 <div className='color'>
                     Color<br />
                     <div className='wrap2Buttons'>

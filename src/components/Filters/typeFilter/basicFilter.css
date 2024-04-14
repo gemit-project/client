@@ -24,7 +24,7 @@
     border: 1px solid #D200FF;
     gap: 3px;
     margin-left: 3vw;
-
+    overflow-y: hidden;
 }
 
 .color {

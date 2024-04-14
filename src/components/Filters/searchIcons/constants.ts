@@ -10,7 +10,7 @@ import radiant from "./Shapes/radiant.svg";
 import marquise from "./Shapes/marquise.svg";
 import Briolette from "./Shapes/Briolette.svg";
 import Fladers from "./Shapes/Flanders.svg";
-import Haxagonal from "./Shapes/Hexagonal.svg";
+import Hexagonal from "./Shapes/Hexagonal.svg";
 import KiteShield from "./Shapes/Kite Shield.svg";
 import Pentagon from "./Shapes/Pentagon.svg";
 import Quadrillion from "./Shapes/Quadrillion.svg";
@@ -94,8 +94,8 @@ export const IconsArr: IconCol[] = [
     icon: KiteShield
   },
   {
-    param: "Haxa",
-    icon: Haxagonal
+    param: "Hexa",
+    icon: Hexagonal
   },
   {
     param: "Roase",
