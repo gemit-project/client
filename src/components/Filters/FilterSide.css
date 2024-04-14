@@ -1,0 +1,10 @@
+.side{
+    width: 54px;
+    height: 730px;
+    flex-shrink: 0;
+    border-radius: 0px 36px 36px 0px;
+    background: var(--purple---basic);
+    box-shadow: 8px 8px 16px 0px rgba(0, 0, 255, 0.15);
+  }
+  
+  
