@@ -1,6 +1,6 @@
 .side{
-    width: 54px;
-    height: 730px;
+    width: 10vh;
+    height: 100vh;
     flex-shrink: 0;
     border-radius: 0px 36px 36px 0px;
     background: var(--purple---basic);
