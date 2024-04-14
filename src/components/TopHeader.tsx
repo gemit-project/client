@@ -1,14 +1,21 @@
-import React from "react";
-import groupd from "../assets/icons/app-icons/diamond.svg"
-import groupg from "../assets/icons/app-icons/gemit.svg"
-import heart from "../assets/icons/personal-area-icons/heart.svg"
-import bell from "../assets/icons/personal-area-icons/bell.svg"
-import imag from "./icons/imag.svg";
-import circle from "../assets/icons/personal-area-icons/circle.svg"
+import React, { useEffect, useState } from "react";
+import groupd from "../assets/icons/app-icons/diamond.svg";
+import groupg from "../assets/icons/app-icons/gemit.svg";
+import heart from "../assets/icons/personal-area-icons/heart.svg";
+import bell from "../assets/icons/personal-area-icons/bell.svg";
+import circle from "../assets/icons/personal-area-icons/circle.svg";
 import "./TopHeader.css";
+import { useSelector } from "react-redux";
+import { PersonalArea } from "./PersonalArea";
 
 export const TopHeader: React.FC = () => {
-  const userName = "";
+  const currentUser = useSelector((state: any) => state.user.currentUser);
+  const userName = currentUser.data?.attributes.profile.abbreviatedName;
+  const buyerOrSeller = currentUser.data?.attributes.profile.publicData.type;
+
+  useEffect(() => {
+    console.log("current user", currentUser);
+  }, [currentUser]);
 
   return (
     <div className="top-header">
@@ -25,7 +32,7 @@ export const TopHeader: React.FC = () => {
               <img src={bell.toString()} className="bell" alt="bell"></img>
             </div>
             <div className="imag-circle">
-              <img src={imag.toString()} className="imag" alt="img"></img>
+              <PersonalArea />
               <img
                 src={circle.toString()}
                 className="circle"
@@ -36,7 +43,7 @@ export const TopHeader: React.FC = () => {
           {userName && (
             <div className="labels">
               <label className="user-name">{userName}</label>
-              <label className="buyer-or-seller">{userName}</label>
+              <label className="buyer-or-seller">{buyerOrSeller}</label>
             </div>
           )}
         </div>
