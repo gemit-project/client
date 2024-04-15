@@ -7,6 +7,7 @@ import circle from "../assets/icons/personal-area-icons/circle.svg";
 import "./TopHeader.css";
 import { useSelector } from "react-redux";
 import { PersonalArea } from "./PersonalArea";
+import { Box, Typography } from "@mui/material";
 
 export const TopHeader: React.FC = () => {
   const currentUser = useSelector((state: any) => state.user.currentUser);
@@ -41,10 +42,14 @@ export const TopHeader: React.FC = () => {
             </div>
           </div>
           {userName && (
-            <div className="labels">
-              <label className="user-name">{userName}</label>
-              <label className="buyer-or-seller">{buyerOrSeller}</label>
-            </div>
+            <Box>
+              <Typography variant="subtitle2" >
+                {userName}
+              </Typography>
+              <Typography variant="body1" >
+                {buyerOrSeller}
+              </Typography>
+            </Box>
           )}
         </div>
       </div>
