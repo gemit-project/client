@@ -1,14 +1,16 @@
-.brdr{
-width:150vw;
-height: 14vw;
-background: #F2F2FF;
-margin-top: -20px;
-border-top:1px #0000FF solid  ;
-z-index: -1;
+.brdr {
+   width: 150vw;
+   height: 14vw;
+   background: #F2F2FF;
+   margin-top: -20px;
+   border-top: 1px #0000FF solid;
+   z-index: -1;
 }
-.dmndCmp{
-   display: inline-flex; 
+
+.dmndCmp {
+   display: inline-flex;
 }
-.cktCmp{
-margin-top: -23px;
+
+.cktCmp {
+   margin-top: -23px;
 }
