@@ -26,11 +26,7 @@ export const TopHeader: React.FC = () => {
             </div>
             <div className="imag-circle">
               <img src={imag.toString()} className="imag" alt="img"></img>
-              <img
-                src={circle.toString()}
-                className="circle"
-                alt="circle"
-              ></img>
+              <img src={circle.toString()} className="circle" alt="circle"></img>
             </div>
           </div>
           {userName && (

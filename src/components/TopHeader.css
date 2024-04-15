@@ -4,18 +4,22 @@
 
 .top-header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  height: 6vw;
 }
 
 .circle {
-  margin-left: -8px;
-  margin-bottom: 28px;
+  margin-left: 40px;
+    margin-top: -3vw;
+
+  /* margin-bottom: 28px; */
+  
 }
 
 .heart-bell {
+  margin-left: 2.8vw;
   display: flex;
-  gap: 40px;
+  gap: 3.3vw;
 }
 
 .right-icons {
@@ -56,7 +60,10 @@
 }
 
 .top-header-logo {
-  margin-left: 30vh;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  margin-left: 5.6vw;
+  padding-bottom: 0.5vw;
+  font-size: 2px;
+}
+.imag{
+  margin-top: -2.3vw;
 }
