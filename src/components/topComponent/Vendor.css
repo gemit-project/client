@@ -1,0 +1,35 @@
+.vndr {
+    margin-left: 1vw;
+}
+
+.title {
+    margin-top: 2vw;
+    color: black;
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.myimg {
+    display: inline-flex;
+}
+
+.picture {
+    width: 50;
+    height: 50;
+    border-radius: 9999px;
+}
+
+.vndrname {
+    color: #363537;
+    font-size: '17px';
+    font-family: 'Poppins';
+    font-weight: 600
+}
+
+.vndrmail {
+    color: rgba(3, 4, 6, 0.70);
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: 300
+}
