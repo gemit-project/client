@@ -1,11 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Dashboard } from "../components/SideBar/Dashboard/Dashboard";
-import { Search } from "../components/SideBar/Search/Search";
-import { CheckOut } from "../components/SideBar/CheckOut";
-import { LogOut } from "../components/SideBar/LogOut";
-import { Setting } from "../components/SideBar/Setting";
-import { Chat } from "../components/SideBar/Chat";
 import { Compare } from "../components/SideBar/Search/Search/Button-Section/Compare";
 import { Reset } from "../components/SideBar/Search/Search/Button-Section/Reset";
 import { Filter } from "../components/SideBar/Search/Search/Button-Section/Filter";
@@ -14,6 +8,12 @@ import { Sort } from "../components/SideBar/Search/Search/Button-Section/Sort";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
+import { Dashboard } from "../components/Dashboard";
+import { CheckOut } from "../components/CheckOut";
+import { LogOut } from "../components/LogOut";
+import { Setting } from "../components/Setting";
+import { Chat } from "../components/Chat";
+import { Search } from "../components/SideBar/Search/Search";
 
 export const Routing: React.FC = () => {
   return (
@@ -38,19 +38,4 @@ export const Routing: React.FC = () => {
     </>
   );
 };
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<SignIn/>}/>
-        <Route path="/Register" element={<Register/>}/>
-        <Route  path="/Reset_Password/:email/:token" element={<PasswordReset/>}/>
-        <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/Search" element={<Search />} />
-        <Route path="/CheckOut" element={<CheckOut />} />
-        <Route path="/LogOut" element={<LogOut />} />
-        <Route path="/Setting" element={<Setting />} />
-        <Route path="/Chat" element={<Chat />} />
-      </Routes>
-    </>
-  );
-};
+

@@ -27,7 +27,6 @@
 .greyDiv{
     display: flex;
     height:100%;
-    width: 100%; 
     padding-top: 12px;
     flex-direction: column;
     align-items: center;
@@ -74,7 +73,6 @@
 }
 .bottomDiv{
     display: flex;
-    width:88%;
     height: 7vh;
     padding: 0px 12px;
     justify-content: space-between;

@@ -146,7 +146,6 @@ export const Search: React.FC = () => {
 
     
     useEffect(()=>{
-        debugger
         getData()
     },[])
 
@@ -156,15 +155,12 @@ export const Search: React.FC = () => {
 
     var listingId = new UUID("6603113e-e43a-4797-8c80-83b36ade2700");
     const getData = () => {
-        debugger
     sdk.listings.query({include: ["images"],
     
     }).then((res:any) => {
-        debugger
         setData(res.data.data)
         setImages(res.data.included)
     }).catch((err:any)=> {
-        debugger
     });
 
     }
@@ -202,7 +198,6 @@ return(<>
                 return null;
             })}
          {/* {images && data && images.find((img:any)=>{
-            debugger
             return  listing?.relationships?.images?.data[0]?.id?.uuid == img?.id?.uuid 
             ?
          <img className='diamondImg' 
