@@ -1,0 +1,58 @@
+.first-screen {
+  width: 90vw;
+  height: 70vh;
+  margin-left: 80px;
+}
+
+.container {
+  width: 52vw;
+}
+
+.company-details {
+  text-align: "left";
+  color: #0000ff;
+  font-size: 12;
+  font-family: "Poppins";
+  font-weight: "600";
+  line-height: 2.4;
+  letter-spacing: 0.54;
+  word-wrap: "break-word";
+}
+
+.title {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.right-culomn {
+  margin-top: auto;
+}
+
+.left-culomn {
+  margin-top: auto;
+}
+
+.box1 {
+  display: grid;
+  grid-template-columns: 12.5vw 12.5vw 12.5vw;
+  grid-row-gap: 1px;
+  margin-top: 1px;
+}
+
+.box2 {
+  margin-top: 1px;
+}
+
+.button-next {
+  margin-left: 78vw;
+  margin-top: 20px;
+}

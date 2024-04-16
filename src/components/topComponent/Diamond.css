@@ -1,0 +1,16 @@
+.sqr {
+    margin-top: 2vw;
+    margin-left: 7vw;
+    width: 4.2vw;
+    height: 4.2vw;
+    background: 'white';
+    border: 1px #0000FF solid;
+    border-radius: 4px;
+    align-content: center;
+}
+
+.dmnd {
+    width: 2.9vw;
+    height: 2.9vw;
+    margin: auto;
+}

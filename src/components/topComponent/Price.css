@@ -1,0 +1,38 @@
+.all {
+    display: inline-flex;
+}
+
+.sqre {
+    margin-left: 1vw;
+    width: 8vw;
+    height: 5.5vw;
+    margin-top: 2.2vw;
+    border-right: 1px #030406 solid;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 5px;
+}
+
+.in {
+    gap: 21px;
+    display: inline-flex;
+}
+
+.prc {
+    color: #030406;
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.cost {
+    width: 80vw;
+    color: #030406;
+    font-size: 24px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    text-transform: uppercase;
+}
