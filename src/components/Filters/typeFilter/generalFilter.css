@@ -32,3 +32,12 @@ label{
 .buttomInputs{
     margin-left: 15vw;
 }
+p{
+    margin: auto;
+}
+.pchecked{
+    margin-left: 5vi;
+}
+.punchecked{
+    margin-left: -6vi;
+}

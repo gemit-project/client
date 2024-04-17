@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './generalFilter.css';
-import Switch from '@mui/material/Switch';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
+import Switch from "react-switch";
+
 // import GeneralFilter from '../typeFilter/generalFilter';
 import Card from '@mui/material/Card';
 
@@ -12,6 +13,8 @@ export default function GeneralFilter() {
     const [num1, setNum1] = React.useState('');
     const [num2, setNum2] = React.useState('');
     const [num3, setNum3] = React.useState('');
+    //switch
+    const [checked, setChecked] = useState(false);
 
     const arr = [1, 2, 3, 4, 5];
     const handleChange1 = (event: SelectChangeEvent) => {
@@ -24,9 +27,10 @@ export default function GeneralFilter() {
         setNum3(event.target.value);
     };
 
+
     return (
         <>
-            <Card style={{backgroundColor:'#EDFAFF',display:'flex', height:'15vh', width:'78vw',marginTop:'4vh', marginLeft:'auto',marginRight:'auto'}}>
+            <Card style={{ backgroundColor: '#EDFAFF', display: 'flex', height: '15vh', width: '78vw', marginTop: '4vh', marginLeft: 'auto', marginRight: 'auto' }}>
                 <div>
                     <b style={{ marginLeft: '2vw' }}>Price</b><br />
                     <label>$ / CT</label>
@@ -53,11 +57,18 @@ export default function GeneralFilter() {
                 </div>
             </Card>
             <div className='switch'>
-                <b>Natural / Lab</b><br/>
-                <Switch defaultChecked
+                <b>Natural / Lab</b><br />
+                {/* <Switch defaultChecked
                     sx={{
                         width: 300
-                    }} />
+                    }} /> */}
+                <div style={{ margin: 'auto' }}>
+                    <Switch onChange={() => { setChecked(!checked) }} checked={checked}
+                        offHandleColor='#fff' onHandleColor='#fff' width={200} id='aaa'
+                        onColor="#00B2FF" offColor='#00B2FF'
+                        checkedIcon={<p className='pchecked'>Lab</p>} uncheckedIcon={<p className='punchecked'>Natural</p>} />
+                </div>
+
             </div>
             <div className='inputs'><br />
                 <div><b>Period</b><br />

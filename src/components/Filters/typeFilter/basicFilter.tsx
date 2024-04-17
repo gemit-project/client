@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './basicFilter.css';
 import { ABCArr, ClarityArr, IconCol, IconsArr } from '../searchIcons/constants'
 import { RxTriangleUp } from 'react-icons/rx'
@@ -9,8 +9,15 @@ import Button from '@mui/material/Button';
 export default function BasicFilter() {
     const [num1, setNum1] = React.useState('');
     const [num2, setNum2] = React.useState('');
-    const [color, setColor] = React.useState('#F3F3F3');
+    const [color, setColor] = useState('');
+    const [ch, setCh] = useState(true);
+    const style1 = {
+        width: '9vw',
+        color: 'black',
+        height: '30px'
+    };
 
+    //   <div style={style}></div>
 
     const arr = [1, 2, 3, 4, 5];
     const handleChange1 = (event: SelectChangeEvent) => {
@@ -19,27 +26,54 @@ export default function BasicFilter() {
     const handleChange2 = (event: SelectChangeEvent) => {
         setNum2(event.target.value);
     };
-    const colorFunc = (event:IconCol) => {
-        setColor('red');
+    const colorFunc = (event: IconCol, i: number) => {       
+        // setColor('blue');
+        setCurrentShapes(f[i].checked = ch)
     }
- 
+    const colorFunc2 = (event: IconCol, i: number) => {       
+        setColor('blue');
+        colorFunc(event,i)
+        return color;
+    }
+    const colorFunc3 = () => {       
+        setColor('blue');
+        // colorFunc(event,i)
+        return color;
+    }
+    // const funci = () =>{
+    //     setCurrentShapes(f);
+    //     setColor('blue');
+    //     return color;
+    // }
+
+    const f: any = IconsArr.map(i => { return { ...i, checked: false } })
+
+    const [currentShapes, setCurrentShapes] = useState(f)
+
+    // useEffect(() => {
+    //     alert('bgfvdcf')
+    //   }, [color]);
+
     return (
         <>
             <div className='block1Input'>
                 <div className='shape'>
                     Shape<br />
-                    {IconsArr.map((element: IconCol) =>
+                    {/*כפתור חץ
+                     <button><RxTriangleUp /></button> */}
+                    {f.map((element: IconCol, i: number) =>
                         <Button variant="contained" size="small"
-                        style={{
-                            color:'black',
-                            backgroundColor:color,
-                            borderWidth: '0px',
-                            marginLeft: '1.5vw',
-                            marginTop:'2vh',
-                            flexDirection:'column',
-                            boxShadow:'none'
-                            
-                        }} onClick={y=>colorFunc(element)}>
+                            style={{
+                                color: 'black',
+                                // background: currentShapes.checked ? colorFunc(element,i) : '#F3F3F3',
+                                backgroundColor: currentShapes.checked ? colorFunc3() : '#F3F3F3',
+                                borderWidth: '0px',
+                                marginLeft: '1.5vw',
+                                marginTop: '2vh',
+                                flexDirection: 'column',
+                                boxShadow: 'none'
+
+                            }} onClick={y => colorFunc2(element, i)}>
                             <img src={element.icon.toString()} className='img'></img>
                             {element.param}
                         </Button>
@@ -52,12 +86,7 @@ export default function BasicFilter() {
                         onChange={handleChange1}
                         displayEmpty
                         inputProps={{ 'aria-label': 'Without label' }}
-                        style={{
-                            width: '9vw',
-                            color: 'black',
-                            //צבע מסגרת לא עובד
-                            height: '30px'
-                        }}
+                        style={style1}
                     >
                         <MenuItem value="">
                             <em>any</em>
@@ -66,7 +95,7 @@ export default function BasicFilter() {
                             <MenuItem value={element}>{element}</MenuItem>
                         )}
                     </Select>
-                    <label style={{marginLeft:'1vw'}}>to</label>
+                    <label style={{ marginLeft: '1vw' }}>to</label>
                     <Select
                         value={num2}
                         onChange={handleChange2}
@@ -75,10 +104,8 @@ export default function BasicFilter() {
                         style={{
                             width: '9vw',
                             color: 'black',
-                            //צבע מסגרת לא עובד
-                            border: 'red',
                             height: '30px',
-                            marginLeft:'1vw'
+                            marginLeft: '1vw'
                         }}
                     >
                         <MenuItem value="">
@@ -92,23 +119,23 @@ export default function BasicFilter() {
             </div><br />
             <div className='block12'>
                 {/* <div className="overflow-auto ..."> */}
-                    <div className='clarity'>
-                        Clarity<br />
-                        {ClarityArr.map((element:string) => 
-                            <Button variant="contained" size="small"
+                <div className='clarity'>
+                    Clarity<br />
+                    {ClarityArr.map((element: string) =>
+                        <Button variant="contained" size="small"
                             style={{
-                                color:'black',
-                                backgroundColor:'#F3F3F3',
+                                color: 'black',
+                                backgroundColor: '#F3F3F3',
                                 border: '1px solid #D200FF',
                                 marginLeft: '1.5vw',
-                                marginTop:'2vh',
+                                marginTop: '2vh',
                                 height: '30px',
                                 width: '5vw',
                                 // overflowX: 'visible'
-                            }} >{element} </Button>              
-                        )}
+                            }} >{element} </Button>
+                    )}
 
-                        {/* <div className='ini'>
+                    {/* <div className='ini'>
                             <label className='inside'>{ClarityArr[0]}</label>
                             <label className='inside'>{ClarityArr[1]}</label>
                         </div>
@@ -117,7 +144,7 @@ export default function BasicFilter() {
                                 <label className='inside'>{element}</label>
                             </label>
                         )} */}
-                    </div><br />
+                </div><br />
                 {/* </div> */}
                 <div className='color'>
                     Color<br />
@@ -128,15 +155,15 @@ export default function BasicFilter() {
                     {ABCArr.map((element: string) =>
                         // <Button >{element} </Button>
                         <Button variant="contained" size="small"
-                        style={{
-                            color:'black',
-                            backgroundColor:'#F3F3F3',
-                            border: '1px solid #D200FF',
-                            marginLeft: '1.5vw',
-                            marginTop:'2vh',
-                            height: '25px',
-                            width: '4vw'
-                        }} >{element}</Button>
+                            style={{
+                                color: 'black',
+                                backgroundColor: '#F3F3F3',
+                                border: '1px solid #D200FF',
+                                marginLeft: '1.5vw',
+                                marginTop: '2vh',
+                                height: '25px',
+                                width: '4vw'
+                            }} >{element}</Button>
 
                     )}
                     <button><RxTriangleUp /></button>
