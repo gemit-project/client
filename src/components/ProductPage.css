@@ -228,6 +228,7 @@ b {
   line-height: 120%; /* 21.6px */
   text-transform: uppercase;
 }
+
 .tippp {
   color: var(--black, #030406);
   font-family: "Poppins";
@@ -301,4 +302,28 @@ b {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+}
+.secutery-Protection{
+  display: flex;
+  width: 582px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.secutery-title{
+  color: #000;
+ width: 456px;
+;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+  text-transform: uppercase;
+}
+.secutery{
+    display: flex;
+width: 540px;
+align-items: center;
+gap: 47px;
 }
