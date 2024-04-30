@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductPage.css";
 import { sdk } from "../config/sharetribeSDK.config";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   IconButton,
   Typography,
 } from "@mui/material";
@@ -18,28 +14,21 @@ import arrowDount from "../assets/icons/product-icons/Group 1652.svg";
 import fullLove from "../assets/icons/product-icons/fullLike.png";
 import emptyLove from "../assets/icons/product-icons/EmptyLike.png";
 import { DiamodsFeaters } from "./Diamond’sFeatures";
-import shipping from "../assets/icons/product-icons/shipping.svg";
-import secutery from "../assets/icons/product-icons/secutery.svg"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 
 const { UUID } = require("sharetribe-flex-sdk").types;
 
 export const ProductPage = () => {
   const navigation = useNavigate();
   const params = useParams();
-  // const dispatch = useDispatch();
   const currentUser = useSelector((state: any) => state.user.currentUser);
-  // const imagges = useSelector((state: any) => state.user.images);
-  const [imgsUuid, setImgsUuid] = useState<
-    Array<{ id: typeof UUID; type: "" }>
-  >([]);
+  const [imgsUuid, setImgsUuid] = useState<Array<{ id: typeof UUID; type: "" }>>([]);
   const [imgsUrl, setImgsUrl] = useState<Array<string>>([]);
   const [image, setImgList] = useState<Array<any>>([]);
-  // const [file, setFile] = useState<File | undefined | null>();
   const [selected, setSelected] = useState<string>("");
   const [isClick, setClick] = useState<boolean>(false);
   useEffect(() => {
-    fff();
+    getListingsImages();
   }, []);
   useEffect(() => {
     imgsUuid.forEach((i) => {
@@ -53,9 +42,8 @@ export const ProductPage = () => {
       });
     });
   }, [imgsUuid, image]);
-  const fff = async () => {
+  const getListingsImages = async () => {
     sdk.listings.query({ include: ["images"] }).then((res: any) => {
-      const urls: string[] = [];
       const uuid: string | undefined = params["uuid"];
       res.data.data.forEach((ele: any) => {
         if (uuid == ele.id.uuid) {
@@ -226,124 +214,7 @@ export const ProductPage = () => {
                 tristique sollicitudin nibh. Vitae proin sagittis nisl rhoncus
                 mattis rhoncus urna neque.
               </p>
-              <div className="secutery">
-                <Typography className="secutery-title">
-                  <b>Shipping options</b>
-                </Typography>
-                <img src={shipping}></img>
-              </div>
-              <div style={{width: "540px"}}>
- <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                      Secure Courier Services
-                </AccordionSummary>
-                <AccordionDetails>
-                 bla bla bla 
-                 ????????????
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                      Private Jet Cargo Services
-                </AccordionSummary>
-                <AccordionDetails>
-                 bla bla bla 
-                 ????????????
-                </AccordionDetails>
-              </Accordion><Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                      Air Freight
-                </AccordionSummary>
-                <AccordionDetails>
-                 bla bla bla 
-                 ????????????
-                </AccordionDetails>
-              </Accordion>
-              </div>
-              <div className="secutery">
-                <Typography className="secutery-title">
-                  <b>Inssurance </b>
-                </Typography>
-                <img src={secutery}></img>
-              </div>
-              <div style={{width: "540px"}}>
-                 <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                      All-Risk Insurance
-                </AccordionSummary>
-                <AccordionDetails>
-                 bla bla bla 
-                 ????????????
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                     Valuable Goods Insurance
-                </AccordionSummary>
-                <AccordionDetails>
-                 bla bla bla 
-                 ????????????
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                      Declared Value Insurance
-                </AccordionSummary>
-                <AccordionDetails>
-                 bla bla bla 
-                 ????????????
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                      Parcel Insurance
-                </AccordionSummary>
-                <AccordionDetails>
-                 bla bla bla 
-                 ????????????
-                </AccordionDetails>
-              </Accordion> <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                      Transit Insurance
-                </AccordionSummary>
-                <AccordionDetails>
-                 bla bla bla 
-                 ????????????
-                </AccordionDetails>
-              </Accordion>
-              </div>
+          
             </div>
           </div>
         </div>
