@@ -7,6 +7,7 @@ import diamond5 from "../assets/diamonds/5.svg";
 import diamond6 from "../assets/diamonds/6.svg";
 import diamond7 from "../assets/diamonds/7.svg";
 import "./Search.css";
+import { Outlet, useNavigate } from "react-router-dom";
 
 
 const Diamonds = [
@@ -134,6 +135,8 @@ const SideButton = [
 ];
 
 export const Search: React.FC = () => {
+  const navigation=useNavigate();
+
   return (
     <>
       <div className="scrollBar">
@@ -165,6 +168,7 @@ export const Search: React.FC = () => {
                     className="diamondImg"
                     src={diamond.dianomdImg}
                     alt="diamond-icon"
+                    onClick={()=>  navigation("/Product/661d00b2-a109-4639-ad41-73986623d87e")}
                   />
                 </div>
                 <div className="bottom-div">
@@ -175,6 +179,7 @@ export const Search: React.FC = () => {
             ))}
           </div>
         </section>
+        <Outlet></Outlet>
       </div>
     </>
   );
