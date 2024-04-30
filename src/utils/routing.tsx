@@ -15,6 +15,7 @@ import { Sort } from "../components/pages/search/Actions/Sort";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
+import { ProductPage } from "../components/ProductPage";
 import { ButtomSecondScreen } from "../components/paymentSecondscreen/ButtomSecondScreen";
 import { ButtomFirstScreen } from "../components/paymentFirstscreen/ButtomFirstScreen";
 import { ShippingAndInsurance } from "../components/shipping&insurance";
@@ -49,6 +50,7 @@ export const Routing: React.FC = () => {
         <Route path="/LogOut" element={<LogOut />} />
         <Route path="/Setting" element={<Setting />} />
         <Route path="/Chat" element={<Chat />} />
+        <Route  path="/Product/:uuid" element={<ProductPage/>}/>
         <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
         <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
       </Routes>

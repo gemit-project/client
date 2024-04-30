@@ -8,6 +8,7 @@
   align-items: center;
   width:100%;
   flex-shrink: 0;
+  background: #F3F3F3 ;
 }
 
 .circle {
