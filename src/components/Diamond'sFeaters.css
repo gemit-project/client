@@ -1,0 +1,102 @@
+.frame2012 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 94px;
+  margin-top: 28px;
+}
+.fetures {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frame2398 {
+  display: flex;
+  width: 650px;
+  gap: 18px;
+}
+.frame2397 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  width: max-content;
+}
+.featers {
+  width: 516px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 36px */
+  text-transform: uppercase;
+}
+.buto {
+  height: 40px;
+  border-radius: 8px;
+  background: var(--light-grey, #ccc);
+  color: #000;
+  width: 258px;
+}
+.bbb {
+  display: flex;
+  align-items: flex-end;
+}
+.tAndBut {
+  display: flex;
+  gap: 100px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.bigchart1 {
+  display: flex;
+  flex-direction: column;
+}
+.headerChart1 {
+  padding: 10px;
+  height: 50px;
+  width: 110px;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid var(--black, #030406);
+  background: var(--purple---basic, #d200ff);
+  text-transform: capitalize;
+}
+.bigchart2 {
+  display: flex;
+  flex-direction: column;
+}
+.headerChart2 {
+  text-align: center;
+  padding: 10px;
+  height: 50px;
+  width: 110px;
+  text-transform: capitalize;
+
+  color: white;
+  border-bottom: 1px solid var(--black, #030406);
+  background: var(--light-purple-advanced, #f0f);
+}
+.featersChart {
+  display: flex;
+  gap: 60px;
+  margin-top: 20px;
+}
+.props {
+  color: var(--black, #030406);
+  text-align: center;
+  padding: 15px;
+  height: 50px;
+  width: 200px;
+  font-family: Assistant;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  border-bottom: 1px solid var(--black, #030406);
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--black, #030406);
+  background: #f8f8f8;
+}

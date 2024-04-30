@@ -1,8 +1,6 @@
 .page {
   height: 85vh;
-  /* width: 97vw; */
   overflow-y: scroll;
-  /* background-color: aqua; */
 }
 .typografy {
   width: 240px;
@@ -20,7 +18,6 @@
   width: 850px;
   margin-top: 20px;
   margin-left: 130px;
-  /* margin-right: 83px; */
   margin-bottom: 274px;
   gap: 24px;
   border-radius: 16px;
@@ -101,13 +98,7 @@
   border-radius: 8px;
   background: var(--Dark-grey, #e6e6e6);
 }
-/* .frame2005 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 106px;
-  align-self: stretch;
-} */
+
 .frame2396 {
   display: flex;
   align-items: flex-start;
@@ -193,10 +184,8 @@ b {
   align-self: stretch;
   border-radius: 8px;
   background: rgba(0, 0, 255, 0.8);
-
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 255, 0.2);
   color: #fff;
-
   text-align: center;
   font-family: "Assistant";
   font-size: 20px;
@@ -213,7 +202,6 @@ b {
 }
 .country {
   color: #000;
-
   font-family: "Poppins";
   font-size: 12px;
   font-style: normal;
@@ -307,69 +295,10 @@ b {
   height: 12.6px;
   flex-shrink: 0;
 }
-
 .addwish {
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
-}
-.frame2012 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 94px;
-  /* background-color: blue; */
-margin-top: 28px;
-}
-.frame2010{
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 24px;
-/* background-color: rgb(202, 130, 14); */
-
-}
-.fetures{
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 34px;
-/* background-color: rgb(72, 188, 10); */
-}
-.frame2398{
-    display: flex;
-    width: 650px;
-    align-items: flex-end;
-    gap:18px;
-}
-.frame2397{
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 18px;
-flex: 1 0 0;
-}
-.featers{
-  width: fixed(516px);
-color: #000;
-
-font-family: Poppins;
-font-size: 30px;
-font-style: normal;
-font-weight: 500;
-line-height: 120%; /* 36px */
-text-transform: uppercase;
-}
-.buto{
-  display: flex;
-width: 458px;
-height: 40px;
-padding: 10px;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
-border-radius: 8px;
-background: var(--light-grey, #CCC);
 }
