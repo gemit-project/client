@@ -9,8 +9,8 @@ import back from "../assets/icons/product-icons/back.svg";
 import lock from "../assets/icons/product-icons/Vector.svg";
 import madalya from "../assets/icons/product-icons/Madalya.svg";
 import arrowDount from "../assets/icons/product-icons/Group 1652.svg";
-import fullLove from "../assets/icons/personal-area-icons/heart.svg";
-import emptyLove from "../assets/icons/product-icons/EmptyLove.svg";
+import fullLove from "../assets/icons/product-icons/fullLike.png";
+import emptyLove from "../assets/icons/product-icons/EmptyLike.png";
 import { DiamodsFeaters } from "./Diamond’sFeatures";
 
 const { UUID } = require("sharetribe-flex-sdk").types;
@@ -94,7 +94,7 @@ export const ProductPage = () => {
               ></img>
               <div className="addwish">
                 <IconButton onClick={() => setClick((isClick) => !isClick)}>
-                  <img src={isClick ? fullLove : emptyLove}></img>
+                  <img style={{width:"30px",height:"30px"}} src={isClick ? fullLove : emptyLove}></img>
                 </IconButton>
                 <Typography>Add To WishList</Typography>
               </div>
@@ -181,7 +181,6 @@ export const ProductPage = () => {
                 <Typography className="tip">
                   <b>Vendor’s Notes</b>
                 </Typography>
-                <img src={lock}></img>
               </div>
               <p className="p">
                 Ullamcorper eget nulla facilisi etiam dignissim diam quis.
@@ -191,10 +190,16 @@ export const ProductPage = () => {
                 justo nec ultrices dui sapien. Gravida dictum fusce ut placerat
                 orci nulla. Eget aliquet nibh...
               </p>
-              <img src={arrowDount}></img>
+             <img src={arrowDount}></img>
               <button className="button-checkout">Check-Out</button>
             </div>
-          </div>
+            <div className="secutery-Protection">
+              <div className="secutery">
+                <Typography className="secutery-title" ><b>secutery&Protection</b></Typography>
+                <img src={lock}></img>
+              </div>
+               </div>
+          </div> 
         </div>
 
         <Outlet></Outlet>
