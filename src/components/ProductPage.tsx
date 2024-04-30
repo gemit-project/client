@@ -19,6 +19,7 @@ import fullLove from "../assets/icons/product-icons/fullLike.png";
 import emptyLove from "../assets/icons/product-icons/EmptyLike.png";
 import { DiamodsFeaters } from "./Diamond’sFeatures";
 import shipping from "../assets/icons/product-icons/shipping.svg";
+import secutery from "../assets/icons/product-icons/secutery.svg"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const { UUID } = require("sharetribe-flex-sdk").types;
@@ -271,7 +272,78 @@ export const ProductPage = () => {
                 </AccordionDetails>
               </Accordion>
               </div>
-             
+              <div className="secutery">
+                <Typography className="secutery-title">
+                  <b>Inssurance </b>
+                </Typography>
+                <img src={secutery}></img>
+              </div>
+              <div style={{width: "540px"}}>
+                 <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                >
+                      All-Risk Insurance
+                </AccordionSummary>
+                <AccordionDetails>
+                 bla bla bla 
+                 ????????????
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                >
+                     Valuable Goods Insurance
+                </AccordionSummary>
+                <AccordionDetails>
+                 bla bla bla 
+                 ????????????
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                >
+                      Declared Value Insurance
+                </AccordionSummary>
+                <AccordionDetails>
+                 bla bla bla 
+                 ????????????
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                >
+                      Parcel Insurance
+                </AccordionSummary>
+                <AccordionDetails>
+                 bla bla bla 
+                 ????????????
+                </AccordionDetails>
+              </Accordion> <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                >
+                      Transit Insurance
+                </AccordionSummary>
+                <AccordionDetails>
+                 bla bla bla 
+                 ????????????
+                </AccordionDetails>
+              </Accordion>
+              </div>
             </div>
           </div>
         </div>
