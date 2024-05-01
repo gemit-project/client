@@ -5,6 +5,7 @@
     align-items: flex-start;
     gap: 1vw;
     flex-direction: row;
+    margin-left: 3vw;
 }
 .leftDiv{
     margin-left: 6vw;
@@ -18,7 +19,7 @@
     font-size: 1.5vw;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; /* 24px */
+    line-height: 120%;
 }
 .compare{
     border-radius: 8px;
