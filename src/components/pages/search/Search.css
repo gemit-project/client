@@ -1,11 +1,11 @@
 .scrollBar{
     scrollbar-color: #b6f0fc #ffffff;
-    width: 96vw;
     overflow: scroll;
     overflow-x: hidden;
 }
 .section{
     height: 100vh;
+    margin-left: 3vw;
 }
 .allView{
     width: 100%;
