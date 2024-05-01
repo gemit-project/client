@@ -1,8 +1,12 @@
 import { BaseScreen } from "./components/base-screen";
 import { BrowserRouter } from "react-router-dom";
 import "./output.css";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setCurrentUser } from "./app/slices/UserSlice";
 
 function App() {
+
   return (
     <div>
       <BrowserRouter>
