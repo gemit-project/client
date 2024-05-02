@@ -1,12 +1,12 @@
 .all {
   display: inline-flex;
+  background-color: transparent;
 }
 
 .squarePrice {
-  margin-left: 1vw;
   width: 8vw;
   height: 5.5vw;
-  margin-top: 2.2vw;
+  margin-top: -0.3vw;
   border-right: 1px #030406 solid;
   flex-direction: column;
   justify-content: flex-start;

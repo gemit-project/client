@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import boldCircle from "./icons/boldCircle.svg";
-import simpleCircle from "./icons/simpleCircle.svg";
+import boldCircle from "../../assets/icons/Checkout-icons/boldCircle.svg"
+import simpleCircle from "../../assets/icons/Checkout-icons/simpleCircle.svg"
 
 export const CheckOut: React.FC = () => {
 

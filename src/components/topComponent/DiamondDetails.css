@@ -1,0 +1,11 @@
+.detail {
+  width: 15vw;
+  height: 8vw;
+  color: #030406;
+  font-size: 23px;
+  font-family: "Poppins";
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 1.9vw;
+  margin-left: 2vw;
+}
