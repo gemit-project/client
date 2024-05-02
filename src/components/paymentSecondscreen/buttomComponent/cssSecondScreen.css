@@ -1,6 +1,5 @@
 .second-screen {
   margin-left: 50px;
-
 }
 .shipping {
   text-align: left;
@@ -11,7 +10,6 @@
   word-wrap: break-word;
 }
 .table2 {
-  /* margin-top: 80px; */
   display: grid;
   grid-template-columns: 50vw 50vw;
   column-gap: 345;
@@ -28,17 +26,14 @@
   text-align: left;
   margin-top: 10px;
 }
-
 .up {
   display: inline-flex;
 }
-
 .buttons {
   display: inline-flex;
   margin-left: 1000px;
   margin-top: 50px;
 }
-
 .button-skip {
   margin-left: 26vw;
   margin-top: 10px;

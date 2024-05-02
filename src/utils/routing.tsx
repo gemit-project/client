@@ -9,9 +9,9 @@ import { Chat } from "../components/Chat";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
-import { Buttom } from "../components/paymentFirstscreen/buttomComponent/buttom";
-import { FundingOptions } from "../components/paymentThirdscreen/FundingOptions";
-import { ButtomSC } from "../components/paymentSecondscreen/buttomComponent/buttomSC";
+import { Buttom } from "../components/paymentFirstscreen/buttomComponent/payment-first-buttom";
+import { ButtomSC } from "../components/paymentSecondscreen/buttomComponent/payment-second-buttom";
+import FundingOptions from "../components/paymentThirdscreen/FundingOptions";
 
 export const Routing: React.FC = () => {
   return (
