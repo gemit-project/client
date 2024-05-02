@@ -1,17 +1,15 @@
 import { Checkbox, FormControlLabel, MenuItem, Select } from '@mui/material'
 import React from 'react'
-import './cssSecondScreen.css'
-
+import './checkoutSecondScreen.css'
 type mapSSProps = {
   name: string;
   list: Array<object>;
   icon:string;
 }
 export const MapSS: React.FC<mapSSProps> = ({name,list,icon}) => {
-
   return (
     <div className='container2'>
-      <div className='first-line'><div className='title2'>{name}</div> <img alt="" style={{marginTop:'35px',marginLeft:'20px'}}  src={icon}></img></div>
+      <div className='first-line'><div className='title2'>{name}</div> <img alt="" style={{marginTop:'35px',marginLeft:'50px'}}  src={icon}></img></div>
       <div>
         {
           list.map((l: any) => (

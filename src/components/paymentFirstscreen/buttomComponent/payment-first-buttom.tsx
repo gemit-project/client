@@ -1,18 +1,14 @@
 import React from 'react'
 import { Map } from './mapComp-payment-first'
 import { Button } from '@mui/material'
-
 import {  Outlet,Link } from "react-router-dom";
-import './cssFirstScreen.css'
-
+import './checkoutFirstScreen.css'
 export const Buttom: React.FC = () => {
-
   const personalDetails = [ 'First name','Second name', 'Phone number', 'Email Addreess'];
   const companyDetails = ['Company Details', 'Company ID','Company ID Desc'];
   const contactDetails = ['Phone number','Email Addreess'];
   const address = [ 'City','State','Company name','Street','Number','Zip code'];
   const shippingAddress = [ 'City','State','Company name','Street','Number','Zip code'];
-
   return (
     <div className='first-screen'>
       <div className='general-details'>General Details</div>

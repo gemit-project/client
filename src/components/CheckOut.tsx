@@ -1,4 +1,4 @@
-import { Buttom } from "./paymentFirstscreen/buttomComponent/buttom";
+import { Buttom } from "./paymentFirstscreen/buttomComponent/payment-first-buttom";
 
 
 export const CheckOut: React.FC = () => {

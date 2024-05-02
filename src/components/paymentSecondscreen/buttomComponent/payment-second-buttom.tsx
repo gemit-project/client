@@ -3,13 +3,11 @@ import React from "react";
 import { MapSS } from "./mapComp-payment-second";
 import truck from "../../../assets/checkoutIcons/truck.svg";
 import vi from "../../../assets/checkoutIcons/vi.svg";
-import "./cssSecondScreen.css";
+import "./checkoutSecondScreen.css";
 import {Outlet, Link } from "react-router-dom";
 import {  useNavigate } from 'react-router';
-
 export const ButtomSC: React.FC = () => {
   let navigate = useNavigate()
-
   const ShippingOptions = [
     {
       text: "Secure Courier Services",
@@ -21,7 +19,6 @@ export const ButtomSC: React.FC = () => {
       text: "Private Jet Cargo Services",
     },
   ];
-
   const Inssurance = [
     {
       text: "All-Risk Insurance",
@@ -41,7 +38,7 @@ export const ButtomSC: React.FC = () => {
   ];
   return (
     <div className="second-screen">
-      <div className="up">
+      <div className="up-line">
         <div className="shipping">Shipping & Insurance</div>
         <div className="button-skip">
           <Button variant="contained"sx={{width: "9vw",backgroundColor: "rgba(204, 204, 204, 0.8)",color: "blue",border: " 1px solid rgba(0, 0, 255, 1)", }}> skip</Button>
@@ -65,6 +62,5 @@ export const ButtomSC: React.FC = () => {
       </div>
     <Outlet/>
     </div>
-  );
-    
+  ); 
 };
