@@ -2,7 +2,7 @@
   height: 85vh;
   overflow-y: scroll;
 }
-.typografy {
+.title-back {
   width: 240px;
   flex-shrink: 0;
   color: var(--black, #030406);
@@ -53,21 +53,20 @@
   flex-shrink: 0;
   background: #707070aa;
 }
-.frame2005 {
+.deatails {
   display: flex;
   width: 541px;
   flex-direction: column;
   margin-top: 20px;
   margin-left: 80px;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 38px;
-  background-color: rgba(127, 255, 212, 0.341);
 }
 .div-details-images {
   display: flex;
   gap: 38px;
 }
-.frame2003 {
+.certificates-country {
   display: flex;
   align-items: flex-start;
   gap: 240px;
@@ -117,7 +116,7 @@
   justify-content: center;
   align-items: flex-start;
 }
-.frame2395 {
+.price-chat {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +125,7 @@
   border-radius: 8px;
   background: var(--Dark-grey, #e6e6e6);
 }
-.but {
+.price , .chat{
   display: flex;
   width: 192px;
   height: 40px;
@@ -135,10 +134,8 @@
   align-items: center;
   border-radius: 8px;
   background: rgba(0, 0, 255, 0.8);
-
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 255, 0.2);
   color: #fff;
-
   text-align: center;
   font-family: "Assistant";
   font-size: 20px;
@@ -146,13 +143,13 @@
   font-weight: 700;
   line-height: 120%;
 }
-.frame1985 {
+.notes {
   display: flex;
   width: 540px;
   align-items: center;
   gap: 47px;
 }
-.tip {
+.vendors-Notes {
   width: 456px;
   flex-shrink: 0;
   flex-shrink: 0;
@@ -168,7 +165,7 @@ b {
 .p {
   align-self: stretch;
   color: #000;
-  font-family: "Poppins";
+  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -193,7 +190,7 @@ b {
   font-weight: 700;
   line-height: 120%;
 }
-.frame1936 {
+.country-div {
   display: flex;
   width: 84px;
   flex-direction: column;
@@ -228,7 +225,6 @@ b {
   line-height: 120%; /* 21.6px */
   text-transform: uppercase;
 }
-
 .tippp {
   color: var(--black, #030406);
   font-family: "Poppins";
@@ -268,7 +264,6 @@ b {
   color: var(--black, #030406);
   text-align: center;
   font-family: "Poppins";
-
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

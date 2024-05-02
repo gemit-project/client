@@ -1,42 +1,69 @@
-import { Typography } from "@mui/material";
-import React from "react";
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
 import "./Diamond'sFeaters.css";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import card from "../assets/icons/product-icons/card.svg";
+import american from "../assets/icons/product-icons/american.svg";
+import visa from "../assets/icons/product-icons/visa.svg";
+
+const cards=[card,american,visa];
 const propsCol1 = ["Shape", "SIZE", "Color", "Clarity"];
 const propsCol2 = ["CUT", "polish", "Symmetry", "Fluorescence"];
 
 export const DiamodsFeaters = () => {
   return (
     <>
-      <div className="frame2012">
-        <div className="fetures">
-          <div className="frame2397">
-            <Typography className="featers">Diamond’s Features</Typography>
+      <div className="diamondsFeatures">
+        <div>
+        <div className="diamondsFeatures-header">
+          <div >
+            <Typography className="first-header"><b>Diamond’s Features</b></Typography>
           </div>
-          <div className="tAndBut">
-            <Typography sx={{ width: "300px" }}>Diamond #125-536</Typography>
-            <div className="bbb">
-              <button className="buto">Full GIA Report</button>
+          <div className="subTitle-button">
+            <Typography sx={{ width: "300px"}}>Diamond #125-536</Typography>
+            <div >
+              <button className="Full-GIA-Report">Full GIA Report</button>
             </div>
           </div>
         </div>
-      </div>
-      <div className="featersChart">
-        <div className="bigchart1">
+       <div className="featersCharts">
+        <div className="right-chart">
           {propsCol1.map((p) => (
             <div style={{ display: "flex" }}>
-              <div className="headerChart1">{p}</div>
+              <div className="right-header-chart">{p}</div>
               <div className="props">cProduct.{p}</div>
             </div>
           ))}
         </div>
-        <div className="bigchart2">
+        <div className="left-chart">
           {propsCol2.map((p) => (
             <div style={{ display: "flex" }}>
-              <div className="headerChart2">{p}</div>
+              <div className="left-header-chart">{p}</div>
               <div className="props">cProduct.{p}</div>
             </div>
           ))}
         </div>
+        </div>
+       </div>
+        <div className="funding-information-div">
+           <Typography className="funding-information-header"><b>Funding information</b></Typography>
+           <div>{cards.map((c)=>(
+            <div style={{ width:"650px" ,display:"flex" ,gap:"2px" }}>
+              <img className="card-img" src={c} />
+              <div className="card-company">Company Name</div>
+              <Accordion sx={{flex: "50%"}}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              Condition
+            </AccordionSummary>
+            <AccordionDetails>bla bla bla ????????????</AccordionDetails>
+          </Accordion>  
+                    </div>
+           ))}
+           </div>
+          </div>
       </div>
     </>
   );
