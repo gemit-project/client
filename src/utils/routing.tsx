@@ -15,7 +15,7 @@ import { Payment } from "@mui/icons-material";
 import { Confirmation } from "../components/confirmation";
 import { FundingOptions } from "../components/fundingOptions";
 import { Buttom } from "../components/paymentFirstscreen/buttomComponent/buttom";
-import { Top } from "../components/topComponent/tc";
+import { Top } from "../components/topComponent/TopCheckout";
 
 export const Routing: React.FC = () => {
   return (

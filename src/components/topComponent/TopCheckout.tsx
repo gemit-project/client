@@ -1,5 +1,5 @@
 import React from "react";
-import { Diamond } from "./diamond";
+import { Diamond } from "./Diamond";
 import './TopCheckout.css';
 import { CheckOut } from "../CheckOut";
 import { DiamondDetails } from "./DiamondDetails";
