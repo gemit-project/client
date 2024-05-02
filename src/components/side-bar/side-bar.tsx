@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./side-bar.css";
-import Dashoard from "../../assets/icons/Dashoard.svg";
-import search from "../../assets/icons/search.svg";
-import checkOut from "../../assets/icons/check-out.svg";
-import chat from "../../assets/icons/chat.svg";
-import setting from "../../assets/icons/settings.svg";
-import logOut from "../../assets/icons/log-out.svg";
-import logo from "../../assets/logo/logo.svg";
+import Dashoard from "../../assets/icons/side-bar-icons/dashoard.svg";
+import search from "../../assets/icons/side-bar-icons/search.svg";
+import checkOut from "../../assets/icons/side-bar-icons/check-out.svg";
+import chat from "../../assets/icons/side-bar-icons/chat.svg";
+import setting from "../../assets/icons/side-bar-icons/settings.svg";
+import logOut from "../../assets/icons/side-bar-icons/log-out.svg";
+import logo from "../../assets/icons/side-bar-icons/logo/logo.svg";
 import { Outlet, Link, useLocation } from "react-router-dom";
 
 export const SideBar = () => {

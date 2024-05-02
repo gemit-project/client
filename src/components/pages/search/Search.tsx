@@ -1,8 +1,8 @@
 import './Search.css';
 import { Button_Section } from './button-section/Button-Section';
-import love from '../../../assets/Like.svg';
+import love from '../../../assets/icons/product-icons/Like.svg';
 import RedLove from '../../../assets/LikeRed.png';
-import box from '../../../assets/box.svg';
+import box from '../../../assets/icons/product-icons/box.svg';
 import { sdk } from '../../../config/sharetribeSDK.config';
 import { useEffect, useState } from 'react';
 
