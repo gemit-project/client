@@ -4,7 +4,7 @@
   align-items: flex-start;
   gap: 94px;
   margin-top: 28px;
-  width:650px;
+  width: 650px;
 }
 .diamondsFeatures-header {
   display: flex;
@@ -64,7 +64,7 @@
   background: var(--light-purple-advanced, #f0f);
 }
 .featersCharts {
- width: 650px;
+  width: 650px;
   display: flex;
   gap: 35px;
   margin-top: 20px;
@@ -85,41 +85,41 @@
   border-bottom: 1px solid var(--black, #030406);
   background: #f8f8f8;
 }
-.funding-information-div{
+.funding-information-div {
   display: flex;
- flex-direction:column ;
- width: 650px;
-  gap:24px;
+  flex-direction: column;
+  width: 650px;
+  gap: 24px;
 }
-.funding-information-header{
+.funding-information-header {
   width: 516px;
-color: #000;
-font-family: "Poppins";
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 120%; /* 28.8px */
-text-transform: uppercase;
+  color: #000;
+  font-family: "Poppins";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 28.8px */
+  text-transform: uppercase;
 }
-.card-img{
+.card-img {
   display: flex;
-height: 48px;
-padding: 16px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-border-bottom: 1px solid var(--black, #030406);
-flex: 5%;
-background: #F8F8F8;
+  height: 48px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--black, #030406);
+  flex: 5%;
+  background: #f8f8f8;
 }
-.card-company{
+.card-company {
   display: flex;
-height: 48px;
-padding: 16px;
-align-items: center;
-text-align: center;
-gap: 8px;
-flex:35%;
-border-bottom: 1px solid var(--black, #030406);
-background: #F8F8F8;
+  height: 48px;
+  padding: 16px;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  flex: 35%;
+  border-bottom: 1px solid var(--black, #030406);
+  background: #f8f8f8;
 }
