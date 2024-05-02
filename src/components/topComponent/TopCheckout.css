@@ -1,4 +1,4 @@
-.brdr {
+.border {
    width: 150vw;
    height: 14vw;
    background: #F2F2FF;
@@ -6,11 +6,9 @@
    border-top: 1px #0000FF solid;
    z-index: -1;
 }
-
-.dmndCmp {
+.diamondComponent {
    display: inline-flex;
 }
-
-.cktCmp {
+.checkoutComponent {
    margin-top: -23px;
 }

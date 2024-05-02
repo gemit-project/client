@@ -6,9 +6,9 @@ import './Price.css';
 export const Price: React.FC<{ prc: string }> = ({ prc }) => {
     return <>
         <div className="all">
-            <div className="sqre">
+            <div className="squarePrice">
                 <div className="in" >
-                    <div className="prc">PRICE</div>
+                    <div className="price">PRICE</div>
                     <img src={hands.toString()}></img>
                 </div>
                 <div className="cost" > ${prc}</div>

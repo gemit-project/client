@@ -1,8 +1,7 @@
 .all {
     display: inline-flex;
 }
-
-.sqre {
+.squarePrice {
     margin-left: 1vw;
     width: 8vw;
     height: 5.5vw;
@@ -14,20 +13,17 @@
     display: inline-flex;
     gap: 5px;
 }
-
 .in {
     gap: 21px;
     display: inline-flex;
 }
-
-.prc {
+.price {
     color: #030406;
-    font-size: 18px;
     font-family: 'Poppins';
     font-weight: 400;
+    font-size: 18px;
     text-transform: uppercase;
 }
-
 .cost {
     width: 80vw;
     color: #030406;

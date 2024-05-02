@@ -1,4 +1,4 @@
-.sqr {
+.square {
     margin-top: 2vw;
     margin-left: 7vw;
     width: 4.2vw;
@@ -8,8 +8,7 @@
     border-radius: 4px;
     align-content: center;
 }
-
-.dmnd {
+.diamond {
     width: 2.9vw;
     height: 2.9vw;
     margin: auto;

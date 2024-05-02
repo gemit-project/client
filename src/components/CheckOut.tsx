@@ -27,7 +27,7 @@ export const CheckOut: React.FC = () => {
                 <div style={{ marginLeft: '3vw', zIndex: -1, width: '81vw', position: 'absolute', border: '0.5vh #0000FF solid' }}></div>
                 {
                     checkoutPages.map((page, i) => (
-                        <Link to={page.nav}>
+                        <Link to={page.nav} >
                             <Circle current={location.pathname.endsWith(`/${page.nav}`) ? true : false} text={page.text} def={location.pathname.endsWith(`/CheckOut`) && page.text === 'General' ? true : false} />
                         </Link>
 
