@@ -8,12 +8,12 @@ import {
 } from "@mui/material";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import back from "../assets/icons/product-icons/back.svg";
-import lock from "../assets/icons/product-icons/Vector.svg";
 import madalya from "../assets/icons/product-icons/Madalya.svg";
 import arrowDount from "../assets/icons/product-icons/Group 1652.svg";
 import fullLove from "../assets/icons/product-icons/fullLike.png";
 import emptyLove from "../assets/icons/product-icons/EmptyLike.png";
 import { DiamodsFeaters } from "./Diamond’sFeatures";
+import { SecuretyProtection } from "./Securety & Protection";
 
 
 const { UUID } = require("sharetribe-flex-sdk").types;
@@ -58,7 +58,7 @@ export const ProductPage = () => {
     <>
       <div className="page">
         <div className="backSearch">
-          <Typography className="typografy">Back To All Results</Typography>
+          <Typography className="title-back">Back To All Results</Typography>
           <IconButton
             onClick={() => {
               navigation("/Search");
@@ -67,41 +67,46 @@ export const ProductPage = () => {
             <img src={back}></img>
           </IconButton>
         </div>
-
         <div className="div-details-images">
-          <div className="images">
-            <div className="calom">
-              {imgsUrl.map((imgg) => (
-                <img
-                  style={{
-                    width: "180px",
-                    height: "130px",
-                    borderRadius: "8px",
-                  }}
-                  src={imgg}
-                  onClick={() => setSelected(imgg)}
-                ></img>
-              ))}
-            </div>
-            <div>
-              <img
-                className="current"
-                src={selected ? selected : imgsUrl[0]}
-              ></img>
-              <div className="addwish">
-                <IconButton onClick={() => setClick((isClick) => !isClick)}>
+           <div className="ddd">
+            <div className="images">
+              <div className="calom">
+                {imgsUrl.map((imgg) => (
                   <img
-                    style={{ width: "30px", height: "30px" }}
-                    src={isClick ? fullLove : emptyLove}
+                    style={{
+                      width: "180px",
+                      height: "130px",
+                      borderRadius: "8px",
+                    }}
+                    src={imgg}
+                    onClick={() => setSelected(imgg)}
                   ></img>
-                </IconButton>
-                <Typography>Add To WishList</Typography>
+                ))}
               </div>
-              <DiamodsFeaters />
-            </div>
+              <div>
+                <img
+                  className="current"
+                  src={selected ? selected : imgsUrl[0]}
+                ></img>
+                <div className="addwish">
+                  <IconButton onClick={() => setClick((isClick) => !isClick)}>
+                    <img
+                      style={{ width: "30px", height: "30px" }}
+                      src={isClick ? fullLove : emptyLove}
+                    ></img>
+                  </IconButton>
+                  <Typography>Add To WishList</Typography>
+                </div>
+              
+               
+            
+                <DiamodsFeaters /> 
+                </div>
+              </div> 
           </div>
-          <div className="frame2005">
-            <label
+          
+          <div className="deatails">
+            <div
               style={{
                 color: " #000",
                 fontFamily: "Poppins",
@@ -110,16 +115,18 @@ export const ProductPage = () => {
                 fontWeight: "600",
                 lineHeight: "120%" /* 40.8px */,
                 textTransform: "uppercase",
+                textAlign:"center",
+                width:"-webkit-fill-available"
               }}
             >
               Current Product Titel
-            </label>
-            <div className="frame2003">
+            </div>
+            <div className="certificates-country">
               <button className="certificates">
                 <img src={madalya}></img>
                 Certificates
               </button>
-              <div className="frame1936">
+              <div className="country-div">
                 <img src="" alt="country img" />
                 <label className="country">country</label>
               </div>
@@ -133,7 +140,7 @@ export const ProductPage = () => {
                   </div>
                   <div className="frame1967">
                     <Typography className="tipp">Discount</Typography>
-                    <Typography className="tippp">32%</Typography>
+                    <Typography className="tippp">-32%</Typography>
                   </div>
                   <div className="frame1967">
                     <Typography className="tipp">Total</Typography>
@@ -170,14 +177,14 @@ export const ProductPage = () => {
                       <Typography variant="body1">mail</Typography>
                     </div>
                   </div>
-                  <div className="frame2395">
-                    <button className="but">BID Price</button>
-                    <button className="but">CHAT</button>
+                  <div className="price-chat">
+                    <button className="price">BID Price</button>
+                    <button className="chat">CHAT</button>
                   </div>
                 </div>
               </div>
-              <div className="frame1985">
-                <Typography className="tip">
+              <div className="notes">
+                <Typography className="vendors-Notes">
                   <b>Vendor’s Notes</b>
                 </Typography>
               </div>
@@ -192,33 +199,9 @@ export const ProductPage = () => {
               <img src={arrowDount}></img>
               <button className="button-checkout">Check-Out</button>
             </div>
-            <div className="secutery-Protection">
-              <div className="secutery">
-                <Typography className="secutery-title">
-                  <b>secutery & Protection</b>
-                </Typography>
-                <img src={lock}></img>
-              </div>
-              <p style={{ width: "auto" }}>
-                Ullamcorper eget nulla facilisi etiam dignissim diam quis.
-                Accumsan sit amet nulla facilisi morbi. Dignissim convallis
-                aenean et tortor at risus viverra adipiscing at. Pellentesque id
-                nibh tortor id aliquet lectus proin nibh nisl. Neque viverra
-                justo nec ultrices dui sapien. Gravida dictum fusce ut placerat
-                orci nulla. Eget aliquet nibh praesent tristique magna sit. Enim
-                nec dui nunc mattis enim ut. Netus et malesuada fames ac turpis
-                egestas maecenas. Morbi blandit cursus risus at ultrices mi.
-                Morbi quis commodo odio aenean sed adipiscing diam donec. Congue
-                quisque egestas diam in arcu cursus euismod. Mi proin sed libero
-                enim sed. Orci eu lobortis elementum nibh tellus. Elit duis
-                tristique sollicitudin nibh. Vitae proin sagittis nisl rhoncus
-                mattis rhoncus urna neque.
-              </p>
-          
-            </div>
+           <SecuretyProtection/>
           </div>
         </div>
-
         <Outlet></Outlet>
       </div>
     </>
