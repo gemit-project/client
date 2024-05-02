@@ -1,0 +1,39 @@
+.vendor {
+  margin-left: 1vw;
+}
+
+.title {
+  margin-top: 2vw;
+  color: black;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.vendorImg {
+  display: inline-flex;
+}
+
+.picture {
+  width: 50;
+  height: 50;
+  border-radius: 9999px;
+}
+
+.vendorName {
+  color: #363537;
+  font-size: "17px";
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.vendorEmail {
+  color: rgba(3, 4, 6, 0.7);
+  font-size: "15px";
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+.nameAndEmail {
+  margin-left: "0.3vw";
+}
