@@ -1,7 +1,6 @@
-.vndr {
+.vendor {
     margin-left: 1vw;
 }
-
 .title {
     margin-top: 2vw;
     color: black;
@@ -9,27 +8,26 @@
     font-family: 'Poppins';
     font-weight: 400;
 }
-
-.myimg {
+.vendorImg {
     display: inline-flex;
 }
-
 .picture {
     width: 50;
     height: 50;
     border-radius: 9999px;
 }
-
-.vndrname {
+.vendorName {
     color: #363537;
     font-size: '17px';
     font-family: 'Poppins';
     font-weight: 600
 }
-
-.vndrmail {
+.vendorEmail {
     color: rgba(3, 4, 6, 0.70);
-    font-size: 15px;
+    font-size: '15px';
     font-family: 'Poppins';
     font-weight: 300
+}
+.nameAndEmail{
+    margin-left: '0.3vw'
 }
