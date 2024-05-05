@@ -9,9 +9,9 @@ import { Chat } from "../components/Chat";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
-import { Buttom } from "../components/paymentFirstscreen/buttomComponent/payment-first-buttom";
-import { ButtomSC } from "../components/paymentSecondscreen/buttomComponent/payment-second-buttom";
-import FundingOptions from "../components/paymentThirdscreen/FundingOptions";
+import { ButtomFirstScreen } from "../components/PaymentFirstScreen/ButtomFirstScreen";
+import { ButtomSecondScreen } from "../components/PaymentSecondScreen/ButtomSecondScreen";
+import FundingOptions from "../components/PaymentThirdscreen/FundingOptions";
 
 export const Routing: React.FC = () => {
   return (
@@ -26,8 +26,8 @@ export const Routing: React.FC = () => {
         <Route path="/LogOut" element={<LogOut />} />
         <Route path="/Setting" element={<Setting />} />
         <Route path="/Chat" element={<Chat />} />
-        <Route path="/Shipping&inssurance" element={<ButtomSC />} />
-        <Route path="/GeneralDetails" element={<Buttom />} />
+        <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
+        <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
         <Route path="/FundingOptions" element={<FundingOptions/>} />
       </Routes>
     </>

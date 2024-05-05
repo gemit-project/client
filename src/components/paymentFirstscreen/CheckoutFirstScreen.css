@@ -1,0 +1,57 @@
+.first-screen {
+  display: 30%;
+  margin-left: 80px;
+}
+.container1 {
+  width: 52vw;
+}
+.general-details {
+    text-align: left;
+    color: #030406;
+    font-size: 34px;
+    font-family: Poppins;
+    font-weight: 600;
+    word-wrap: break-word; 
+}
+.company-details {
+  text-align: "left";
+  color: #0000ff;
+  font-size: 12px;
+  font-family: "Poppins";
+  font-weight: "600";
+  line-height: 2.4;
+  letter-spacing: 0.54;
+  word-wrap: "break-word";
+}
+.title1 {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+  margin-top: 10px;
+}
+.check-text{
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 100;
+  text-align: left;
+  margin-top: 10px;
+}
+.table1 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.box1 {
+  display: grid;
+  grid-template-columns: 11.5vw 11.5vw 11.5vw;
+  grid-row-gap: 1px;
+  margin-top: 1px;
+}
+.box2 {
+  margin-top: 1px;
+}
+.button-next1 {
+  margin-left: 155vh;
+  margin-top: 40px;
+}
