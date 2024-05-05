@@ -14,9 +14,8 @@ import { Sort } from "../components/pages/search/Actions/Sort";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
-import { ButtomFirstScreen } from "../components/PaymentFirstScreen/ButtomFirstScreen";
-import { ButtomSecondScreen } from "../components/PaymentSecondScreen/ButtomSecondScreen";
-import FundingOptions from "../components/PaymentThirdscreen/FundingOptions";
+import { ButtomSecondScreen } from "../components/paymentSecondscreen/ButtomSecondScreen";
+import { ButtomFirstScreen } from "../components/paymentFirstscreen/ButtomFirstScreen";
 
 export const Routing: React.FC = () => {
   return (

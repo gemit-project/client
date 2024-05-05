@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import "./CheckoutSecondScreen.css";
-import {Outlet, Link } from "react-router-dom";
+import {Outlet } from "react-router-dom";
 import {  useNavigate } from 'react-router';
 import { MapSecondScreen } from "./MapSecondScreen";
 import  truck  from "../../assets/checkoutIcons/truck.svg"
