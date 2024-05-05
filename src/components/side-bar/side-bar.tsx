@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import dashboard from '../assets/icons/side-bar-icons/dashoard.svg'
-import search from "../assets/icons/side-bar-icons/search.svg";
-import checkOut from "../assets/icons/side-bar-icons/check-out.svg"
-import chat from "../assets/icons/side-bar-icons/chat.svg"
-import settings from "../assets/icons/side-bar-icons/settings.svg"
-import logOut from "../assets/icons/side-bar-icons/log-out.svg"
-import logo from "../assets/icons/side-bar-icons/logo/logo.svg"
-import { Outlet, Link, useLocation } from "react-router-dom";
 import "./side-bar.css";
+import Dashoard from "../../assets/icons/side-bar-icons/dashoard.svg";
+import search from "../../assets/icons/side-bar-icons/search.svg";
+import checkOut from "../../assets/icons/side-bar-icons/check-out.svg";
+import chat from "../../assets/icons/side-bar-icons/chat.svg";
+import setting from "../../assets/icons/side-bar-icons/settings.svg";
+import logOut from "../../assets/icons/side-bar-icons/log-out.svg";
+import logo from "../../assets/icons/side-bar-icons/logo/logo.svg";
+import { Outlet, Link, useLocation } from "react-router-dom";
 
 export const SideBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -22,7 +22,7 @@ export const SideBar = () => {
 
   const TopIcons = [
     {
-      src: dashboard,
+      src: Dashoard,
       to: "Dashboard",
     },
     {
@@ -41,7 +41,7 @@ export const SideBar = () => {
 
   const buttomIcons = [
     {
-      src: settings,
+      src: setting,
       to: "Setting",
     },
     {
@@ -62,7 +62,7 @@ export const SideBar = () => {
       >
         <div>
           {isExpanded ? (
-            <img src={logo} className="logo" alt="logo" />
+            <img src={logo} className="logo" />
           ) : (
             <div style={{ height: "27vh" }} />
           )}
@@ -71,9 +71,9 @@ export const SideBar = () => {
           {TopIcons.map((icon, i) => (
             <div key={i} className="myDiv">
               <div
-                className={`side ${myLocation === `/${icon.to}` ? "true" : ""}`}
+                className={`side ${myLocation == `/${icon.to}` ? "true" : ""}`}
               />
-              <img className="img" src={icon.src} alt="side-bar-icon" />
+              <img className="img" src={icon.src} />
               <div>
                 {isExpanded ? (
                   <Link to={`/${icon.to}`} className="name">
@@ -88,10 +88,10 @@ export const SideBar = () => {
               <div key={i} className="myDiv">
                 <div
                   className={`side ${
-                    myLocation === `/${icon.to}` ? "true" : ""
+                    myLocation == `/${icon.to}` ? "true" : ""
                   }`}
                 />
-                <img className="img" src={icon.src} alt="img" />
+                <img className="img" src={icon.src} />
                 <div>
                   {isExpanded ? (
                     <Link to={`/${icon.to}`} className="name">
