@@ -7,7 +7,6 @@ import { LogOut } from "../components/pages/LogOut";
 import { Setting } from "../components/pages/Setting";
 import { Chat } from "../components/pages/Chat";
 import { Compare } from "../components/pages/search/Actions/Compare";
-import { Listing } from "../components/pages/dashboard/listing/Listing";
 import { Filter } from "../components/pages/search/Actions/Filter";
 import { Reset } from "../components/pages/search/Actions/Reset";
 import { View } from "../components/pages/search/Actions/View";
@@ -15,6 +14,8 @@ import { Sort } from "../components/pages/search/Actions/Sort";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
+import { ButtomSecondScreen } from "../components/paymentSecondscreen/ButtomSecondScreen";
+import { ButtomFirstScreen } from "../components/paymentFirstscreen/ButtomFirstScreen";
 
 export const Routing: React.FC = () => {
   return (
@@ -35,6 +36,8 @@ export const Routing: React.FC = () => {
         <Route path="/LogOut" element={<LogOut />} />
         <Route path="/Setting" element={<Setting />} />
         <Route path="/Chat" element={<Chat />} />
+        <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
+        <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
       </Routes>
     </>
   );
