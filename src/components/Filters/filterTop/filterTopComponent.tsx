@@ -49,10 +49,10 @@ export default function FilterTopComponent() {
                             height: '25px'
                         }}><CiFilter /> Apply</Button>
 
-                    <Button variant="outlined" size="small"
+                    <Button variant="outlined" 
                         style={{
                             marginLeft: '3vw',
-                            width: '0.1vi',
+                            width: '10px',
                             color: 'black',
                             borderColor: 'black',
                             height: '25px'

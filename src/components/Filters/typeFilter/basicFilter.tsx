@@ -10,7 +10,7 @@ export default function BasicFilter() {
     const [num1, setNum1] = React.useState('');
     const [num2, setNum2] = React.useState('');
     const [color, setColor] = useState('');
-    const [ch, setCh] = useState(true);
+    const [ch, setCh] = useState(false);
     const style1 = {
         width: '9vw',
         color: 'black',
@@ -26,16 +26,18 @@ export default function BasicFilter() {
     const handleChange2 = (event: SelectChangeEvent) => {
         setNum2(event.target.value);
     };
-    const colorFunc = (event: IconCol, i: number) => {       
-        // setColor('blue');
-        setCurrentShapes(f[i].checked = ch)
-    }
-    const colorFunc2 = (event: IconCol, i: number) => {       
+    const colorFunc = (event: IconCol, i: number) => {
         setColor('blue');
-        colorFunc(event,i)
+        setCh(true)
+        setCurrentShapes(currentShapes[i].checked = ch)
+        return color
+    }
+    const colorFunc2 = (event: IconCol, i: number) => {
+        setColor('blue');
+        colorFunc(event, i)
         return color;
     }
-    const colorFunc3 = () => {       
+    const colorFunc3 = () => {
         setColor('blue');
         // colorFunc(event,i)
         return color;
@@ -46,14 +48,35 @@ export default function BasicFilter() {
     //     return color;
     // }
 
-    const f: any = IconsArr.map(i => { return { ...i, checked: false } })
+    const f: any = IconsArr.map(i => { return { ...i, checked:false } })
 
     const [currentShapes, setCurrentShapes] = useState(f)
 
+    useEffect(() => {
+        // return function colorFunc = (event: IconCol, i: number) => {
+        //     setColor('blue');
+        //     setCh(true)
+        //     setCurrentShapes(f[i].checked = ch)
+        
+        // }
+            
+      }, [color]);
+    
     // useEffect(() => {
     //     alert('bgfvdcf')
     //   }, [color]);
 
+
+
+    // const [state, setState] = useState('');
+    // useEffect(() => {
+    //   // will run once at page load.
+    //   // will run again when the specific value in the dependencies array changes.
+    // //   return function cleanupListener() {
+    // //     window.removeEventListener(setCh, () => { })
+    // //   }
+    // }, [state]);
+  
     return (
         <>
             <div className='block1Input'>
@@ -65,15 +88,16 @@ export default function BasicFilter() {
                         <Button variant="contained" size="small"
                             style={{
                                 color: 'black',
-                                // background: currentShapes.checked ? colorFunc(element,i) : '#F3F3F3',
-                                backgroundColor: currentShapes.checked ? colorFunc3() : '#F3F3F3',
+                                background: currentShapes.checked ? colorFunc(element,i) : '#F3F3F3',
+                                // backgroundColor: color,
                                 borderWidth: '0px',
                                 marginLeft: '1.5vw',
                                 marginTop: '2vh',
                                 flexDirection: 'column',
-                                boxShadow: 'none'
+                                boxShadow: 'none',
+                                overflowWrap:'break-word'
 
-                            }} onClick={y => colorFunc2(element, i)}>
+                            }} onClick={y => colorFunc2(element,i)}>
                             <img src={element.icon.toString()} className='img'></img>
                             {element.param}
                         </Button>

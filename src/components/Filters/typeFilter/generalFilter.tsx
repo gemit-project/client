@@ -27,30 +27,34 @@ export default function GeneralFilter() {
         setNum3(event.target.value);
     };
 
-
     return (
         <>
-            <Card style={{ backgroundColor: '#EDFAFF', display: 'flex', height: '15vh', width: '78vw', marginTop: '4vh', marginLeft: 'auto', marginRight: 'auto' }}>
-                <div>
-                    <b style={{ marginLeft: '2vw' }}>Price</b><br />
+            <Card style={{
+                backgroundColor: '#EDFAFF', display: 'flex', height: '15vh', marginLeft: 'auto', marginRight: 'auto',
+                width: '78vw', marginTop: '4vh'
+            }}>
+                <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+                    <b style={{ marginLeft: '1vw' }}>Price</b><br />
                     <label>$ / CT</label>
-                    <div className='wrap2Input'>
+                    <div >
                         <input type='text' placeholder='From'></input>
                         <input type='text' placeholder='To'></input>
                     </div>
                 </div>
+                <hr></hr>
                 <div>
                     <b></b><br />
                     <label>Total ($)</label>
-                    <div className='wrap2Input'>
+                    <div>
                         <input type='text' placeholder='From'></input>
                         <input type='text' placeholder='To'></input>
                     </div>
                 </div>
+                <hr></hr>
                 <div>
                     <b></b><br />
                     <label>Discount (%)</label>
-                    <div className='wrap2Input'>
+                    <div >
                         <input type='text' placeholder='From'></input>
                         <input type='text' placeholder='To'></input>
                     </div>

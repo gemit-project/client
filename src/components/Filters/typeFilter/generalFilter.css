@@ -11,11 +11,9 @@
     margin-top: 12vh;
 }
 
-.wrap2Input {
-    margin-left: 1vw;
-}
+
 input{
-    margin-left: 1vw;
+    margin-left: 0.8vw;
     border: 2px solid #00B2FF;
     border-radius: 0.3vi;
     padding: 0.5vi;
