@@ -28,7 +28,6 @@ export const Routing: React.FC = () => {
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
         <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
-        <Route path="/FundingOptions" element={<FundingOptions/>} />
       </Routes>
     </>
   );
