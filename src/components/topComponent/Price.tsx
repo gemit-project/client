@@ -1,6 +1,6 @@
 import React from "react";
 import "./Diamond.css";
-import hands from "./../icons/hands.svg";
+import hands from "../../assets/icons/Checkout-icons/hands.svg";
 import "./Price.css";
 
 export const Price: React.FC<{diamondPrice: string }> = ({ diamondPrice }) => {
