@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Dashboard } from "../components/pages/dashboard/Dashboard";
@@ -26,10 +27,18 @@ export const Routing: React.FC = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<SignIn />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/Reset_Password/:email/:token" element={<PasswordReset />} />
+        <Route path="/" element={<SignIn/>}/>
+        <Route path="/Register" element={<Register/>}/>
+        <Route  path="/Reset_Password/:email/:token" element={<PasswordReset/>}/>
         <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Search" element={<Search />} />
+        <Route path="/CheckOut" element={< Top />}>
+          <Route path="General" element={< General />} />
+          <Route path="ShippingAndInsurance" element={< ShippingAndInsurance />} />
+          <Route path="FundingOptions" element={< FundingOptions />} />
+          <Route path="Payment" element={< Payment />} />
+          <Route path="Confirmation" element={< Confirmation />} />
+        </Route>
         <Route path="/Search" element={<Search />}>
           <Route path="Compare" element={<Compare />} />
           <Route path="Filter" element={<Filter />} />

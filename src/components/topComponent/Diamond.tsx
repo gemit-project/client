@@ -1,7 +1,7 @@
 import React from "react";
 import "./Diamond.css";
 
-export const Diamond: React.FC<{diamondImg: string }> = ({ diamondImg }) => {
+export const Diamond: React.FC<{ diamondImg: string }> = ({ diamondImg }) => {
   return (
     <>
       <div className="square">
