@@ -34,11 +34,14 @@ export default function SignIn() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     sdk.login({ username: myUser.email, password: myUser.pass })
-      .then((loginRes: any) => {
+      .then(() => {
         console.log("Login successful.");
-        sdk.currentUser.show().then((res: any) => {
+        sdk.currentUser.show({
+          expand: true,
+          include: ["profileImage"]
+        }).then((res: any) => {
           console.log(res)
-          dispatch(setCurrentUser(res.data.data))
+          dispatch(setCurrentUser(res.data))
           setFlag(false)
           navigate("Dashboard")
         });
@@ -100,7 +103,7 @@ export default function SignIn() {
               <CssBaseline />
               <Box
                 sx={{
-                  marginTop: 8,
+                  margin: 4,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
