@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import "./checkoutFirstScreen.css";
+import "./CheckoutFirstScreen.css";
 import { Checkbox } from "@mui/material";
 type props = {
   name: string;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '@mui/material'
 import {  Outlet,Link } from "react-router-dom";
-import './checkoutFirstScreen.css'
+import './CheckoutFirstScreen.css'
 import { MapFirstScreen } from './MapFirstScreen';
 export const ButtomFirstScreen: React.FC = () => {
   const personalDetails = [ 'First name','Second name', 'Phone number', 'Email Addreess'];

@@ -1,11 +1,11 @@
 import { Button } from "@mui/material";
 import React from "react";
-import truck from "../../../assets/checkoutIcons/truck.svg";
-import vi from "../../../assets/checkoutIcons/vi.svg";
 import "./CheckoutSecondScreen.css";
 import {Outlet, Link } from "react-router-dom";
 import {  useNavigate } from 'react-router';
 import { MapSecondScreen } from "./MapSecondScreen";
+import  truck  from "../../assets/checkoutIcons/truck.svg"
+import  vi  from "../../assets/checkoutIcons/vi.svg"
 export const ButtomSecondScreen: React.FC = () => {
   let navigate = useNavigate()
   const ShippingOptions = [
@@ -57,7 +57,7 @@ export const ButtomSecondScreen: React.FC = () => {
             <Button variant="contained"sx={{width: "9vw", backgroundColor: "rgba(204, 204, 204, 0.8)",color: "blue",}}  onClick={()=>navigate(-1)}>Back</Button>
         </div>
         <div className="button-next2" >
-          <Link to="FundingOptions"><Button variant="contained" sx={{ width: "9vw" }}>Next</Button></Link>
+          <Button variant="contained" sx={{ width: "9vw" }}>Next</Button>
         </div>
       </div>
     <Outlet/>

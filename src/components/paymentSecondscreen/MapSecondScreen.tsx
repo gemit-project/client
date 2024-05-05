@@ -4,7 +4,7 @@ import './CheckoutSecondScreen.css'
 type props = {
   name: string;
   list: Array<object>;
-  icon:string;
+  icon: any;
 }
 export const MapSecondScreen: React.FC<props> = ({name,list,icon}) => {
   return (
