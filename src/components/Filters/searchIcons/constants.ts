@@ -85,48 +85,50 @@ export const IconsArr: IconCol[] = [
     param: "marquise",
     icon: marquise
   },
-  {
-    param: "Trilliant",
-    icon: Trilliant
-  },
-  {
-    param: "Kite",
-    icon: KiteShield
-  },
-  {
-    param: "Hexa",
-    icon: Hexagonal
-  },
-  {
-    param: "Roase",
-    icon: Roase
-  },
-  {
-    param: "Fladers",
-    icon: Fladers
-  },
-  {
-    param: "Quad",
-    icon: Quadrillion
-  },
-  {
-    param: "Briolette",
-    icon: Briolette
-  },
-  {
-    param: "Shield",
-    icon: Shield
-  },
-  {
-    param: "star",
-    icon: star
-  },
-  {
-    param: "Pentagon",
-    icon: Pentagon
-  },
 ]
 
+export const MoreIconsArr: IconCol[] = [
+{
+  param: "Trilliant",
+  icon: Trilliant
+},
+{
+  param: "Kite",
+  icon: KiteShield
+},
+{
+  param: "Hexa",
+  icon: Hexagonal
+},
+{
+  param: "Roase",
+  icon: Roase
+},
+{
+  param: "Fladers",
+  icon: Fladers
+},
+{
+  param: "Quad",
+  icon: Quadrillion
+},
+{
+  param: "Briolette",
+  icon: Briolette
+},
+{
+  param: "Shield",
+  icon: Shield
+},
+{
+  param: "star",
+  icon: star
+},
+{
+  param: "Pentagon",
+  icon: Pentagon
+},
+]
 export const ClarityArr: string[] = [
   "FL", "IF", "VVS1", "VVS2", "VS1", "VS2", "SI1", "SI2", "SI3"
 ]

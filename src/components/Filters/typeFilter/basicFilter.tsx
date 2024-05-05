@@ -5,12 +5,15 @@ import { RxTriangleUp } from 'react-icons/rx'
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Button from '@mui/material/Button';
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 
 export default function BasicFilter() {
     const [num1, setNum1] = React.useState('');
     const [num2, setNum2] = React.useState('');
     const [color, setColor] = useState('');
     const [ch, setCh] = useState(false);
+    const [more, setMore] = React.useState(false);
+
     const style1 = {
         width: '9vw',
         color: 'black',
@@ -48,7 +51,7 @@ export default function BasicFilter() {
     //     return color;
     // }
 
-    const f: any = IconsArr.map(i => { return { ...i, checked:false } })
+    const f: any = IconsArr.map(i => { return { ...i, checked: false } })
 
     const [currentShapes, setCurrentShapes] = useState(f)
 
@@ -57,11 +60,11 @@ export default function BasicFilter() {
         //     setColor('blue');
         //     setCh(true)
         //     setCurrentShapes(f[i].checked = ch)
-        
+
         // }
-            
-      }, [color]);
-    
+
+    }, [color]);
+
     // useEffect(() => {
     //     alert('bgfvdcf')
     //   }, [color]);
@@ -76,7 +79,7 @@ export default function BasicFilter() {
     // //     window.removeEventListener(setCh, () => { })
     // //   }
     // }, [state]);
-  
+
     return (
         <>
             <div className='block1Input'>
@@ -88,23 +91,44 @@ export default function BasicFilter() {
                         <Button variant="contained" size="small"
                             style={{
                                 color: 'black',
-                                background: currentShapes.checked ? colorFunc(element,i) : '#F3F3F3',
+                                background: currentShapes.checked ? colorFunc(element, i) : '#F3F3F3',
                                 // backgroundColor: color,
                                 borderWidth: '0px',
                                 marginLeft: '1.5vw',
                                 marginTop: '2vh',
                                 flexDirection: 'column',
                                 boxShadow: 'none',
-                                overflowWrap:'break-word'
+                                overflowWrap: 'break-word'
 
-                            }} onClick={y => colorFunc2(element,i)}>
+                            }} onClick={y => colorFunc2(element, i)}>
                             <img src={element.icon.toString()} className='img'></img>
                             {element.param}
                         </Button>
                     )}
+                    <button onClick={x=>{setMore(!more)}} style={{marginLeft:'30vw'}}>{more?<BiChevronUp />: <BiChevronDown />}</button>
+                    {more? f.map((element: IconCol, i: number) =>
+                        <Button variant="contained" size="small"
+                            style={{
+                                color: 'black',
+                                background: currentShapes.checked ? colorFunc(element, i) : '#F3F3F3',
+                                // backgroundColor: color,
+                                borderWidth: '0px',
+                                marginLeft: '1.5vw',
+                                marginTop: '2vh',
+                                flexDirection: 'column',
+                                boxShadow: 'none',
+                                overflowWrap: 'break-word'
+
+                            }} onClick={y => colorFunc2(element, i)}>
+                            <img src={element.icon.toString()} className='img'></img>
+                            {element.param}
+                        </Button>
+                    ) :''}
+                    
                 </div>
-                <div className='inputs'><br />
-                    <b>Carat (size)</b><br /><br />
+                <div style={{ marginTop: '7vh', marginLeft: '6vw' }}><br />
+                    <b >Carat (size)</b>
+                    <br /><br />
                     <Select
                         value={num1}
                         onChange={handleChange1}

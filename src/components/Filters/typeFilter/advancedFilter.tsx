@@ -123,12 +123,17 @@ export default function RangeSlider() {
     const [value2, setValue2] = React.useState<number[]>([0, 100]);
     const [value3, setValue3] = React.useState<number[]>([0, 100]);
     const [value4, setValue4] = React.useState<number[]>([0, 100]);
+    const [value, setValue] = React.useState<number>(0);
+    const handleChange= (event: Event, newValue: number | number[]) => {
+        setValue(newValue as number);
+        alert(value as number /2)
+    };
 
     const updateValue = (num: number | number[]) => {
-        switch(num){
-            case 0:alert("0");break;
-            case 100:alert("100");break;
-            case 50:alert("50");break;
+        switch (num) {
+            case 0: alert("0"); break;
+            case 100: alert("100"); break;
+            case 50: alert("50"); break;
 
         }
     }
@@ -147,6 +152,10 @@ export default function RangeSlider() {
     const handleChange4 = (event: Event, newValue: number | number[]) => {
         setValue4(newValue as number[]);
     };
+
+
+
+
     return (
         <>
             <br />
@@ -167,7 +176,7 @@ export default function RangeSlider() {
                 </Box>
                 <Box className="box">
                     <b>Flourance</b>
-                    <Slider
+                    {/* <Slider
                         size="small"
                         onChange={handleChange4}
                         value={value4}
@@ -178,9 +187,18 @@ export default function RangeSlider() {
                     <label>FAINT</label>
                     <label>MEDIUM</label>
                     <label>STRONG</label>
-                    <label>VERY STRONG</label>
+                    <label>VERY STRONG</label> */}
+
+                    <Slider
+                        max={999}
+                        min={1}
+                        onChange={handleChange}
+                        value={value}
+                        valueLabelDisplay="auto"
+                    ></Slider>
+
                 </Box>
-            </div>
+            </div >
             <div className='IWrap'>
                 <Box className="box" style={{ marginTop: '4vh' }}>
                     <b>Symetry</b>
@@ -200,15 +218,15 @@ export default function RangeSlider() {
                     <br />
                     {wordsArr.map((element: string) =>
                         <Button variant="contained" size="small"
-                        style={{
-                            color:'#FF00FF',
-                            backgroundColor:'#F3F3F3',
-                            marginLeft: '1.5vw',
-                            marginTop:'2vh',
-                            border:'1px solid black'
-                            
-                        }}>
-                       {element} </Button>
+                            style={{
+                                color: '#FF00FF',
+                                backgroundColor: '#F3F3F3',
+                                marginLeft: '1.5vw',
+                                marginTop: '2vh',
+                                border: '1px solid black'
+
+                            }}>
+                            {element} </Button>
                     )}
                 </div>
             </div>
