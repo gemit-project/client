@@ -7,7 +7,6 @@ import { LogOut } from "../components/pages/LogOut";
 import { Setting } from "../components/pages/Setting";
 import { Chat } from "../components/pages/Chat";
 import { Compare } from "../components/pages/search/Actions/Compare";
-import { Listing } from "../components/pages/dashboard/listing/Listing";
 import { Filter } from "../components/pages/search/Actions/Filter";
 import { Reset } from "../components/pages/search/Actions/Reset";
 import { View } from "../components/pages/search/Actions/View";
