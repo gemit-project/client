@@ -6,7 +6,7 @@
 
 .squarePrice {
   width: 8vw;
-  height: 65px;
+  height: 5vw;
   margin-top: 2vw;
   border-right: 1px #030406 solid;
   flex-direction: column;
@@ -18,14 +18,14 @@
 
 .titleWithHandsIcon {
   gap: 21px;
-  display: inline-flex; 
+  display: inline-flex;
 }
 
 .price {
   color: #030406;
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.2vw;
   text-transform: uppercase;
   margin-top: 5px;
 }
@@ -34,12 +34,14 @@
   margin-top: -7px;
   width: 80vw;
   color: #030406;
-  font-size: 23px;
+  font-size: 1.8vw;
   font-family: "Poppins";
   font-weight: 549;
   text-transform: uppercase;
 }
 
-.hand{
+.hand {
+  width: 2vw;
+  height: 2vw;
   margin-left: -10px;
 }

@@ -56,11 +56,13 @@ const Circle: React.FC<{ current: boolean; text: string; def: boolean }> = ({
   return (
     <div className="circlesPosition">
       {current || def ? (
-        <div>
+        <div className="bold">
           <img src={boldCircle.toString()}></img>
         </div>
       ) : (
-        <img src={simpleCircle.toString()}></img>
+        <div className="simple">
+          <img src={simpleCircle.toString()}></img>
+        </div>
       )}
       <div style={{ display: "flex", alignItems: "center" }}>
         {current || def ? (

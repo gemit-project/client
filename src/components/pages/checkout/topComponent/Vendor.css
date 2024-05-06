@@ -6,7 +6,7 @@
 .title {
   margin-top: 2.5vw;
   color: black;
-  font-size: 14px;
+  font-size: 1.15vw;
   font-family: "Poppins";
   font-weight: 400;
 }
@@ -17,11 +17,13 @@
 
 .picture {
   border-radius: 9999px;
+  height: 3vw;
+  width: 3vw;
 }
 
 .vendorName {
   color: #363537;
-  font-size: 15px;
+  font-size: 1.1vw;
   font-family: "Poppins";
   font-weight: 600;
   margin-left: 5px;
@@ -29,7 +31,7 @@
 
 .vendorEmail {
   color: rgba(3, 4, 6, 0.7);
-  font-size: 15px;
+  font-size: 1.1vw;
   font-family: "Poppins";
   font-weight: 300;
   margin-left: 5px;
