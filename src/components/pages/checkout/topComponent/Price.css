@@ -1,14 +1,13 @@
-.all {
+.priceFrame {
   display: inline-flex;
   background-color: transparent;
-  margin-top: -2.5vw;
+  margin-left: 1.5vw;
 }
 
 .squarePrice {
-  
   width: 8vw;
-  height: 5.5vw;
-  margin-top: 2.2vw;
+  height: 5vw;
+  margin-top: 2vw;
   border-right: 1px #030406 solid;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,27 +16,32 @@
   gap: 5px;
 }
 
-.in {
-  
+.titleWithHandsIcon {
   gap: 21px;
   display: inline-flex;
-  
 }
 
 .price {
   color: #030406;
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.2vw;
   text-transform: uppercase;
-  
+  margin-top: 5px;
 }
 
 .cost {
+  margin-top: -7px;
   width: 80vw;
   color: #030406;
-  font-size: 24px;
+  font-size: 1.8vw;
   font-family: "Poppins";
-  font-weight: 500;
+  font-weight: 549;
   text-transform: uppercase;
+}
+
+.hand {
+  width: 2vw;
+  height: 2vw;
+  margin-left: -10px;
 }

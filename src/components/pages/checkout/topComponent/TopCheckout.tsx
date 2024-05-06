@@ -4,10 +4,10 @@ import "./TopCheckout.css";
 import { DiamondDetails } from "./DiamondDetails";
 import { Price } from "./Price";
 import { Vendor } from "./Vendor";
-import diamond from "../../assets/diamonds/2.svg";
-import { CheckOut } from "../pages/CheckOut";
+import diamond from "../../../../assets/diamonds/2.svg";
+import { StatusLine } from "../StatusLine";
 
-export const Top: React.FC = () => {
+export const TopCheckout: React.FC = () => {
   return (
     <>
       <div className="border">
@@ -26,7 +26,7 @@ export const Top: React.FC = () => {
           />
         </div>
         <div className="checkoutComponent">
-          <CheckOut />
+          <StatusLine />
         </div>
       </div>
     </>
