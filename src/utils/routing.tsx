@@ -53,6 +53,7 @@ export const Routing: React.FC = () => {
         <Route  path="/Product/:uuid" element={<ProductPage/>}/>
         <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
         <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
+        <Route  path="/Product/:uuid" element={<ProductPage/>}/>
       </Routes>
     </>
   );
