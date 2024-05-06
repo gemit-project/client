@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Dashboard } from "../components/pages/dashboard/Dashboard";
 import { Search } from "../components/pages/search/Search";
 import { CheckOut } from "../components/pages/CheckOut";
@@ -16,6 +16,8 @@ import { Sort } from "../components/pages/search/Actions/Sort";
 import SignIn from "../components/SginIn";
 import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
+import { ButtomSecondScreen } from "../components/paymentSecondscreen/ButtomSecondScreen";
+import { ButtomFirstScreen } from "../components/paymentFirstscreen/ButtomFirstScreen";
 import { ShippingAndInsurance } from "../components/shipping&insurance";
 import { Payment } from "@mui/icons-material";
 import { Confirmation } from "../components/confirmation";
@@ -56,6 +58,8 @@ export const Routing: React.FC = () => {
         <Route path="/LogOut" element={<LogOut />} />
         <Route path="/Setting" element={<Setting />} />
         <Route path="/Chat" element={<Chat />} />
+        <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
+        <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
       </Routes>
     </>
   );
