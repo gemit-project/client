@@ -1,37 +1,38 @@
 .vendor {
   margin-left: 1vw;
+  margin-top: -0.5vw;
 }
 
 .title {
-  margin-top: 2vw;
+  margin-top: 2.5vw;
   color: black;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Poppins";
   font-weight: 400;
 }
 
-.vendorImg {
+.vendorDetails {
   display: inline-flex;
 }
 
 .picture {
-  width: 50;
-  height: 50;
   border-radius: 9999px;
 }
 
 .vendorName {
   color: #363537;
-  font-size: "17px";
+  font-size: 15px;
   font-family: "Poppins";
   font-weight: 600;
+  margin-left: 5px;
 }
 
 .vendorEmail {
   color: rgba(3, 4, 6, 0.7);
-  font-size: "15px";
+  font-size: 15px;
   font-family: "Poppins";
   font-weight: 300;
+  margin-left: 5px;
 }
 
 .nameAndEmail {

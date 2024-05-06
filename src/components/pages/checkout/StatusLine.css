@@ -1,0 +1,48 @@
+.line {
+  margin-left: 4.55vw;
+  width: 87vw;
+  height: 4vh;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+  align-content: center;
+}
+
+.moreAttributesToLine {
+  margin-left: 3vw;
+  z-index: -1;
+  width: 81vw;
+  position: absolute;
+  border: 0.5vh #0000ff solid;
+}
+
+.circlesPosition {
+  margin-left: -1vw;
+  margin-bottom: -10vh;
+  flex-direction: column;
+  align-items: center;
+  display: inline-flex;
+}
+
+.currentPage {
+  margin-top: 0.6vh;
+  color: black;
+  font-size: 18px;
+  font-family: "Poopins";
+  font-weight: 700;
+}
+.currentPage {
+  margin-top: 0.6vh;
+  color: black;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+.otherPage {
+  margin-top: 1.3vh;
+  color: black;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 450;
+}
