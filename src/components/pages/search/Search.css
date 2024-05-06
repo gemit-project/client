@@ -2,6 +2,7 @@
     scrollbar-color: #b6f0fc #ffffff;
     overflow: scroll;
     overflow-x: hidden;
+    height: 64vh;
 }
 .section{
     height: 100vh;
@@ -14,7 +15,7 @@
     justify-content: flex-start; 
     align-content: baseline;
     flex-wrap: wrap;
-    margin-left: 4vw;
+    margin-left: 1vw;
 }
 .allDiv{
     flex-direction: column;
@@ -48,6 +49,7 @@
     align-self: stretch;
 }
 .blueButton{
+    background-color: gainsboro;
     height: 3vh;
     display: flex;
     padding: 4px 8px;
@@ -74,7 +76,7 @@
 }
 .bottomDiv{
     display: flex;
-    width:88%;
+    width:100%;
     height: 7vh;
     padding: 0px 12px;
     justify-content: space-between;
@@ -86,7 +88,7 @@
 .diamondName{
     color: #000;
     font-family: Poppins;
-    font-size: 15px;
+    font-size: 2.3vh;
     font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 18px */

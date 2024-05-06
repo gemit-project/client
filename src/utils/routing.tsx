@@ -23,7 +23,9 @@ export const Routing: React.FC = () => {
         <Route path="/" element={<SignIn/>}/>
         <Route path="/Register" element={<Register/>}/>
         <Route  path="/Reset_Password/:email/:token" element={<PasswordReset/>}/>
-        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Dashboard" element={<Dashboard />}>
+          <Route path="Listing" element={<Listing />} />
+        </Route>
         <Route path="/Search" element={<Search />}>
           <Route path="Compare" element={<Compare />} />
           <Route path="Filter" element={<Filter />} />

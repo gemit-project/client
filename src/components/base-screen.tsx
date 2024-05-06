@@ -12,7 +12,7 @@ export const BaseScreen: React.FC = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            marginLeft: "52px",
+            // marginLeft: "52px",
             position: "fixed",
           }}
         >
