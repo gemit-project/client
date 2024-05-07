@@ -7,8 +7,11 @@ import filter from "../../../../assets/ButtonSection/filter.svg";
 import { Link, Outlet } from "react-router-dom";
 
 export const Button_Section: React.FC = () => {
+
+
   return (
     <>
+<div className="existFilter">No filter criteria were selected</div>
       <div className="all">
         <div className="leftDiv">Top Ten</div>
         <div className="compare">
