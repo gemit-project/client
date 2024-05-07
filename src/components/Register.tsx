@@ -15,7 +15,7 @@ import { Outlet, useNavigate } from 'react-router';
 import { useState } from 'react';
 import diamond from "../assets/icons/app-icons/diamond.svg";
 import gemit from "../assets/icons/app-icons/gemit.svg";
-import MuiPhoneNumber from 'material-ui-phone-number';
+// import MuiPhoneNumber from 'material-ui-phone-number';
 import { useDispatch } from 'react-redux';
 import { setCurrentUser } from '../app/slices/UserSlice';
 import InputLabel from '@mui/material/InputLabel';
@@ -231,8 +231,8 @@ export function Register() {
                   onChange={(e) => { setUser({ ...user, displayName: e.target.value }) }}
                   value={user?.displayName}
                 />
-                <MuiPhoneNumber variant='outlined' fullWidth defaultCountry={'us'} onChange={(e: any) => { }}
-                  onBlur={(e: any) => { setUser({ ...user, protectedData: { phoneNumber: convertPhoneNumber(e.target.value) } }) }} />
+                {/* <MuiPhoneNumber variant='outlined' fullWidth defaultCountry={'us'} onChange={(e: any) => { }}
+                  onBlur={(e: any) => { setUser({ ...user, protectedData: { phoneNumber: convertPhoneNumber(e.target.value) } }) }} /> */}
                 <TextField
                   margin="normal"
                   fullWidth
