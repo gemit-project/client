@@ -9,10 +9,10 @@
   width: 150vw;
   flex-shrink: 0;
   height: 4vw;
-  margin-left: -5vw;
+  margin-left: -7vw;
   margin-bottom: 2.5vw;
   background-color: #f3f3f3;
-  gap: 2vw;
+  /* gap: 2vw; */
 }
 
 .circle {
@@ -29,13 +29,14 @@
 .right-icons {
   display: flex;
   align-items: center;
-  margin-left: 750px;
+  margin-left: 790px;
 }
 
 .heart-bell-imag-circle {
   display: flex;
   gap: 2vw;
   align-items: center;
+  margin-left: -150px;
 }
 
 .buyer-or-seller {
@@ -47,7 +48,7 @@
 
 .the-whole-page {
   display: flex;
-  gap: 12px;
+  /* gap: 122px; */
   align-items: center;
 }
 
@@ -64,7 +65,7 @@
 }
 
 .top-header-logo {
-  margin-left: -43vw;
+  margin-left: -49vw;
 }
 
 .imag-circle {
