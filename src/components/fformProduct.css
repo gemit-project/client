@@ -9,18 +9,18 @@
     border-radius: 8px;
     opacity: 0.8;
     background: #0008ff;
-    width: 300px;
+    width: 100px;
     height: 30px;
     font-size: 20px;
     color:white;
 }
 .AddingProduct
 {
-    margin-left: 700px;
+    margin-left: 650px;
     border-radius: 8px;
     opacity: 0.8;
-    width: 1000px;
-    font-size: 50px;
+    width: 300px;
+    font-size: 38px;
     color:#0008ff ;
 }
 .frame
@@ -48,7 +48,7 @@
 .attributes
 {
    color:#0008ff;
-   font-size: 30px;
+   font-size: 25px;
 }
 .upload
 {

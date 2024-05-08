@@ -24,3 +24,7 @@ export const symmetryOptions =  [
 export const FluorescenceOptions =  [
     "Nonem","Very Slight","Slight","Faint","Medium","Strong"
 ]
+export const LabOptions =  [
+    "GIA","RAP AGS","HRD","IGI","RDC","CGL","DCLA","GHI","DBGIS","GWLAB","NGTC","PGS","NONE"
+]
+
