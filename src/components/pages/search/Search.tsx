@@ -165,6 +165,7 @@ export const Search: React.FC = () => {
           </div>
         </section>
       </div>
+      <Outlet></Outlet>
     </>
   );
 };
