@@ -1,6 +1,6 @@
-import { Product } from "../components/Type";
+import { Product } from "../Types/product";
 import { sdk } from "../config/sharetribeSDK.config";
-const { UUID, LatLng, Money, AvailabilityPlan ,privateData,metadata} = require("sharetribe-flex-sdk").types;
+const { UUID, LatLng, Money, AvailabilityPlan ,privateData} = require("sharetribe-flex-sdk").types;
 export const addProduct= async(product:Product)=>{
   debugger
   const c: string = product?.images?.[0] || '';
