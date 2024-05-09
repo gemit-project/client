@@ -1,5 +1,6 @@
 .second-screen {
-  margin-left: 50px;
+  margin-left: 80px;
+  margin-top: 50px;
 }
 .shipping {
   text-align: left;
@@ -44,6 +45,7 @@
 .select {
   display: grid;
   grid-template-columns: 400px 80px;
+  grid-template-rows: 25px;
 }
 .right-culomn2 {
   margin-bottom: 130px;

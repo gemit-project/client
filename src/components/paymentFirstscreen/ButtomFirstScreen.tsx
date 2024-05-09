@@ -3,8 +3,10 @@ import { Button } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 import "./CheckoutFirstScreen.css";
 import { MapFirstScreen } from "./MapFirstScreen";
-
+import { useNavigate } from "react-router";
 export const ButtomFirstScreen: React.FC = () => {
+  let navigate = useNavigate();
+
   const personalDetails = [
     "First name",
     "Second name",
@@ -44,8 +46,8 @@ export const ButtomFirstScreen: React.FC = () => {
         </div>
       </div>
       <div className="button-next1">
-        <Link to="/Shipping&inssurance">
-          <Button variant="contained" sx={{ width: "10vw" }}>
+        <Link to="/CheckOut/ShippingAndInsurance">
+          <Button variant="contained" sx={{ width: "10vw" }}  onClick={() => navigate("/CheckOut/ShippingAndInsurance")}>
             Next
           </Button>
         </Link>

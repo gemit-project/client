@@ -77,13 +77,13 @@ export const ButtomSecondScreen: React.FC = () => {
               backgroundColor: "rgba(204, 204, 204, 0.8)",
               color: "blue",
             }}
-            onClick={() => navigate(-1)}
+            onClick={() => navigate("/CheckOut/General")}
           >
             Back
           </Button>
         </div>
         <div className="button-next2">
-          <Button variant="contained" sx={{ width: "9vw" }}>
+          <Button variant="contained" sx={{ width: "9vw" }}  onClick={() => navigate("/CheckOut/FundingOptions")}>
             Next
           </Button>
         </div>

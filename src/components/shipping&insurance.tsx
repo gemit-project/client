@@ -1,3 +1,7 @@
+import { ButtomSecondScreen } from "./paymentSecondscreen/ButtomSecondScreen";
+
 export const ShippingAndInsurance: React.FC = () => {
-  return <div>shipping</div>;
+  return <div>
+    <ButtomSecondScreen/>
+  </div>;
 };
