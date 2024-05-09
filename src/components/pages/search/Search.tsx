@@ -5,9 +5,11 @@ import RedLove from '../../../assets/LikeRed.png';
 import box from '../../../assets/icons/product-icons/box.svg';
 import { sdk } from '../../../config/sharetribeSDK.config';
 import { useEffect, useState } from 'react';
+import { useNavigate, useNavigation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setCurrentDaimond } from '../../../app/slices/DaimondSlice';
 
 const { UUID, LatLng, Money } = require("sharetribe-flex-sdk").types;
-
 const SideButton = [
     {
         color: "var(--main-blue, #00F)",
@@ -30,11 +32,12 @@ const SideButton = [
 ]
 
 export const Search: React.FC = () => {
-
+const dispatch=useDispatch();
     const [data, setData] = useState<Array<any>>([]);
     const [images, setImages] = useState<Array<any>>([]);
     const [myCompares, setMyCompares] = useState<Array<string>>([]);
     const [lovlyDiamonds, setLovlyDiamonds] = useState<Array<string>>([]);
+    const navigate=useNavigate();
 
     useEffect(() => {
         getData()
@@ -85,7 +88,7 @@ export const Search: React.FC = () => {
                             <div className="greyDiv">
                                 <div className='among'>
                                     <img key={i} className={`${listing?.attributes?.compare ? 'boxImg' : ''}`}
-                                        src={box} onClick={() => myCompareDiamonds(listing?.id?.uuid, i)} />
+                                        src={box} onClick={() =>{ myCompareDiamonds(listing?.id?.uuid, i)}} />
                                     {/* <div className='blueButton' style={{backgroundColor:SideButton[diamond.sideButton]?.color, border:SideButton[diamond.sideButton]?.border }}> */}
                                     {/* <div className='blueButtomText' 
                                         style={{color:SideButton[diamond.sideButton]?.wordColor}} 
@@ -100,6 +103,7 @@ export const Search: React.FC = () => {
                                                 key={img.id.uuid}
                                                 className='diamondImg'
                                                 src={img.attributes.variants.default.url}
+                                                onClick={(e)=>{dispatch(setCurrentDaimond(listing));navigate(`/Product/${listing.id.uuid}`)}}
                                             />
                                         );
                                     }

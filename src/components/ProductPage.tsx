@@ -9,7 +9,7 @@ import madalya from "../assets/icons/product-icons/Madalya.svg";
 import arrowDount from "../assets/icons/product-icons/Group 1652.svg";
 import fullLove from "../assets/icons/product-icons/fullLike.png";
 import emptyLove from "../assets/icons/product-icons/EmptyLike.png";
-import { DiamodFeaters } from "./Diamond’sFeatures";
+import { DiamodFeaters } from "./DiamondsFeatures";
 import { SecuretyProtection } from "./Securety & Protection";
 
 const { UUID } = require("sharetribe-flex-sdk").types;
@@ -18,6 +18,7 @@ export const ProductPage = () => {
   const navigation = useNavigate();
   const params = useParams();
   const currentUser = useSelector((state: any) => state.user.currentUser);
+  const [currentDiamond,setCurrentDiamond]=useState();
   const [imgsUuid, setImgsUuid] = useState<
     Array<{ id: typeof UUID; type: "" }>
   >([]);
@@ -29,6 +30,9 @@ export const ProductPage = () => {
     getListingsImages();
   }, []);
   useEffect(() => {
+    sdk.listings.show({id:params["uuid"] },{included:["images"]}).then((res:any) => {
+      setCurrentDiamond(res.data)
+    });
     imgsUuid.forEach((i) => {
       image.forEach((j: any) => {
         if (i.id.uuid == j.id.uuid) {
@@ -55,8 +59,9 @@ export const ProductPage = () => {
   return (
     <>
       <div className="page">
+       
         <div className="backSearch">
-          <Typography className="title-back">Back To All Results</Typography>
+          <Typography className="titleBack">Back To All Results</Typography>
           <IconButton
             onClick={() => {
               navigation("/Search");
@@ -65,15 +70,15 @@ export const ProductPage = () => {
             <img src={back}></img>
           </IconButton>
         </div>
-        <div className="div-details-images">
-          <div>
+        <div className="detailsImagesDiv">
+          <div style={{width:"60%"}}>
             <div className="images">
               <div className="calom">
                 {imgsUrl.map((imgg) => (
                   <img
                     style={{
-                      width: "180px",
-                      height: "130px",
+                      width: "100%",
+                      height:"150px",
                       borderRadius: "8px",
                     }}
                     src={imgg}
@@ -89,51 +94,53 @@ export const ProductPage = () => {
                 <div className="addwish">
                   <IconButton onClick={() => setClick((isClick) => !isClick)}>
                     <img
-                      style={{ width: "30px", height: "30px" }}
+                      style={{ width: "20px", height: "20px" }}
                       src={isClick ? fullLove : emptyLove}
                     ></img>
                   </IconButton>
                   <Typography>Add To WishList</Typography>
                 </div>
-                <DiamodFeaters />
-              </div>
-            </div>
+               
+              </div> 
+           
+            </div> 
+              <DiamodFeaters />
           </div>
           <div className="deatails">
-            <div className="diamond-Title">Current Product Titel</div>
-            <div className="certificates-country">
+            <div className="diamondTitle">Current Product Titel</div>
+            <div className="certificatesCountry">
               <button className="certificates">
                 <img src={madalya}></img>
                 Certificates
               </button>
-              <div className="country-div">
+              <div className="countryDiv">
                 <img src="" alt="country img" />
                 <label className="country">country</label>
               </div>
             </div>
-            <div className="prices-deatails">
+            <div className="pricesDeatails">
               <div className="prices">
                 <div className="price">
-                  <Typography className="price-header">S/CR</Typography>
-                  <Typography className="price-amount">$3333</Typography>
+                  <Typography className="priceHeader">S/CR</Typography>
+                  <Typography className="priceAmount">$3333</Typography>
                 </div>
                 <div className="price">
-                  <Typography className="price-header">Discount</Typography>
-                  <Typography className="price-amount">-32%</Typography>
+                  <Typography className="priceHeader">Discount</Typography>
+                  <Typography className="priceAmount">-32%</Typography>
                 </div>
                 <div className="price">
-                  <Typography className="price-header">Total</Typography>
-                  <Typography className="price-amount">$4321</Typography>
+                  <Typography className="priceHeader">Total</Typography>
+                  <Typography className="priceAmount">$4321</Typography>
                 </div>
               </div>
-              <div className="netoral-lab">
+              <div className="netoralLab">
                 <Typography className="netoral">NETORAL</Typography>
                 <Typography className="lab">LAB</Typography>
               </div>
             </div>
-            <div className="vendor">
-              <div className="vendor-contact">
-                <div className="vendor-profil">
+            <div className="vendorDiv">
+              <div className="vendorContact">
+                <div className="vendorProfil">
                   <img
                     style={{
                       height: "50px",
@@ -149,18 +156,18 @@ export const ProductPage = () => {
                     className="imag"
                     alt="Change"
                   ></img>
-                  <div className="vendor-deatails">
+                  <div className="vendorDeatails">
                     <Typography variant="subtitle2">vendor name</Typography>
                     <Typography variant="body1">mail</Typography>
                   </div>
                 </div>
-                <div className="priceAndChat-buttons">
-                  <button className="bidPrice-button">BID Price</button>
-                  <button className="chat-button">CHAT</button>
+                <div className="priceAndChatButtons">
+                  <button className="bidPriceButton">BID Price</button>
+                  <button className="chatButton">CHAT</button>
                 </div>
               </div>
               <div className="notes">
-                <Typography className="vendors-Notes">
+                <Typography className="vendorsNotes">
                   <b>Vendor’s Notes</b>
                 </Typography>
               </div>
@@ -173,12 +180,13 @@ export const ProductPage = () => {
                 orci nulla. Eget aliquet nibh...
               </p>
               <img src={arrowDount}></img>
-              <button className="button-checkout">Check-Out</button>
+              <button className="buttonCheckout">Check-Out</button>
             </div>
             <SecuretyProtection />
           </div>
-        </div>
+        </div> 
         <Outlet></Outlet>
+     
       </div>
     </>
   );

@@ -1,14 +1,15 @@
 .gemit {
-  margin-left: 30px;
+  margin-left: 5vw;
 }
 
 .top-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:100%;
+  width:100vw;
   flex-shrink: 0;
   background: #F3F3F3 ;
+  height: 10vh;
 }
 
 .circle {

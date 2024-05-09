@@ -10,6 +10,7 @@ import card from "../assets/icons/product-icons/card.svg";
 import american from "../assets/icons/product-icons/american.svg";
 import visa from "../assets/icons/product-icons/visa.svg";
 
+
 const cards = [card, american, visa];
 const propsCol1 = ["SHAPE", "SIZE", "COLOR", "CLARITY"];
 const propsCol2 = ["CUT", "POLISH", "SYMMETRY", "FLUORESCENCE"];
