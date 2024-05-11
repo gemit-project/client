@@ -123,69 +123,72 @@ const dispatch=useDispatch();
               data.length > 0 &&
               data.map((listing: any, i: any) => (
                 <div className="allDiv" key={i}>
-                  <div className="greyDiv">
+                  <div className="greyDiv"
+                        onClick={() =>{dispatch(setCurrentDaimond(listing));navigate("/Product")}}
+                  
+                  >
                     <div className="among">
                       <img
                         key={i}
                         className={listing?.attributes?.compare ? "boxImg" : ""}
                         src={box}
                         alt="compareImg"
-                        onClick={() => CompareDiamonds(listing?.id?.uuid, i)}
+                        onClick={() =>{ CompareDiamonds(listing?.id?.uuid, i);}}
                       />
                       <div className="blueButton" />
-                      {/* <div className='blueButton' style={{backgroundColor:SideButton[diamond.sideButton]?.color, border:SideButton[diamond.sideButton]?.border }}> */}
-                      {/* <div className='blueButtomText' 
-    const getData = () => {
-        sdk.listings.query({
-            include: ["images"],
-        }).then((res: any) => {
-            setData(res.data.data.map((x: any) => {
-                return {
-                    ...x, attributes: { ...x.attributes, lovly: false, compare: false }
-                }
-            }))
-            setImages(res.data.included)
-        }).catch((err: any) => {
-            console.log(err)
-        });
-    }
+                                                                        {/* <div className='blueButton' style={{backgroundColor:SideButton[diamond.sideButton]?.color, border:SideButton[diamond.sideButton]?.border }}> */}
+                                                                        {/* <div className='blueButtomText' 
+                                                        const getData = () => {
+                                                            sdk.listings.query({
+                                                                include: ["images"],
+                                                            }).then((res: any) => {
+                                                                setData(res.data.data.map((x: any) => {
+                                                                    return {
+                                                                        ...x, attributes: { ...x.attributes, lovly: false, compare: false }
+                                                                    }
+                                                                }))
+                                                                setImages(res.data.included)
+                                                            }).catch((err: any) => {
+                                                                console.log(err)
+                                                            });
+                                                        }
 
-    const myCompareDiamonds = (id: string, key: number) => {
-        for (let i = 0; i < data.length; i++) {
-            if (data[i].id.uuid == id && data[i].attributes.compare == false) {
-                data[i].attributes.compare = true;
-                setMyCompares(myCompares.concat(id));
-            }
-            else {
-                data[i].attributes.compare = false;
-                // myCompares.find(x=>x==id ? setMyCompares(myCompares.splice(id.)) :"")
-            }
-        }
-    }
+                                                        const myCompareDiamonds = (id: string, key: number) => {
+                                                            for (let i = 0; i < data.length; i++) {
+                                                                if (data[i].id.uuid == id && data[i].attributes.compare == false) {
+                                                                    data[i].attributes.compare = true;
+                                                                    setMyCompares(myCompares.concat(id));
+                                                                }
+                                                                else {
+                                                                    data[i].attributes.compare = false;
+                                                                    // myCompares.find(x=>x==id ? setMyCompares(myCompares.splice(id.)) :"")
+                                                                }
+                                                            }
+                                                        }
 
-    const myLovlyDiamonds = (id: string, key: number) => {
-        data.find(x => x.id.uuid == id ? x.attributes.lovly = !x.attributes.lovly : "");
-        data.find(x => x.id.uuid == id && x.attributes.lovly == true ? setLovlyDiamonds(lovlyDiamonds.concat(id)) :
-            //  lovlyDiamonds.find(item => item == id ? setLovlyDiamonds(lovlyDiamonds.splice(item)))
-            "");
-    }
+                                                        const myLovlyDiamonds = (id: string, key: number) => {
+                                                            data.find(x => x.id.uuid == id ? x.attributes.lovly = !x.attributes.lovly : "");
+                                                            data.find(x => x.id.uuid == id && x.attributes.lovly == true ? setLovlyDiamonds(lovlyDiamonds.concat(id)) :
+                                                                //  lovlyDiamonds.find(item => item == id ? setLovlyDiamonds(lovlyDiamonds.splice(item)))
+                                                                "");
+                                                        }
 
-    return (<>
-        <Button_Section></Button_Section>
-        <div className='scrollBar'>
-            <section className='section' >
-                <div className='allView'>
-                    {data.map((listing: any, i: any) => (
-                        <div className='allDiv' key={i}>
-                            <div className="greyDiv">
-                                <div className='among'>
-                                    <img key={i} className={`${listing?.attributes?.compare ? 'boxImg' : ''}`}
-                                        src={box} onClick={() =>{ myCompareDiamonds(listing?.id?.uuid, i)}} />
-                                    {/* <div className='blueButton' style={{backgroundColor:SideButton[diamond.sideButton]?.color, border:SideButton[diamond.sideButton]?.border }}> */}
-                                    {/* <div className='blueButtomText' 
-                                        style={{color:SideButton[diamond.sideButton]?.wordColor}} 
-                                        >{SideButton[diamond.sideButton]?.word}</div> */}
-                      {/* </div> */}
+                                                        return (<>
+                                                            <Button_Section></Button_Section>
+                                                            <div className='scrollBar'>
+                                                                <section className='section' >
+                                                                    <div className='allView'>
+                                                                        {data.map((listing: any, i: any) => (
+                                                                            <div className='allDiv' key={i}>
+                                                                                <div className="greyDiv">
+                                                                                    <div className='among'>
+                                                                                        <img key={i} className={`${listing?.attributes?.compare ? 'boxImg' : ''}`}
+                                                                                            src={box} onClick={() =>{ myCompareDiamonds(listing?.id?.uuid, i)}} />
+                                                                                        {/* <div className='blueButton' style={{backgroundColor:SideButton[diamond.sideButton]?.color, border:SideButton[diamond.sideButton]?.border }}> */}
+                                                                                        {/* <div className='blueButtomText' 
+                                                                                            style={{color:SideButton[diamond.sideButton]?.wordColor}} 
+                                                                                            >{SideButton[diamond.sideButton]?.word}</div> */}
+                                                                        {/* </div> */}
                     </div>
 
                     {images.map((img: any) => {
@@ -199,6 +202,7 @@ const dispatch=useDispatch();
                             className="diamondImg"
                             src={img.attributes.variants.default.url}
                             alt="diamondImg"
+                            
                           />
                         );
                       }
