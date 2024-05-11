@@ -103,7 +103,7 @@ const dispatch=useDispatch();
                                                 key={img.id.uuid}
                                                 className='diamondImg'
                                                 src={img.attributes.variants.default.url}
-                                                onClick={(e)=>{dispatch(setCurrentDaimond(listing));navigate(`/Product/${listing.id.uuid}`)}}
+                                                onClick={(e)=>{dispatch(setCurrentDaimond(listing));navigate(`/Product`)}}
                                             />
                                         );
                                     }

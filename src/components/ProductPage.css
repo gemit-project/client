@@ -2,10 +2,8 @@
   height: 90vh;
   overflow-y: scroll;
   background: #f8f8f8;
-  background-color: aqua;
 }
 .titleBack {
-  /* width: 50vw; */
   flex-shrink: 0;
   color: var(--black, #030406);
   text-align: right;
@@ -21,23 +19,21 @@
   width:100%;
   margin-top: 20px;
   margin-left: 5vw;
-  /* margin-bottom: 274px; */
   gap: 24px;
   border-radius: 16px;
-  opacity: 0px;
-  box-sizing: border-box;
   display: flex;
 }
 .calom {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width:20%;
-  height: 75%;
+  width:100%;
+  height: 80%;
+  overflow-y: scroll;
 }
 .current {
-  width:75%;
-  height: 75%;
+  width:550px;
+  height: 450px;
   flex-shrink: 0;
   border-radius: 16px;
 }
@@ -50,7 +46,6 @@
   align-items: center;
   gap: 14px;
   flex-shrink: 0;
-  /* background: #707070aa; */
 }
 .deatails {
   display: flex;
@@ -72,7 +67,6 @@
   text-transform: uppercase;
   text-align: center;
   width: "-webkit-fill-available";
-
 }
 .detailsImagesDiv {
   display: flex;
@@ -290,299 +284,4 @@ b {
   width: 75%;
 }
 
-/* .page {
-  scrollbar-color: #b6f0fc #ffffff;
-    overflow: scroll;
-    overflow-x: hidden;
 
-}
-
-  .section{
-    height: 100vh;
-    margin-left: 3vw;
-}
-.allview{
-  width: 100%;
-}
-.title-back {
-  width: 50vw;
-  flex-shrink: 0;
-  color: var(--black, #030406);
-  text-align: right;
-  font-family: Poppins;
-  font-size: 10vh;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120vh; 
-  text-transform: capitalize;
-}
-.images {
-  width: 50vw;
-  margin-top: 3vh;
-  margin-left: 7vw;
-  gap: 3vw;
-  border-radius: 16vw;
-  box-sizing: border-box;
-  display: flex;
-}
-.calom {
-  display: flex;
-  flex-direction: column;
-  gap: 3vh;
-}
-.onepic {
-  width: 180px;
-  height: 130px;
-  border-radius: 8px;
-  border: 2px solid black;
-}
-.current {
-  width: 30vw;
-  height: 55vh;
-  flex-shrink: 0;
-  border-radius: 16px;
-}
-.backSearch {
-  display: flex;
-  width: 100vw;
-  height: 10vh;
-  padding-right: 108px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 14px;
-  flex-shrink: 0;
-  background: #707070aa;
-}
-.deatails {
-  display: flex;
-  width: 50vw;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-left: 80px;
-  align-items: flex-end;
-  gap: 38px;
-}
-.diamond-Title {
-  color: #000;
-  font-family: Poppins;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120% ;
-  text-transform: uppercase;
-  text-align: center;
-  width: -webkit-fill-available;
-}
-.div-details-images {
-  display: flex;
-  height: 100vh;
-  gap: 38px;
-}
-.certificates-country {
-  display: flex;
-  align-items: flex-start;
-  gap: 240px;
-  align-self: stretch;
-}
-.vendor {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-  align-self: stretch;
-}
-.vendor-contact {
-  display: flex;
-  width: 541px;
-  padding-top: 24px;
-  align-items: center;
-  gap: 73px;
-  border-top: 1px solid rgba(0, 0, 255, 0.5);
-}
-.certificates {
-  display: flex;
-  height: 45px;
-  padding: 7.731px 41px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 8px;
-  background: var(--Dark-grey, #e6e6e6);
-}
-.vendor-profil {
-  display: flex;
-  width: 274px;
-  align-items: center;
-  gap: 12px;
-}
-.vendor-deatails {
-  display: flex;
-  height: 49px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.priceAndChat-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 8px;
-  border-radius: 8px;
-  background: var(--Dark-grey, #e6e6e6);
-}
-.bidPrice-button,
-.chat-button {
-  display: flex;
-  width: 192px;
-  height: 40px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  background: rgba(0, 0, 255, 0.8);
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 255, 0.2);
-  color: #fff;
-  text-align: center;
-  font-family: "Assistant";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-}
-.notes {
-  display: flex;
-  width: 540px;
-  align-items: center;
-  gap: 47px;
-}
-.vendors-Notes {
-  width: 456px;
-  flex-shrink: 0;
-  flex-shrink: 0;
-}
-b {
-  color: #000;
-  font-family: "Poppins";
-  font-size: 30px;
-  font-style: initial;
-  font-weight: 600;
-  line-height: 135%;
-}
-.p {
-  align-self: stretch;
-  color: #000;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-  text-transform: capitalize;
-}
-.button-checkout {
-  display: flex;
-  height: 40px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
-  border-radius: 8px;
-  background: rgba(0, 0, 255, 0.8);
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 255, 0.2);
-  color: #fff;
-  text-align: center;
-  font-family: "Assistant";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-}
-.country-div {
-  display: flex;
-  width: 84px;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-.country {
-  color: #000;
-  font-family: "Poppins";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; 
-  text-transform: uppercase;
-}
-.price-header {
-  align-self: stretch;
-  color: var(--black, #030406);
-  font-family: "Poppins";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  text-transform: uppercase;
-}
-.price-amount {
-  color: var(--black, #030406);
-  font-family: "Poppins";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%; 
-  text-transform: uppercase;
-}
-.prices {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-.price {
-  display: flex;
-  width: 108px;
-  padding: 8px 0px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  border-right: 1px solid var(--black, #030406);
-}
-.netoral,
-.lab {
-  flex: 1 0 0;
-  color: var(--black, #030406);
-  text-align: center;
-  font-family: "Poppins";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 135%; 
-  text-transform: uppercase;
-  width: fixed(84px);
-  height: 22px;
-}
-.netoral-lab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  flex: 1 0 0;
-}
-.prices-deatails {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 90px;
-  align-self: stretch;
-}
-.arrowDown {
-  width: 14px;
-  height: 12.6px;
-  flex-shrink: 0;
-}
-.addwish {
-  align-items: center;
-  gap: 5px;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-} */

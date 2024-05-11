@@ -11,55 +11,43 @@ import fullLove from "../assets/icons/product-icons/fullLike.png";
 import emptyLove from "../assets/icons/product-icons/EmptyLike.png";
 import { DiamodFeaters } from "./DiamondsFeatures";
 import { SecuretyProtection } from "./Securety & Protection";
+import { Daimond } from "../Types/Daiamond";
+import { User } from "../Types/User";
 
 const { UUID } = require("sharetribe-flex-sdk").types;
 
 export const ProductPage = () => {
   const navigation = useNavigate();
-  const params = useParams();
   const currentUser = useSelector((state: any) => state.user.currentUser);
-  const [currentDiamond,setCurrentDiamond]=useState();
-  const [imgsUuid, setImgsUuid] = useState<
-    Array<{ id: typeof UUID; type: "" }>
-  >([]);
-  const [imgsUrl, setImgsUrl] = useState<Array<string>>([]);
-  const [image, setImgList] = useState<Array<any>>([]);
   const [selected, setSelected] = useState<string>("");
   const [isClick, setClick] = useState<boolean>(false);
+  const [currentDiamond, setCurrentDiamond] = useState<Daimond>();
+  const currentUUIDDaimond = useSelector(
+    (state: any) => state.daimond.currentDaimond
+  ).id.uuid;
+  const [currentUUIDVendor, setUUIdVendor] = useState();
+  const [currentVendor, setVendor] = useState();
+
+  const getCurentDaimond = async () => {
+    sdk.listings
+      .show({ id: currentUUIDDaimond, include: ["author", "images"] })
+      .then((res: any) => {
+        setCurrentDiamond(res.data);
+        setSelected(res.data.included[1].attributes.variants.default.url);
+        setUUIdVendor(res.data.included[0].id.uuid);
+        console.log(res.data);
+      });
+  };
   useEffect(() => {
-    getListingsImages();
+    getCurentDaimond();
   }, []);
   useEffect(() => {
-    sdk.listings.show({id:params["uuid"] },{included:["images"]}).then((res:any) => {
-      setCurrentDiamond(res.data)
-    });
-    imgsUuid.forEach((i) => {
-      image.forEach((j: any) => {
-        if (i.id.uuid == j.id.uuid) {
-          if (imgsUrl.length < imgsUuid.length) {
-            imgsUrl.push(j.attributes.variants.default.url);
-            setImgsUrl(imgsUrl);
-          }
-        }
-      });
-    });
-  }, [imgsUuid, image]);
-  const getListingsImages = async () => {
-    sdk.listings.query({ include: ["images"] }).then((res: any) => {
-      const uuid: string | undefined = params["uuid"];
-      res.data.data.forEach((ele: any) => {
-        if (uuid == ele.id.uuid) {
-          setImgsUuid(ele.relationships.images.data);
-          setImgList(res.data.included);
-        }
-      });
-    });
-  };
+    debugger;
+  }, [currentUUIDVendor]);
 
   return (
     <>
       <div className="page">
-       
         <div className="backSearch">
           <Typography className="titleBack">Back To All Results</Typography>
           <IconButton
@@ -71,26 +59,30 @@ export const ProductPage = () => {
           </IconButton>
         </div>
         <div className="detailsImagesDiv">
-          <div style={{width:"60%"}}>
+          <div style={{ width: "60%", height: "75%" }}>
             <div className="images">
-              <div className="calom">
-                {imgsUrl.map((imgg) => (
-                  <img
-                    style={{
-                      width: "100%",
-                      height:"150px",
-                      borderRadius: "8px",
-                    }}
-                    src={imgg}
-                    onClick={() => setSelected(imgg)}
-                  ></img>
-                ))}
+              <div style={{ width: "20%" }}>
+                <div className="calom">
+                  {currentDiamond?.included?.map(
+                    (imagge: any) =>
+                      imagge.type == "image" && (
+                        <img
+                          style={{
+                            width: "100%",
+                            height: "100px",
+                            borderRadius: "8px",
+                          }}
+                          src={imagge.attributes.variants.default.url}
+                          onClick={() =>
+                            setSelected(imagge.attributes.variants.default.url)
+                          }
+                        ></img>
+                      )
+                  )}
+                </div>
               </div>
-              <div>
-                <img
-                  className="current"
-                  src={selected ? selected : imgsUrl[0]}
-                ></img>
+              <div style={{ height: "50%" }}>
+                <img className="current" src={selected ? selected : ""}></img>
                 <div className="addwish">
                   <IconButton onClick={() => setClick((isClick) => !isClick)}>
                     <img
@@ -100,14 +92,14 @@ export const ProductPage = () => {
                   </IconButton>
                   <Typography>Add To WishList</Typography>
                 </div>
-               
-              </div> 
-           
-            </div> 
-              <DiamodFeaters />
+              </div>
+            </div>
+            <DiamodFeaters />
           </div>
           <div className="deatails">
-            <div className="diamondTitle">Current Product Titel</div>
+            <div className="diamondTitle">
+              {currentDiamond ? currentDiamond.data.attributes?.title : ""}
+            </div>
             <div className="certificatesCountry">
               <button className="certificates">
                 <img src={madalya}></img>
@@ -184,9 +176,8 @@ export const ProductPage = () => {
             </div>
             <SecuretyProtection />
           </div>
-        </div> 
+        </div>
         <Outlet></Outlet>
-     
       </div>
     </>
   );

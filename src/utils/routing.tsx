@@ -50,7 +50,7 @@ export const Routing: React.FC = () => {
         <Route path="/LogOut" element={<LogOut />} />
         <Route path="/Setting" element={<Setting />} />
         <Route path="/Chat" element={<Chat />} />
-        <Route  path="/Product/:uuid" element={<ProductPage/>}/>
+        <Route  path="/Product" element={<ProductPage/>}/>
         <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
         <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
         <Route  path="/Product/:uuid" element={<ProductPage/>}/>
