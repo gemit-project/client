@@ -23,7 +23,11 @@ export const TopHeader: React.FC = () => {
       <div className="top-header-logo">
         <img src={groupg.toString()} alt="gemit-logo" className="gemit"></img>
         <br />
-        <img src={groupd.toString()} alt="diamond-logo"></img>
+        <img
+          src={groupd.toString()}
+          alt="diamond-logo"
+          className="second-word-in-logo"
+        ></img>
       </div>
       <div className="right-icons">
         <div className="the-whole-page">
@@ -43,12 +47,8 @@ export const TopHeader: React.FC = () => {
           </div>
           {userName && (
             <Box>
-              <Typography variant="subtitle2" >
-                {userName}
-              </Typography>
-              <Typography variant="body1" >
-                {buyerOrSeller}
-              </Typography>
+              <Typography variant="subtitle2">{userName}</Typography>
+              <Typography variant="body1">{buyerOrSeller}</Typography>
             </Box>
           )}
         </div>

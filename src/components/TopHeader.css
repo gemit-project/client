@@ -6,15 +6,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width:100vw;
+  width: 150vw;
   flex-shrink: 0;
-  background: #F3F3F3 ;
-  height: 10vh;
+  height: 4vw;
+  margin-left: -7vw;
+  margin-bottom: 2.5vw;
+  background-color: #f3f3f3;
+  /* gap: 2vw; */
 }
 
 .circle {
-  margin-left: -8px;
+  margin-left: -15px;
   margin-bottom: 28px;
+  z-index: 0;
 }
 
 .heart-bell {
@@ -25,13 +29,14 @@
 .right-icons {
   display: flex;
   align-items: center;
-  margin-left: 750px;
+  margin-left: 790px;
 }
 
 .heart-bell-imag-circle {
   display: flex;
-  gap: 37px;
+  gap: 2vw;
   align-items: center;
+  margin-left: -150px;
 }
 
 .buyer-or-seller {
@@ -43,7 +48,7 @@
 
 .the-whole-page {
   display: flex;
-  gap: 12px;
+  /* gap: 122px; */
   align-items: center;
 }
 
@@ -60,12 +65,14 @@
 }
 
 .top-header-logo {
-  margin-left: 30vh;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  margin-left: -49vw;
 }
-.imag-circle{
- 
+
+.imag-circle {
   display: flex;
   align-items: center;
+}
+
+.second-word-in-logo {
+  margin-top: -1.5vw;
 }
