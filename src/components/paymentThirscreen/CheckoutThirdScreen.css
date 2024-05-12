@@ -52,10 +52,10 @@
   display: grid;
   grid-template-columns: 22vw auto;
 }
-.funding-period {
+.second-slide-title {
   margin-bottom: 40px;
 }
-.right2-culomn {
+.second-slide-right-culomn {
   display: inline-flex;
   gap: 30px;
   margin-left: 30px;

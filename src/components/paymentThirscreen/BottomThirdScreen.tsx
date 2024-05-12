@@ -81,7 +81,7 @@ export const BottomThirdScreen: React.FC = () => {
 
       <div className="second-slide">
         <div className="left-culomn">
-          <div className="funding-period">Funding Period (days)</div>
+          <div className="second-slide-title">Funding Period (days)</div>
           <Box sx={{ width: "22vw" }}>
             <Typography
               className="typography"
@@ -103,7 +103,7 @@ export const BottomThirdScreen: React.FC = () => {
           </div>
         </div>
 
-        <div className="right2-culomn">
+        <div className="second-slide-right-culomn">
           <div>
             <div style={{ marginTop: "80px" }}>Interest Rate (%)</div>
             <Button variant="outlined" sx={{ width: "8vw", height: "4vh" }}>
