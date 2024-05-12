@@ -1,0 +1,63 @@
+.third-screen {
+  margin-left: 110px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: 7vh 20vh;
+}
+.title {
+  display: inline-flex;
+}
+.funding {
+  text-align: left;
+  color: #030406;
+  font-size: 36px;
+  font-family: Poppins;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.button-skip {
+  margin-left: 57vw;
+  margin-top: 10px;
+}
+.first-slide {
+  display: grid;
+  grid-template-columns: 22vw auto;
+}
+.left-culomn {
+  margin-top: 50px;
+}
+.right-culomn {
+  margin-top: 85px;
+  margin-left: 30px;
+}
+.funding-percentage {
+  width: 30vw;
+}
+.typography {
+  text-align: center;
+}
+.please-text {
+  font-size: 10px;
+  margin-left: 5vw;
+}
+.buttons {
+  display: inline-flex;
+  margin-left: 63vw;
+  margin-top: 20px;
+}
+.button-next {
+  margin-left: 15px;
+}
+.second-slide {
+  display: grid;
+  grid-template-columns: 22vw auto;
+}
+.second-slide-title {
+  margin-bottom: 40px;
+}
+.second-slide-right-culomn {
+  display: inline-flex;
+  gap: 30px;
+  margin-left: 30px;
+  margin-top: 45px;
+}

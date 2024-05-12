@@ -1,5 +1,5 @@
 .first-screen {
-  display: 30%;
+  margin-top: 50px;
   margin-left: 80px;
 }
 .container1 {
@@ -40,7 +40,7 @@
 }
 .table1 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50vw auto;
 }
 .box1 {
   display: grid;

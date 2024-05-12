@@ -40,6 +40,15 @@ const Line: React.FC<{ text: string }> = ({ text }) => {
           <MenuItem value="1">$508.22</MenuItem>
         </Select>
       </div>
+      <div
+          style={{
+            width: "32vw",
+            height: 0,
+            opacity: 0.35,
+            border: "1px #030406 solid",
+            marginTop: "15px",
+          }}
+        ></div>
     </div>
   );
 };
