@@ -10,7 +10,7 @@ export const Vendor: React.FC<{ name: string; mail: string; img: string }> = ({
     <>
       <div className="vendor">
         <div className="title">Vendor</div>
-        <div className="vendorImg">
+        <div className="vendorDetails">
           <img className="picture" src={img} />
           <div className="nameAndEmail" style={{ marginLeft: "0.3vw" }}>
             <div className="vendorName">{name}</div>

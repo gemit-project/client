@@ -4,13 +4,13 @@
   width: 4.2vw;
   height: 4.2vw;
   background: "white";
-  border: 1px #0000ff solid;
+  border: 0.01vw #0000ff solid;
   border-radius: 4px;
   align-content: center;
 }
 
 .diamond {
-  width: 2.9vw;
-  height: 2.9vw;
+  width: 2.7vw;
+  height: 2.7vw;
   margin: auto;
 }

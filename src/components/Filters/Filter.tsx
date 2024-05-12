@@ -4,7 +4,7 @@ import { FilterSide } from './FilterSide'
 export const Filter = () => {
     return (
         <>
-            <FilterSide color="blue"/>
+          <FilterSide color="blue"/>
         </>
     )
 }

@@ -1,9 +1,9 @@
-import { Buttom } from "./paymentFirstscreen/buttomComponent/buttom";
+import { ButtomFirstScreen } from "./paymentFirstscreen/ButtomFirstScreen";
 
 export const General: React.FC = () => {
   return (
     <>
-      <Buttom />
+      <ButtomFirstScreen />
     </>
   );
 };
