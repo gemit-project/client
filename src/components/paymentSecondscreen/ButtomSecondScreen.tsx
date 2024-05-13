@@ -41,7 +41,7 @@ export const ButtomSecondScreen: React.FC = () => {
     <div className="second-screen">
       <div className="up-line">
         <div className="shipping">Shipping & Insurance</div>
-        <div className="button-skip">
+        <div className="button-skip1">
           <Button
             variant="contained"
             sx={{
@@ -49,9 +49,10 @@ export const ButtomSecondScreen: React.FC = () => {
               backgroundColor: "rgba(204, 204, 204, 0.8)",
               color: "blue",
               border: " 1px solid rgba(0, 0, 255, 1)",
+              marginLeft:"10px"
             }}
+            
           >
-            {" "}
             skip
           </Button>
         </div>
