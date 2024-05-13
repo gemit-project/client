@@ -1,0 +1,9 @@
+# Exported from Render on 2024-05-13T06:54:09Z
+services:
+- type: web
+  name: gemit-diamonds-staging
+  runtime: static
+  repo: https://github.com/gemit-project/client
+  buildCommand: npm run build
+  staticPublishPath: build
+version: "1"
