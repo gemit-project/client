@@ -1,17 +1,27 @@
+.scrollBar {
+  scrollbar-color: #b6f0fc #ffffff;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 64vh;
+}
+.section {
+  height: 100vh;
+  margin-left: 2px;
+}
 .first-screen {
   margin-top: 50px;
-  margin-left: 80px;
+  margin-left: 10vw;
 }
 .container1 {
   width: 52vw;
 }
 .general-details {
-    text-align: left;
-    color: #030406;
-    font-size: 34px;
-    font-family: Poppins;
-    font-weight: 600;
-    word-wrap: break-word; 
+  text-align: left;
+  color: #030406;
+  font-size: 34px;
+  font-family: Poppins;
+  font-weight: 600;
+  word-wrap: break-word;
 }
 .company-details {
   text-align: "left";
@@ -31,7 +41,7 @@
   text-align: left;
   margin-top: 10px;
 }
-.check-text{
+.check-text {
   font-family: Poppins;
   font-size: 14px;
   font-weight: 100;
@@ -52,6 +62,6 @@
   margin-top: 1px;
 }
 .button-next1 {
-  margin-left: 155vh;
+  margin-left: 70vw;
   margin-top: 40px;
 }

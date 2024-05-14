@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 import { setCurrentUser } from "./app/slices/UserSlice";
 
 function App() {
-
   return (
     <div>
       <BrowserRouter>
