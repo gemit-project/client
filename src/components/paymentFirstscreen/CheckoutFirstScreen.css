@@ -6,7 +6,7 @@
 }
 .section {
   height: 100vh;
-  margin-left: 3vw;
+  margin-left: 2px;
 }
 .first-screen {
   margin-top: 50px;
@@ -39,7 +39,7 @@
   font-weight: 600;
   line-height: 28.8px;
   text-align: left;
-  /* margin-top: 10px; */
+  margin-top: 10px;
 }
 .check-text {
   font-family: Poppins;
@@ -62,6 +62,6 @@
   margin-top: 1px;
 }
 .button-next1 {
-  margin-left: 40vh;
+  margin-left: 70vw;
   margin-top: 40px;
 }

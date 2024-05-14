@@ -33,6 +33,7 @@ export const BottomThirdScreen: React.FC = () => {
               color: "blue",
               border: " 1px solid rgba(0, 0, 255, 1)",
             }}
+            onClick={() => navigate("/CheckOut/Payment")}
           >
             {" "}
             skip
@@ -102,7 +103,6 @@ export const BottomThirdScreen: React.FC = () => {
             Please slide to adjust funding period{" "}
           </div>
         </div>
-
         <div className="second-slide-right-culomn">
           <div>
             <div style={{ marginTop: "80px" }}>Interest Rate (%)</div>
@@ -162,7 +162,11 @@ export const BottomThirdScreen: React.FC = () => {
           </Button>
         </div>
         <div className="button-next">
-          <Button variant="contained" sx={{ width: "9vw" }}>
+          <Button
+            variant="contained"
+            sx={{ width: "9vw" }}
+            onClick={() => navigate("/CheckOut/Payment")}
+          >
             Next
           </Button>
         </div>

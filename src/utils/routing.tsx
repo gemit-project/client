@@ -17,12 +17,12 @@ import { Register } from "../components/Register";
 import { PasswordReset } from "../components/ResetPassword";
 import { ButtomSecondScreen } from "../components/paymentSecondscreen/ButtomSecondScreen";
 import { ButtomFirstScreen } from "../components/paymentFirstscreen/ButtomFirstScreen";
-import { ShippingAndInsurance } from "../components/shipping&insurance";
-import { Payment } from "@mui/icons-material";
-import { Confirmation } from "../components/confirmation";
-import { FundingOptions } from "../components/fundingOptions";
+import { ShippingAndInsurance } from "../components/Payments/shipping&insurance";
+import { Confirmation } from "../components/Payments/confirmation";
+import { FundingOptions } from "../components/Payments/fundingOptions";
 import { TopCheckout } from "../components/pages/checkout/topComponent/TopCheckout";
-import { General } from "../components/general";
+import { General } from "../components/Payments/general";
+import { Payment } from "../components/Payments/payment";
 
 export const Routing: React.FC = () => {
   return (

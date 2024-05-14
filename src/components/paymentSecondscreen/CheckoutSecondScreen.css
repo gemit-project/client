@@ -3,7 +3,6 @@
   margin-top: 50px;
 }
 .shipping {
-  /* width: 20vw; */
   text-align: left;
   color: #030406;
   font-size: 36px;
@@ -33,14 +32,13 @@
 }
 .button-skip1 {
   margin-top: 10px;
-   margin-left: 25vw;
+  margin-left: 25vw;
 }
 .buttons {
   display: inline-flex;
   margin-left: 1000px;
   margin-top: 50px;
 }
-
 .button-next2 {
   margin-left: 15px;
 }

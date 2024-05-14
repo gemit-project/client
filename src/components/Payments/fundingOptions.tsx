@@ -1,4 +1,4 @@
-import { BottomThirdScreen } from "./paymentThirscreen/BottomThirdScreen";
+import { BottomThirdScreen } from "../paymentThirscreen/BottomThirdScreen";
 
 export const FundingOptions: React.FC = () => {
   return <>

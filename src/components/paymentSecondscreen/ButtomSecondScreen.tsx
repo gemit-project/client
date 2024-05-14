@@ -49,9 +49,9 @@ export const ButtomSecondScreen: React.FC = () => {
               backgroundColor: "rgba(204, 204, 204, 0.8)",
               color: "blue",
               border: " 1px solid rgba(0, 0, 255, 1)",
-              marginLeft:"10px"
+              marginLeft: "10px",
             }}
-            
+            onClick={() => navigate("/CheckOut/FundingOptions")}
           >
             skip
           </Button>
@@ -84,7 +84,11 @@ export const ButtomSecondScreen: React.FC = () => {
           </Button>
         </div>
         <div className="button-next2">
-          <Button variant="contained" sx={{ width: "9vw" }}  onClick={() => navigate("/CheckOut/FundingOptions")}>
+          <Button
+            variant="contained"
+            sx={{ width: "9vw" }}
+            onClick={() => navigate("/CheckOut/FundingOptions")}
+          >
             Next
           </Button>
         </div>
