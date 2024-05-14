@@ -1,0 +1,41 @@
+.scrollBarTable {
+  scrollbar-color: #aae6e6 #ffffff;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 53vh;
+  width: 96vw;
+}
+.section1 {
+  height: 100vh;
+  /* margin-left: 3vw; */
+}
+.allTableView {
+  width: 50%;
+  margin-top: 2vh;
+  margin-left: 8vw;
+}
+.th {
+  border-bottom: 1px solid var(--black, #030406);
+  border-left: 1px solid rgb(232, 232, 232);
+  border-right: 1px solid rgb(232, 232, 232);
+  background: var(--background-light-blue, #aae6e6);
+  /* width: 10vh;
+    height: 1vh; */
+  padding: 0.5vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.td {
+  border-bottom: 1px solid var(--black, #030406);
+  border-left: 1px solid rgb(232, 232, 232);
+  border-right: 1px solid rgb(232, 232, 232);
+  justify-content: center;
+  align-items: center;
+  padding: 1vh;
+}
+.pencilimg {
+  width: 2vw;
+  height: 4vh;
+  flex-shrink: 0;
+}
