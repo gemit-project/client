@@ -7,10 +7,12 @@
   border: 0.01vw #0000ff solid;
   border-radius: 4px;
   align-content: center;
+ 
 }
 
 .diamond {
   width: 2.7vw;
   height: 2.7vw;
+  display: flex;
   margin: auto;
 }
