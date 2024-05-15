@@ -11,6 +11,7 @@ export const TopCheckout: React.FC = () => {
   return (
     <>
       <div className="border">
+        <div className="positionInsideBorder">
         <div className="diamondComponent">
           <Diamond diamondImg={diamond.toString()} />
           <div>
@@ -27,6 +28,7 @@ export const TopCheckout: React.FC = () => {
         </div>
         <div className="checkoutComponent">
           <StatusLine />
+        </div>
         </div>
       </div>
     </>
