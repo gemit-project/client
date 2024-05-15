@@ -1,0 +1,99 @@
+.fourth-screen {
+  margin-top: 40px;
+  margin-left: 10vw;
+  display: inline-flex;
+}
+.payment {
+  text-align: left;
+  color: #030406;
+  font-size: 34px;
+  font-family: Poppins;
+  font-weight: 600;
+  word-wrap: break-word;
+  width: 10vw;
+}
+.table-list {
+  width: 42vw;
+}
+tr {
+  height: 35px;
+}
+.first-table-title {
+  display: inline-flex;
+  margin-left: 7vw;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32.85px;
+  text-align: left;
+}
+.basic-price {
+  margin-left: 30vw;
+}
+.total {
+  display: inline-flex;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32.85px;
+}
+.second-table-title {
+  display: inline-flex;
+  margin-left: 7vw;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32.85px;
+  text-align: left;
+}
+.balance-due {
+  margin-left: 29vw;
+}
+
+.total-table {
+  width: 43vw;
+  margin-left: 7vw;
+}
+.tr1 {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29.86px;
+  text-align: left;
+}
+.tr2 {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29.86px;
+  text-align: left;
+}
+.tr3 {
+  display: inline-flex;
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 37.33px;
+  text-align: left;
+  margin-left: 7vw;
+}
+.td3 {
+  border: 1px solid blue;
+  border-radius: 10px;
+  width: 10vw;
+  text-align: center;
+  margin-left: 23vw;
+}
+.td1 {
+  text-align: right;
+}
+.td2 {
+  text-align: right;
+}
+.payment-buttons {
+  margin-left: 2vw;
+  display: inline-flex;
+}
+.payment-button-next {
+  margin-left: 15px;
+}
