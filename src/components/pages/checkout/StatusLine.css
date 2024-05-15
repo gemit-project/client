@@ -1,6 +1,6 @@
 .line {
   margin-left: 4.55vw;
-  width: 87vw;
+  width: 77vw;
   height: 4vh;
   justify-content: space-between;
   align-items: center;
@@ -11,13 +11,13 @@
 .moreAttributesToLine {
   margin-left: 3vw;
   z-index: -1;
-  width: 81vw;
+  width: 71vw;
   position: absolute;
   border: 0.5vh #0000ff solid;
 }
 
 .circlesPosition {
-  margin-left: -1px;
+  /* margin-left: -1px; */
   margin-bottom: -10vh;
   flex-direction: column;
   align-items: center;
