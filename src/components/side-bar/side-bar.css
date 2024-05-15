@@ -1,5 +1,5 @@
 .sidebar {
-  width: 8vh;
+  width: 9vh;
   height: 100vh;
   flex-shrink: 0;
   border-radius: 0vh 6vh 6vh 0vh;
@@ -10,7 +10,7 @@
 }
 
 .sidebar.expanded {
-  width: 20vh; /* Set the expanded width */
+  width: 25vh; /* Set the expanded width */
 }
 .logo {
   fill: #fff;
