@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Frame2.css";
 import pas from "../../../../assets/Pas.svg";
 import add from "../../../../assets/Listing/Button.svg";
+import Button from '@mui/material/Button';
 
 export const Frame2: React.FC = () => {
   const [counter, setCounter] = useState(25);
@@ -18,14 +19,14 @@ export const Frame2: React.FC = () => {
       <div className="result">Results:{counter}</div>
       {labels.map((i) => (
         <>
-          <div className="label">{i.name}</div>
+          <Button variant="text" className="label">{i.name}</Button>
           <img src={pas}></img>
         </>
       ))}
-      <button className="blueB">
+      <Button variant="contained" className="blueB">
         Add
         <img className="addImg" src={add} />
-      </button>
+      </Button>
     </div>
   );
 };

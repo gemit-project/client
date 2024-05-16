@@ -8,6 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import arrow from "../../../../assets/Listing/arrow.svg";
+import Button from '@mui/material/Button';
 
 export const Frame1: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ export const Frame1: React.FC = () => {
           placeholder=" Search "
           className="saerchText"
         ></input>
-        <input type="button" className="searchButton" value="Search"></input>
+        <Button variant="contained" className="searchButton">Search</Button>
         <div className="selectDiv">
           <div className="whiteSelect"> All Statuses </div>
           <div className="blueSelect">
