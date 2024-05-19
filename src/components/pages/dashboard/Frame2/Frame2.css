@@ -12,11 +12,12 @@
   color: rgba(3, 4, 6, 0.85);
   margin-left: 8vw;
   font-family: Assistant;
-  font-size: 1.5vw;
+  font-size: 1.5v;
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
-  margin-right: 45vw;
+  margin-right: 44.5vw;
+  margin-top: 1.5vh;
 }
 .labal {
   opacity: 0.65;

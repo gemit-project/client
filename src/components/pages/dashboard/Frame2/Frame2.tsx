@@ -4,6 +4,7 @@ import "./Frame2.css";
 import pas from "../../../../assets/Pas.svg";
 import add from "../../../../assets/Listing/Button.svg";
 import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 
 export const Frame2: React.FC = () => {
   const [counter, setCounter] = useState(25);
@@ -24,7 +25,7 @@ export const Frame2: React.FC = () => {
         </>
       ))}
       <Button variant="contained" className="blueB">
-        Add
+       <Link to="/addDimond">ADD</Link>
         <img className="addImg" src={add} />
       </Button>
     </div>

@@ -1,37 +1,33 @@
 .mainDiv{  
     display: flex;
     width: 100vw;
-    height: 5vh;
+    height: 6vh;
     padding: 10px 0px 10px 100px;
     align-items: center;
-    gap: 2vw;
+    gap: 3vw;
     flex-shrink: 0;
     border-top: 1px solid var(--light-grey, #CCC);
     background: #E0E0FF; 
-}
-.circle{
-    height: 5vh;
-    /* align-items: center; */
-    /* padding-top: 5.5vh; */
-    margin-top: 5.5vh;
+    margin-left: 1vw;
 }
 .word{
     text-decoration:none;
 }
 .chat{
-    padding-left: 10vw;
+    padding-left: 13vw;
     text-decoration:none;
 }
 .underDiv{
     display: flex;
     width: 100vw;
-    padding: 8px 0px 8px 0px;
+    padding: 5px 0px 5px 0px;
     flex-direction: row;
-    gap: 2vw;
+    gap: 4.5vw;
     justify-content: center;
     align-items: flex-start;
     border-bottom: 1px solid var(--light-grey, #CCC);
     background: #CACAFF;
+    margin-left: 1vw;
 }
 .labels{
     color: var(--black, #030406);
@@ -47,8 +43,7 @@
 .one{
     border-bottom: 0.75px solid rgba(3, 4, 6, 0.30);
     display: flex;
-    width: 192px;
-    padding-bottom: 4px;
+    width: 13vw;
     flex-direction: column;
     align-items: flex-end; 
 }

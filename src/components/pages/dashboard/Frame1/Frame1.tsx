@@ -2,15 +2,17 @@ import "./Frame1.css";
 import Search from "../../../../../assets/icons/side-bar-icons/search.svg";
 import { SearchRounded } from "@mui/icons-material";
 import * as React from "react";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
 import arrow from "../../../../assets/Listing/arrow.svg";
 import Button from '@mui/material/Button';
+import { useState } from "react";
 
 export const Frame1: React.FC = () => {
+
+  const [Selected,setSelected] = useState(false);
+
+  const PopSelect=()=>{
+    setSelected(!Selected)
+  } 
   return (
     <>
       <div className="Frame1">
@@ -20,12 +22,14 @@ export const Frame1: React.FC = () => {
           className="saerchText"
         ></input>
         <Button variant="contained" className="searchButton">Search</Button>
+        <div className="whitediv"></div>
         <div className="selectDiv">
           <div className="whiteSelect"> All Statuses </div>
-          <div className="blueSelect">
-            <img src={arrow} />
-          </div>
+          <button className="blueSelect" onClick = {PopSelect}>
+            <img src={arrow}/>
+          </button>
         </div>
+        <div className={Selected?`pop`:""}></div>
         <div className="selectDiv">
           <div className="whiteSelect">By Date </div>
           <div className="blueSelect">

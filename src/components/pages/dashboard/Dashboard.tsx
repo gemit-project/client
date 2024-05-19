@@ -52,9 +52,6 @@ export const Dashboard = () => {
         <div className="mainDiv">
             {dashboardRouting.map((item, i) =>
                 < >
-                    <div>
-                        {item.name == "Revenue" ? <img src={circle} className='circle'></img> : ""}
-                    </div>
                     <Link key={i} to={item.name} className="word">{item.name}</Link>
                     <img src={Pas}></img>
                 </>)
