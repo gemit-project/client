@@ -1,0 +1,32 @@
+label {
+    margin-left: 2.5vw;
+}
+.box {
+    width: 34vw;
+    margin-Left: 6vw;
+    height: 20vh;
+}
+.grayBox {
+    width: 34vw;
+    margin-Left: 7vw;
+    height: 27vh;
+    border: 1px solid black;
+    border-radius: 1vi;
+    padding-left: 1vi;
+    padding-top: 1vi;
+    background-color: #F8F8F8;
+}
+.inputWrap {
+    margin-left: 8vw;
+    margin-top: 2vi;
+}
+.input {
+    border: 1px solid #FF00FF;
+    border-radius: 0.3vi;
+    padding: 0.5vi;
+    width: 16vw;
+}
+.IWrap{
+    display: flex;
+    flex-direction: row;
+}

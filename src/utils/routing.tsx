@@ -43,11 +43,11 @@ export const Routing: React.FC = () => {
         </Route>
         <Route path="/Search" element={<Search />}>
           <Route path="Compare" element={<Compare />} />
-          <Route path="Filter" element={<Filter />} />
           <Route path="Reset" element={<Reset />} />
           <Route path="View" element={<View />} />
           <Route path="Sort" element={<Sort />} />
         </Route>
+        <Route path="Filter" element={<Filter />} />
         <Route path="/CheckOut" element={< Top />}>
           <Route path="General" element={< General />} />
           <Route path="ShippingAndInsurance" element={< ShippingAndInsurance />} />

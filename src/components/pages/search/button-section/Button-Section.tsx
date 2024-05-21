@@ -39,7 +39,7 @@ export const Button_Section: React.FC = () => {
         </div>
         <div className="filter">
           <img src={filter} className="filterImg" />
-          <Link to="Filter" className="buttonsWord">
+          <Link to="/Filter" className="buttonsWord">
             Filter
           </Link>
         </div>
