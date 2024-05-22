@@ -1,8 +1,44 @@
-.confirmation{
-    text-align: left;
-    color: #030406;
-    font-size: 32px;
-    font-family: Poppins;
-    font-weight: 600;
-    word-wrap: break-word; 
+.confirmation {
+  text-align: left;
+  color: #030406;
+  font-size: 32px;
+  font-family: Poppins;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.thank-you {
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 53.75px;
+  text-align: center;
+  margin-top: 7vh;
+}
+.success-sentence {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 29.86px;
+  text-align: center;
+}
+.transaction-num {
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32.85px;
+  text-align: center;
+  margin-left: 4vw;
+}
+.p {
+  margin-left: 4vw;
+  margin-top: 3vh;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 29.86px;
+  text-align: center;
+}
+.Back-to-Marketplace {
+  margin-left: 5vw;
+  margin-top: 2vh;
 }
