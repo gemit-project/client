@@ -93,7 +93,7 @@ export function Register() {
       });
     }
     setUser({ ...user, email: (event.target.value) });
-
+    dispatch(setCurrentUser(user))
   }
   //Password validation
   const validatePass = (event: any) => {

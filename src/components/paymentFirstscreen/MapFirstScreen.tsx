@@ -2,6 +2,7 @@ import { TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./CheckoutFirstScreen.css";
 import { Checkbox } from "@mui/material";
+import { useSelector } from "react-redux";
 
 type props = {
   name: string;
@@ -59,10 +60,28 @@ export const MapFirstScreen: React.FC<props> = ({ name, list }) => {
   );
 };
 const Square: React.FC<{ text: string }> = ({ text }) => {
+  const currentUser = useSelector((state: any) => state.user.currentUser);
+  const userEmail = currentUser.data.attributes.email;
+  const userFirstName = currentUser.data.attributes.profile.firstName;
+  const userLastName = currentUser.data.attributes.profile.lastName;
+  const [currentField, setCurrentField] = useState("");
+  const initialCurrentField = () => {
+    if (text === "First name") setCurrentField(userFirstName);
+    else if (text === "Second name") setCurrentField(userLastName);
+    else if (text === "Email Addreess") setCurrentField(userEmail);
+  };
+
+  useEffect(() => {
+    initialCurrentField();
+  },[]);
   return (
     <div>
       <div className="company-details">{text}</div>
       <TextField
+      onChange={(e)=>{
+        setCurrentField(e.target.value)
+      }}
+        value={currentField}   
         id="outlined-size-small"
         size="small"
         sx={{ width: "10vw" }}
