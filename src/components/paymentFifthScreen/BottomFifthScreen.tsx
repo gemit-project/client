@@ -30,7 +30,7 @@ export const BottomFifthScreen: React.FC = () => {
         gap: "55px",
         position: "absolute",
         marginTop: "80px",
-        marginLeft: "10vw",
+        marginLeft: "5vw",
       }}
     >
       <div className="confirmation">Confirmation</div>
