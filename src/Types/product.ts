@@ -7,6 +7,4 @@ export type Product={
      privateData?:typeof privateData,
      publicData?:typeof publicData,
      images?: Array<typeof UUID>
-   
-   
 }
