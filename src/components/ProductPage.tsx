@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductPage.css";
 import { sdk } from "../config/sharetribeSDK.config";
 import { useSelector } from "react-redux";
-import { IconButton, Typography } from "@mui/material";
+import { Button, IconButton, Typography } from "@mui/material";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import back from "../assets/icons/product-icons/back.svg";
 import madalya from "../assets/icons/product-icons/Madalya.svg";
@@ -13,10 +13,14 @@ import { DiamodFeaters } from "./DiamondsFeatures";
 import { SecuretyProtection } from "./Securety & Protection";
 import { Daimond } from "../Types/Daiamond";
 import { User } from "../Types/User";
+import { Vendor } from "../Types/Vendor";
+import { hasFlag } from "country-flag-icons";
+import { countries } from "country-flag-icons";
 
 const { UUID } = require("sharetribe-flex-sdk").types;
 
 export const ProductPage = () => {
+  const str = "http://purecatamphetamine.github.io/country-flag-icons/3x2/";
   const navigation = useNavigate();
   const currentUser = useSelector((state: any) => state.user.currentUser);
   const [selected, setSelected] = useState<string>("");
@@ -26,7 +30,7 @@ export const ProductPage = () => {
     (state: any) => state.daimond.currentDaimond
   ).id.uuid;
   const [currentUUIDVendor, setUUIdVendor] = useState();
-  const [currentVendor, setVendor] = useState();
+  const [currentVendor, setVendor] = useState<Vendor>();
 
   const getCurentDaimond = async () => {
     sdk.listings
@@ -34,16 +38,14 @@ export const ProductPage = () => {
       .then((res: any) => {
         setCurrentDiamond(res.data);
         setSelected(res.data.included[1].attributes.variants.default.url);
-        setUUIdVendor(res.data.included[0].id.uuid);
+        setVendor(res.data.included[0]);
         console.log(res.data);
       });
   };
   useEffect(() => {
     getCurentDaimond();
   }, []);
-  useEffect(() => {
-    debugger;
-  }, [currentUUIDVendor]);
+  useEffect(() => {}, [currentUUIDVendor]);
 
   return (
     <>
@@ -60,8 +62,15 @@ export const ProductPage = () => {
         </div>
         <div className="detailsImagesDiv">
           <div style={{ width: "60%", height: "75%" }}>
-            <div className="images">
-              <div style={{ width: "20%" }}>
+            <div
+              className="images"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+              }}
+            >
+              <div style={{ width: "15%" }}>
                 <div className="calom">
                   {currentDiamond?.included?.map(
                     (imagge: any) =>
@@ -69,7 +78,7 @@ export const ProductPage = () => {
                         <img
                           style={{
                             width: "100%",
-                            height: "100px",
+                            height: "70px",
                             borderRadius: "8px",
                           }}
                           src={imagge.attributes.variants.default.url}
@@ -106,8 +115,12 @@ export const ProductPage = () => {
                 Certificates
               </button>
               <div className="countryDiv">
-                <img src="" alt="country img" />
-                <label className="country">country</label>
+                <img
+                  alt="United States"
+                  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+                  style={{width:'84px',height:'35px'}}
+                />
+                <label className="country">{currentDiamond?.data.attributes?.publicData?.Country}</label>
               </div>
             </div>
             <div className="pricesDeatails">
@@ -122,12 +135,14 @@ export const ProductPage = () => {
                 </div>
                 <div className="price">
                   <Typography className="priceHeader">Total</Typography>
-                  <Typography className="priceAmount">$4321</Typography>
+                  <Typography className="priceAmount">
+                    ${currentDiamond?.data.attributes.price.amount}
+                  </Typography>
                 </div>
               </div>
               <div className="netoralLab">
-                <Typography className="netoral">NETORAL</Typography>
-                <Typography className="lab">LAB</Typography>
+                <Typography className="netoral" sx={{backgroundColor:currentDiamond?.data.attributes?.publicData?.Natural=="Natural"? "rgb(104, 112, 112)":" rgba(245, 245, 245, 0);"}}>Netural</Typography>
+                <Typography className="lab" sx={{backgroundColor:currentDiamond?.data.attributes?.publicData?.Lab=="Lab"? "rgb(104, 112, 112)":" rgba(245, 245, 245, 0);"}}>LAB</Typography>
               </div>
             </div>
             <div className="vendorDiv">
@@ -140,17 +155,18 @@ export const ProductPage = () => {
                       borderRadius: "90%",
                     }}
                     src={
-                      currentUser.included
-                        ? currentUser.included[0].attributes.variants.default
-                            .url
-                        : ""
+                     currentDiamond?.data.attributes.publicData?.img
                     }
                     className="imag"
                     alt="Change"
                   ></img>
                   <div className="vendorDeatails">
-                    <Typography variant="subtitle2">vendor name</Typography>
-                    <Typography variant="body1">mail</Typography>
+                    <Typography variant="subtitle2">
+                      {currentVendor?.attributes.profile.displayName}
+                    </Typography>
+                    <Typography variant="body1">
+                      {currentDiamond?.data.attributes.publicData.Email}
+                    </Typography>
                   </div>
                 </div>
                 <div className="priceAndChatButtons">
@@ -177,6 +193,7 @@ export const ProductPage = () => {
             <SecuretyProtection />
           </div>
         </div>
+
         <Outlet></Outlet>
       </div>
     </>

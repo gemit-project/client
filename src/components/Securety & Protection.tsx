@@ -39,10 +39,12 @@ export const SecuretyProtection = () => {
             sagittis nisl rhoncus mattis rhoncus urna neque.
           </p>
         </div>
+        
         <div>
           <div className="secutery">
             <Typography className="secutery-title">
               <b>Shipping options</b>
+              
             </Typography>
             <img src={shipping}></img>
           </div>
@@ -56,7 +58,7 @@ export const SecuretyProtection = () => {
               >
                 {shipping}
               </AccordionSummary>
-              <AccordionDetails>bla bla bla ????????????</AccordionDetails>
+              <AccordionDetails></AccordionDetails>
             </Accordion>
            ) )}
           </div>
@@ -78,7 +80,7 @@ export const SecuretyProtection = () => {
               >
                 {inss} Insurance
               </AccordionSummary>
-              <AccordionDetails>bla bla bla ????????????</AccordionDetails>
+              <AccordionDetails></AccordionDetails>
             </Accordion>
            ) )}
           </div>

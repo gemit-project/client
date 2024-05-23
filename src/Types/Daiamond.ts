@@ -1,3 +1,4 @@
+import { User } from "./User";
 
 const { UUID, LatLng, Money ,availabilityPlan,publicData,privateData} = require("sharetribe-flex-sdk").types;
 export type Daimond = {

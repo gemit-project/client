@@ -1,17 +1,16 @@
+const { UUID } = require("sharetribe-flex-sdk").types;
 
-const { UUID, LatLng, Money ,availabilityPlan,publicData,privateData} = require("sharetribe-flex-sdk").types;
-
-
-export type Image={
-    attributes: {
-variant: {
-    default: {
+export type Image = {
+  attributes: {
+    variant: {
+      default: {
         height: number;
-        name:string;
+        name: string;
         url: string;
-        width: 750
-    }}
-id: typeof UUID
-type: "image"
-}
-}
+        width: 750;
+      };
+    };
+    id: typeof UUID;
+    type: "image";
+  };
+};
