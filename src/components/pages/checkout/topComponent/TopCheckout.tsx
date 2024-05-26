@@ -1,5 +1,5 @@
 import React from "react";
-import { Diamond } from "./Diamond";
+import { DiamondDisplay } from "./DiamondDisplay";
 import "./TopCheckout.css";
 import { DiamondDetails } from "./DiamondDetails";
 import { Price } from "./Price";
@@ -11,8 +11,9 @@ export const TopCheckout: React.FC = () => {
   return (
     <>
       <div className="border">
+        <div className="positionInsideBorder">
         <div className="diamondComponent">
-          <Diamond diamondImg={diamond.toString()} />
+          <DiamondDisplay diamondImg={diamond.toString()} />
           <div>
             <DiamondDetails diamondDetails={"1.08 Carat G SI1 Excellent Cut"} />
           </div>
@@ -27,6 +28,7 @@ export const TopCheckout: React.FC = () => {
         </div>
         <div className="checkoutComponent">
           <StatusLine />
+        </div>
         </div>
       </div>
     </>

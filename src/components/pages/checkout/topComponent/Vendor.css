@@ -1,6 +1,8 @@
 .vendor {
   margin-left: 1vw;
   margin-top: -0.5vw;
+  flex-direction: column;
+  display:flex;
 }
 
 .title {
@@ -39,4 +41,5 @@
 
 .nameAndEmail {
   margin-left: "0.3vw";
+  
 }

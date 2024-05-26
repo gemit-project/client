@@ -2,10 +2,9 @@
   width: 150vw;
   height: 12.5vw;
   background: #f2f2ff;
-  margin-top: -40px;
+  margin-top: -50px;
   border-top: 1px #0000ff solid;
   z-index: -1;
-  margin-left: -23px;
 }
 
 .diamondComponent {
@@ -15,4 +14,8 @@
 
 .checkoutComponent {
   margin-top: -23px;
+}
+
+.positionInsideBorder {
+  margin-left: 120px;
 }

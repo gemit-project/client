@@ -1,5 +1,5 @@
 .sidebar {
-  width: 10vh;
+  width: 9vh;
   height: 100vh;
   flex-shrink: 0;
   border-radius: 0vh 6vh 6vh 0vh;
@@ -10,7 +10,7 @@
 }
 
 .sidebar.expanded {
-  width: 30vh; /* Set the expanded width */
+  width: 25vh; /* Set the expanded width */
 }
 .logo {
   fill: #fff;
@@ -18,7 +18,7 @@
   height: 10vh;
   flex-shrink: 0;
   margin-top: 12vh;
-  margin-left: 7vh;
+  margin-left: 3vh;
 }
 .side.true {
   border-radius: 0vh 1vh 1vh 0vh;
@@ -36,11 +36,11 @@
 .img {
   fill: #fff;
   width: 3vh;
-  margin-left: 2.5vh;
+  margin-left: 1vh;
 }
 .name {
   color: #fff;
-  margin-left: 4vh;
+  margin-left: 2vh;
   display: flex;
   align-items: flex-end;
   text-decoration: none;
