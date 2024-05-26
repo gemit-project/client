@@ -25,7 +25,7 @@ export const SecuretyProtection = () => {
             <img src={lock}></img>
           </div>
           <p style={{ width: "540px" }}>
-            Ullamcorper eget nulla facilisi etiam dignissim diam quis. Accumsan
+            {/* Ullamcorper eget nulla facilisi etiam dignissim diam quis. Accumsan
             sit amet nulla facilisi morbi. Dignissim convallis aenean et tortor
             at risus viverra adipiscing at. Pellentesque id nibh tortor id
             aliquet lectus proin nibh nisl. Neque viverra justo nec ultrices dui
@@ -36,7 +36,7 @@ export const SecuretyProtection = () => {
             adipiscing diam donec. Congue quisque egestas diam in arcu cursus
             euismod. Mi proin sed libero enim sed. Orci eu lobortis elementum
             nibh tellus. Elit duis tristique sollicitudin nibh. Vitae proin
-            sagittis nisl rhoncus mattis rhoncus urna neque.
+            sagittis nisl rhoncus mattis rhoncus urna neque. */}???
           </p>
         </div>
         

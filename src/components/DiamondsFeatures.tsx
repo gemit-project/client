@@ -19,7 +19,7 @@ const propsCol1 = ["Shape", "Size", "Color", "Clarity"];
 const propsCol2 = ["Cut", "Polish", "Symmetry", "Fluorescence"];
 
 export const DiamodFeaters = () => {
-  // const currentDaimond=useSelector((state:typeof reduxStore)=> state.getState().daimond.currentDaimond)
+  
   const currentDaimond=useSelector((state:any)=> state.daimond.currentDaimond)
 
   return (
@@ -64,20 +64,23 @@ export const DiamodFeaters = () => {
           </Typography>
           <div>
             {cards.map((c) => (
-              <div style={{ width: "550px", display: "flex", gap: "2px" }}>
-                <img className="card-img" src={c} />
+              <div style={{ width: "100%", display: "flex", gap: "2px" }}>
+  
+                <div style={{display:'flex',flexDirection:'column',flex:'10%',alignItems:'center',padding: '16px',borderBottom: '1px solid var(--black, #030406)'}}><img className="card-img" src={c} /></div>
                 <div className="card-company">Company Name</div>
-                <Accordion sx={{ flex: "50%",width:'250px'}}>
+               
+                <Accordion sx={{display:'flex',flexDirection:'column',flex:'70%'}}>
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1-content"
                     id="panel1-header"
-                    style={{width:'300px'}}
+                    
                   >
                     Condition
                   </AccordionSummary>
-                  <AccordionDetails></AccordionDetails>
+                  <AccordionDetails>BKJKJ</AccordionDetails>
                 </Accordion>
+                
               </div>
             ))}
           </div>

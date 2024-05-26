@@ -61,7 +61,7 @@ export const ProductPage = () => {
           </IconButton>
         </div>
         <div className="detailsImagesDiv">
-          <div style={{ width: "60%", height: "75%" }}>
+          <div>
             <div
               className="images"
               style={{
@@ -70,7 +70,7 @@ export const ProductPage = () => {
                 justifyContent: "center",
               }}
             >
-              <div style={{ width: "15%" }}>
+              <div style={{ width: "20%" }}>
                 <div className="calom">
                   {currentDiamond?.included?.map(
                     (imagge: any) =>
@@ -105,6 +105,7 @@ export const ProductPage = () => {
             </div>
             <DiamodFeaters />
           </div>
+          <div>
           <div className="deatails">
             <div className="diamondTitle">
               {currentDiamond ? currentDiamond.data.attributes?.title : ""}
@@ -115,34 +116,33 @@ export const ProductPage = () => {
                 Certificates
               </button>
               <div className="countryDiv">
-                <img
-                  alt="United States"
-                  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
-                  style={{width:'84px',height:'35px'}}
-                />
+             
+                {/* <img src={`https://www.countryflags.io/${}/flat/64.png`} alt="Country Flag" /> */}
+                <img src={`https://www.countryflags.io/usa/flat/64.png`} alt="Country Flag" style={{width:'50px',height:"50px"}}/>
+      
                 <label className="country">{currentDiamond?.data.attributes?.publicData?.Country}</label>
               </div>
             </div>
             <div className="pricesDeatails">
               <div className="prices">
-                <div className="price">
+                <div className="priceDiv">
                   <Typography className="priceHeader">S/CR</Typography>
-                  <Typography className="priceAmount">$3333</Typography>
+                  <Typography className="priceAmount">${currentDiamond?.data?.attributes?.price?.amount}</Typography>
                 </div>
-                <div className="price">
+                <div className="priceDiv">
                   <Typography className="priceHeader">Discount</Typography>
-                  <Typography className="priceAmount">-32%</Typography>
+                  <Typography className="priceAmount">??</Typography>
                 </div>
-                <div className="price">
+                <div className="priceDiv">
                   <Typography className="priceHeader">Total</Typography>
                   <Typography className="priceAmount">
-                    ${currentDiamond?.data.attributes.price.amount}
+                    ??
                   </Typography>
                 </div>
               </div>
               <div className="netoralLab">
-                <Typography className="netoral" sx={{backgroundColor:currentDiamond?.data.attributes?.publicData?.Natural=="Natural"? "rgb(104, 112, 112)":" rgba(245, 245, 245, 0);"}}>Netural</Typography>
-                <Typography className="lab" sx={{backgroundColor:currentDiamond?.data.attributes?.publicData?.Lab=="Lab"? "rgb(104, 112, 112)":" rgba(245, 245, 245, 0);"}}>LAB</Typography>
+                <Typography className="netoral" sx={{backgroundColor:currentDiamond?.data.attributes?.publicData?.Natural=="Natural"? "rgb(104, 112, 112)":" transparent"}}>Netural</Typography>
+                <Typography className="lab" sx={{backgroundColor:currentDiamond?.data.attributes?.publicData?.Lab=="Lab"? "rgb(104, 112, 112)":"transparent"}}>LAB</Typography>
               </div>
             </div>
             <div className="vendorDiv">
@@ -179,18 +179,21 @@ export const ProductPage = () => {
                   <b>Vendor’s Notes</b>
                 </Typography>
               </div>
-              <p className="p">
-                Ullamcorper eget nulla facilisi etiam dignissim diam quis.
+              <p className="pVendor">
+                {/* Ullamcorper eget nulla facilisi etiam dignissim diam quis.
                 Accumsan sit amet nulla facilisi morbi. Dignissim convallis
                 aenean et tortor at risus viverra adipiscing at. Pellentesque id
                 nibh tortor id aliquet lectus proin nibh nisl. Neque viverra
                 justo nec ultrices dui sapien. Gravida dictum fusce ut placerat
-                orci nulla. Eget aliquet nibh...
+                orci nulla. Eget aliquet nibh... */}??
               </p>
               <img src={arrowDount}></img>
               <button className="buttonCheckout">Check-Out</button>
             </div>
+            <div style={{ borderLeft: '1px solid rgba(3, 4, 6, 0.50)',marginLeft:'8vw'}}>
             <SecuretyProtection />
+            </div>
+            </div>
           </div>
         </div>
 

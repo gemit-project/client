@@ -53,7 +53,7 @@
   width: 40%;
   flex-direction: column;
   margin-top: 20px;
-  margin-left: 2vw;
+  margin-left: 8vw;
   margin-right: 5vw;
   align-items: center;
   gap: 38px;
@@ -166,7 +166,7 @@ b {
   font-weight: 600;
   line-height: 135%;
 }
-.p {
+.pVendor {
   align-self: stretch;
   color: #000;
   font-family: Poppins;
@@ -175,6 +175,8 @@ b {
   font-weight: 400;
   line-height: 140%;
   text-transform: capitalize;
+  text-align: start;
+  margin-left: unset;
 }
 .buttonCheckout {
   display: flex;
@@ -193,6 +195,8 @@ b {
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
+  width: 540px;
+    
 }
 .countryDiv {
   display: flex;
@@ -234,7 +238,7 @@ b {
   align-items: flex-start;
   gap: 24px;
 }
-.price {
+.priceDiv {
   display: flex;
   width: 108px;
   padding: 8px 0px;
