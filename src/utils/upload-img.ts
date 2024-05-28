@@ -1,7 +1,6 @@
 import { sdk } from "../config/sharetribeSDK.config";
 
 export const uploadImage = async (file: File | null) => {
-  debugger
   if (file) {
     try {
       const res = await sdk.images.upload(
