@@ -2,6 +2,8 @@ import React from "react";
 import SideBar from "./side-bar/side-bar";
 import { TopHeader } from "./TopHeader";
 import { Routing } from "../utils/routing";
+import { FormProduct } from "./FormProduct";
+import SignIn from "./SginIn";
 
 export const BaseScreen: React.FC = () => {
   return (
@@ -16,9 +18,11 @@ export const BaseScreen: React.FC = () => {
           }}
         >
           <TopHeader />
+          <SignIn></SignIn>
+          <FormProduct></FormProduct>
           <Routing />
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   );
 };
