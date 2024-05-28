@@ -54,7 +54,6 @@
   flex-direction: column;
   margin-top: 20px;
   margin-left: 8vw;
-  margin-right: 5vw;
   align-items: center;
   gap: 38px;
 }
@@ -71,13 +70,13 @@
 }
 .detailsImagesDiv {
   display: flex;
-  gap: 15px;
+  gap: 120px;
   width: 100vw;
 }
 .certificatesCountry {
   display: flex;
   align-items: flex-start;
-  gap: 240px;
+  gap: 300px;
   align-self: stretch;
 }
 .vendorDiv {
@@ -260,7 +259,6 @@ b {
   text-transform: uppercase;
   width: fixed(84px);
   height: 22px;
-  /* background-color: rgba(245, 245, 245, 0); */
 }
 .netoralLab {
   display: flex;

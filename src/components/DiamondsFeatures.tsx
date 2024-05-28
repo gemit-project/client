@@ -65,16 +65,13 @@ export const DiamodFeaters = () => {
           <div>
             {cards.map((c) => (
               <div style={{ width: "100%", display: "flex", gap: "2px" }}>
-  
                 <div style={{display:'flex',flexDirection:'column',flex:'10%',alignItems:'center',padding: '16px',borderBottom: '1px solid var(--black, #030406)'}}><img className="card-img" src={c} /></div>
                 <div className="card-company">Company Name</div>
-               
                 <Accordion sx={{display:'flex',flexDirection:'column',flex:'70%'}}>
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1-content"
                     id="panel1-header"
-                    
                   >
                     Condition
                   </AccordionSummary>

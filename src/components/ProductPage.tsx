@@ -14,10 +14,13 @@ import { SecuretyProtection } from "./Securety & Protection";
 import { Daimond } from "../Types/Daiamond";
 import { User } from "../Types/User";
 import { Vendor } from "../Types/Vendor";
-import { hasFlag } from "country-flag-icons";
 import { countries } from "country-flag-icons";
 
-const { UUID } = require("sharetribe-flex-sdk").types;
+type Countries = {
+  [key: string]: string;
+};
+
+const countriesCode: Countries = { USA: "US", Israel: "IL" };
 
 export const ProductPage = () => {
   const str = "http://purecatamphetamine.github.io/country-flag-icons/3x2/";
@@ -29,6 +32,7 @@ export const ProductPage = () => {
   const currentUUIDDaimond = useSelector(
     (state: any) => state.daimond.currentDaimond
   ).id.uuid;
+  const cerentC = String(currentDiamond?.data.attributes?.publicData?.Country);
   const [currentUUIDVendor, setUUIdVendor] = useState();
   const [currentVendor, setVendor] = useState<Vendor>();
 
@@ -46,7 +50,7 @@ export const ProductPage = () => {
     getCurentDaimond();
   }, []);
   useEffect(() => {}, [currentUUIDVendor]);
-
+  
   return (
     <>
       <div className="page">
@@ -106,93 +110,125 @@ export const ProductPage = () => {
             <DiamodFeaters />
           </div>
           <div>
-          <div className="deatails">
-            <div className="diamondTitle">
-              {currentDiamond ? currentDiamond.data.attributes?.title : ""}
-            </div>
-            <div className="certificatesCountry">
-              <button className="certificates">
-                <img src={madalya}></img>
-                Certificates
-              </button>
-              <div className="countryDiv">
-             
-                {/* <img src={`https://www.countryflags.io/${}/flat/64.png`} alt="Country Flag" /> */}
-                <img src={`https://www.countryflags.io/usa/flat/64.png`} alt="Country Flag" style={{width:'50px',height:"50px"}}/>
-      
-                <label className="country">{currentDiamond?.data.attributes?.publicData?.Country}</label>
+            <div className="deatails">
+              <div className="diamondTitle">
+                {currentDiamond ? currentDiamond.data.attributes?.title : ""}
               </div>
-            </div>
-            <div className="pricesDeatails">
-              <div className="prices">
-                <div className="priceDiv">
-                  <Typography className="priceHeader">S/CR</Typography>
-                  <Typography className="priceAmount">${currentDiamond?.data?.attributes?.price?.amount}</Typography>
+              <div className="certificatesCountry">
+                <button className="certificates">
+                  <img src={madalya}></img>
+                  Certificates
+                </button>
+                <div className="countryDiv">
+                  <img
+                    src={`${str}${
+                      countriesCode[
+                        currentDiamond?.data.attributes?.publicData?.Country
+                      ]
+                    }.svg`}
+                    style={{ width: "50px", height: "50px" }}
+                  ></img>
+                  <label className="country">
+                    {currentDiamond?.data.attributes?.publicData?.Country}
+                  </label>
                 </div>
-                <div className="priceDiv">
-                  <Typography className="priceHeader">Discount</Typography>
-                  <Typography className="priceAmount">??</Typography>
+              </div>
+              <div className="pricesDeatails">
+                <div className="prices">
+                  <div className="priceDiv">
+                    <Typography className="priceHeader">S/CR</Typography>
+                    <Typography className="priceAmount">
+                      ${currentDiamond?.data?.attributes?.price?.amount}
+                    </Typography>
+                  </div>
+                  <div className="priceDiv">
+                    <Typography className="priceHeader">Discount</Typography>
+                    <Typography className="priceAmount">??</Typography>
+                  </div>
+                  <div className="priceDiv">
+                    <Typography className="priceHeader">Total</Typography>
+                    <Typography className="priceAmount">??</Typography>
+                  </div>
                 </div>
-                <div className="priceDiv">
-                  <Typography className="priceHeader">Total</Typography>
-                  <Typography className="priceAmount">
-                    ??
+                <div className="netoralLab">
+                  <Typography
+                    className="netoral"
+                    sx={{
+                      backgroundColor:
+                        currentDiamond?.data.attributes?.publicData?.Natural ==
+                        "Natural"
+                          ? "rgb(104, 112, 112)"
+                          : " transparent",
+                    }}
+                  >
+                    Netural
+                  </Typography>
+                  <Typography
+                    className="lab"
+                    sx={{
+                      backgroundColor:
+                        currentDiamond?.data.attributes?.publicData?.Lab ==
+                        "Lab"
+                          ? "rgb(104, 112, 112)"
+                          : "transparent",
+                    }}
+                  >
+                    LAB
                   </Typography>
                 </div>
               </div>
-              <div className="netoralLab">
-                <Typography className="netoral" sx={{backgroundColor:currentDiamond?.data.attributes?.publicData?.Natural=="Natural"? "rgb(104, 112, 112)":" transparent"}}>Netural</Typography>
-                <Typography className="lab" sx={{backgroundColor:currentDiamond?.data.attributes?.publicData?.Lab=="Lab"? "rgb(104, 112, 112)":"transparent"}}>LAB</Typography>
-              </div>
-            </div>
-            <div className="vendorDiv">
-              <div className="vendorContact">
-                <div className="vendorProfil">
-                  <img
-                    style={{
-                      height: "50px",
-                      width: "50px",
-                      borderRadius: "90%",
-                    }}
-                    src={
-                     currentDiamond?.data.attributes.publicData?.img
-                    }
-                    className="imag"
-                    alt="Change"
-                  ></img>
-                  <div className="vendorDeatails">
-                    <Typography variant="subtitle2">
-                      {currentVendor?.attributes.profile.displayName}
-                    </Typography>
-                    <Typography variant="body1">
-                      {currentDiamond?.data.attributes.publicData.Email}
-                    </Typography>
+              <div className="vendorDiv">
+                <div className="vendorContact">
+                  <div className="vendorProfil">
+                    <img
+                      style={{
+                        height: "50px",
+                        width: "50px",
+                        borderRadius: "90%",
+                      }}
+                      src={currentDiamond?.data.attributes.publicData?.img}
+                      className="imag"
+                      alt="Change"
+                    ></img>
+                    <div className="vendorDeatails">
+                      <Typography variant="subtitle2">
+                        {currentVendor?.attributes.profile.displayName}
+                      </Typography>
+                      <Typography variant="body1">
+                        {currentDiamond?.data.attributes.publicData.Email}
+                      </Typography>
+                    </div>
+                  </div>
+                  <div className="priceAndChatButtons">
+                    <button className="bidPriceButton">BID Price</button>
+                    <button className="chatButton">CHAT</button>
                   </div>
                 </div>
-                <div className="priceAndChatButtons">
-                  <button className="bidPriceButton">BID Price</button>
-                  <button className="chatButton">CHAT</button>
+                <div className="notes">
+                  <Typography className="vendorsNotes">
+                    <b>Vendor’s Notes</b>
+                  </Typography>
                 </div>
-              </div>
-              <div className="notes">
-                <Typography className="vendorsNotes">
-                  <b>Vendor’s Notes</b>
-                </Typography>
-              </div>
-              <p className="pVendor">
-                {/* Ullamcorper eget nulla facilisi etiam dignissim diam quis.
+                <p className="pVendor">
+                  {/* Ullamcorper eget nulla facilisi etiam dignissim diam quis.
                 Accumsan sit amet nulla facilisi morbi. Dignissim convallis
                 aenean et tortor at risus viverra adipiscing at. Pellentesque id
                 nibh tortor id aliquet lectus proin nibh nisl. Neque viverra
                 justo nec ultrices dui sapien. Gravida dictum fusce ut placerat
-                orci nulla. Eget aliquet nibh... */}??
-              </p>
-              <img src={arrowDount}></img>
-              <button className="buttonCheckout">Check-Out</button>
-            </div>
-            <div style={{ borderLeft: '1px solid rgba(3, 4, 6, 0.50)',marginLeft:'8vw'}}>
-            <SecuretyProtection />
-            </div>
+                orci nulla. Eget aliquet nibh... */}
+                  ??
+                </p>
+                <img src={arrowDount}></img>
+                <button className="buttonCheckout">Check-Out</button>
+              </div>
+              <div
+                style={{
+                  borderLeft: "1px solid rgba(3, 4, 6, 0.50)",
+                  marginLeft: "8vw",
+                }}
+              >
+                <SecuretyProtection />
+              </div>
             </div>
           </div>
         </div>
