@@ -5,6 +5,9 @@ import Favorite from "../../../assets/forevrite.png";
 import box from "../../../assets/icons/product-icons/box.svg";
 import { sdk } from "../../../config/sharetribeSDK.config";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setCurrentDaimond } from "../../../app/slices/DaimondSlice";
 
 const { UUID, LatLng, Money } = require("sharetribe-flex-sdk").types;
 
@@ -34,7 +37,8 @@ export const Search: React.FC = () => {
   const [images, setImages] = useState<Array<any>>([]);
   const [Compares, setCompares] = useState<Array<string>>([]);
   const [favorites, setFavorites] = useState<Array<string>>([]);
-
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   useEffect(() => {
     getData();
   }, []);
@@ -115,7 +119,11 @@ export const Search: React.FC = () => {
               data.length > 0 &&
               data.map((listing: any, i: any) => (
                 <div className="allDiv" key={i}>
-                  <div className="greyDiv">
+                  <div className="greyDiv"
+                  onClick={() => {
+                    dispatch(setCurrentDaimond(listing));
+                    navigate("/Product");
+                  }}>
                     <div className="among">
                       <img
                         key={i}
