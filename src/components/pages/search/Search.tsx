@@ -108,7 +108,16 @@ export const Search: React.FC = () => {
       setFavorites(newFavorites);
     }
   };
-
+  const getCurentDaimond = async (listing: any) => {
+    debugger;
+    sdk.listings
+      .show({ id: listing?.id?.uuid, include: ["author", "images"] })
+      .then((res: any) => {
+        console.log(res.data);
+        dispatch(setCurrentDaimond(listing));
+        navigate("/Product");
+      });
+  };
   return (
     <>
       <Button_Section></Button_Section>
@@ -119,11 +128,12 @@ export const Search: React.FC = () => {
               data.length > 0 &&
               data.map((listing: any, i: any) => (
                 <div className="allDiv" key={i}>
-                  <div className="greyDiv"
-                  onClick={() => {
-                    dispatch(setCurrentDaimond(listing));
-                    navigate("/Product");
-                  }}>
+                  <div
+                    className="greyDiv"
+                    onClick={() => {
+                      getCurentDaimond(listing);
+                    }}
+                  >
                     <div className="among">
                       <img
                         key={i}
