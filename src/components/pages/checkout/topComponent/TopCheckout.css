@@ -1,16 +1,21 @@
 .border {
   width: 150vw;
-  height: 14vw;
+  height: 12.5vw;
   background: #f2f2ff;
-  margin-top: -20px;
+  margin-top: -50px;
   border-top: 1px #0000ff solid;
   z-index: -1;
 }
 
 .diamondComponent {
   display: inline-flex;
+  margin-top: -10px;
 }
 
 .checkoutComponent {
   margin-top: -23px;
+}
+
+.positionInsideBorder {
+  margin-left: 120px;
 }

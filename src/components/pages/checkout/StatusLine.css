@@ -1,0 +1,51 @@
+.line {
+  margin-left: 4.55vw;
+  width: 77vw;
+  height: 4vh;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+  margin-top: -555px;
+}
+
+.moreAttributesToLine {
+  margin-left: 3vw;
+  z-index: -1;
+  width: 71vw;
+  position: absolute;
+  border: 0.5vh #0000ff solid;
+}
+
+.circlesPosition {
+  /* margin-left: -1px; */
+  margin-bottom: -10vh;
+  flex-direction: column;
+  align-items: center;
+  display: inline-flex;
+}
+
+.currentPage {
+  margin-top: 0.6vh;
+  color: black;
+  font-size: 1.3vw;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+.otherPage {
+  margin-top: 0.8vw;
+  color: black;
+  font-size: 1.1vw;
+  font-family: "Poppins";
+  font-weight: 450;
+}
+
+.bold {
+  height: 3vw;
+  width: 3vw;
+}
+
+.simple {
+  height: 2vw;
+  width: 2vw;
+}

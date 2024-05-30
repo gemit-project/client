@@ -1,18 +1,17 @@
 import React from "react";
-import "./Diamond.css";
-import hands from "../../assets/icons/Checkout-icons/hands.svg";
+import hands from "../../../../assets/icons/Checkout-icons/hands.svg"
 import "./Price.css";
 
 export const Price: React.FC<{diamondPrice: string }> = ({ diamondPrice }) => {
   return (
     <>
-      <div className="all">
+      <div className="priceFrame">
         <div className="squarePrice">
-          <div className="in">
+          <div className="titleWithHandsIcon">
             <div className="price">PRICE</div>
-            <img src={hands.toString()}></img>
+            <img className="hand" src={hands.toString()}></img>
           </div>
-          <div className="cost"> ${diamondPrice}</div>
+          <div className="cost">${diamondPrice}</div>
         </div>
       </div>
     </>

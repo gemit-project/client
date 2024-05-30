@@ -1,5 +1,6 @@
 .second-screen {
-  margin-left: 50px;
+  margin-left: 10vw;
+  margin-top: 50px;
 }
 .shipping {
   text-align: left;
@@ -29,14 +30,14 @@
 .up-line {
   display: inline-flex;
 }
+.button-skip1 {
+  margin-top: 10px;
+  margin-left: 25vw;
+}
 .buttons {
   display: inline-flex;
   margin-left: 1000px;
   margin-top: 50px;
-}
-.button-skip {
-  margin-left: 26vw;
-  margin-top: 10px;
 }
 .button-next2 {
   margin-left: 15px;
@@ -44,6 +45,7 @@
 .select {
   display: grid;
   grid-template-columns: 400px 80px;
+  grid-template-rows: 25px;
 }
 .right-culomn2 {
   margin-bottom: 130px;
