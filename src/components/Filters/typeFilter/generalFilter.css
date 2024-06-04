@@ -1,0 +1,37 @@
+.switch {
+    margin-left: 5vw;
+    margin-top: 12vh;
+}
+.lab{
+    color: rgb(108, 106, 106);
+    margin-left: 3vh;
+}
+.lab2{
+    color: rgb(108, 106, 106);
+    margin-left: 4vh;
+}
+.inputs {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+.buttomInputs{
+    margin-left: 12vw;
+}
+p{
+    margin: auto;
+}
+.pchecked{
+    margin-left: 5vi;
+}
+.punchecked{
+    margin-left: -5vi;
+}
+.inpo{
+    margin-left: 1.5vw;
+    text-indent: 0.2vw;
+    width: 10vw;
+    border: 2px solid #00B2FF;
+    border-radius: 0.2vi;
+    padding: 0.1vi;
+}
