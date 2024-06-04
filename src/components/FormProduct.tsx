@@ -120,9 +120,9 @@ useEffect(()=>{
   return (
     <>
       <br></br>
-      <div className="wraps">
+      <div  style={{ }} className="wraps">
         <label className="AddingProduct">add product</label>
-        <div style={{ display: "flex", gap: "100px" }} className="frame">
+        <div style={{ display:"flex", gap: "100px", border:"3px solid black", borderColor:"#0008ff" ,alignItems:"center"}}  className="frame">
           <div>
             <TextField
               sx={{ color: "cyan", boder: "2px solid cyan" }}

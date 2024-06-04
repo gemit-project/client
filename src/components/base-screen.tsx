@@ -9,19 +9,20 @@ export const BaseScreen: React.FC = () => {
   return (
     <div>
       <div style={{ display: "flex", flexDirection: "row" }}>
-         {/* <SideBar />
+         <SideBar />
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             position: "fixed",
+            justifyContent:"center"
           }}
-        > */}
-          {/* <TopHeader /> */}
+        >
+          <TopHeader />
           <FormProduct></FormProduct>
           <Routing />
         </div>
       </div>
-    // </div>
+     </div>
   );
 };
