@@ -7,21 +7,25 @@ import { Vendor } from "./Vendor";
 import { StatusLine } from "../StatusLine";
 import { useSelector } from "react-redux";
 export const TopCheckout: React.FC = () => {
+  debugger
   const currentDaimond = useSelector(
     (state: any) => state.daimond.currentDaimond
   );
-  const TheDiamondPrice = currentDaimond?.attributes.price.amount;
-  const diamondTitle = currentDaimond?.attributes.title;
-  const vendorEmail = currentDaimond?.attributes.publicData?.Email;
-  const vendorName = currentDaimond?.attributes.publicData?.Profil.displayName;
-  const vendorImg = currentDaimond?.attributes.publicData?.img;
-
+  const TheDiamondPrice = currentDaimond?.data.attributes.price.amount;
+  const diamondTitle = currentDaimond?.data.attributes.title;
+  const vendorEmail = currentDaimond?.data.attributes.publicData?.Email;
+  const vendorName = currentDaimond?.data.attributes.publicData?.Profil.displayName;
+  const vendorImg = currentDaimond?.data.attributes.publicData?.img;
+  debugger
+  const diamondImg = currentDaimond.included
+  ? currentDaimond.included[1].attributes.variants.default.url
+  : "";
   return (
     <>
       <div className="border">
         <div className="positionInsideBorder">
           <div className="diamondComponent">
-          
+          <DiamondDisplay diamondImg={diamondImg} />
             <div>
               <DiamondDetails diamondDetails={diamondTitle} />
             </div>

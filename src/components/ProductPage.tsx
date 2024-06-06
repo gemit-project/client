@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductPage.css";
 import { sdk } from "../config/sharetribeSDK.config";
 import { useSelector } from "react-redux";
-import { Button, IconButton, Typography } from "@mui/material";
+import {  IconButton, Typography } from "@mui/material";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import back from "../assets/icons/product-icons/back.svg";
 import madalya from "../assets/icons/product-icons/Madalya.svg";
@@ -11,10 +11,7 @@ import fullLove from "../assets/icons/product-icons/fullLike.png";
 import emptyLove from "../assets/icons/product-icons/EmptyLike.png";
 import { DiamodFeaters } from "./DiamondsFeatures";
 import { SecuretyProtection } from "./Securety & Protection";
-import { Daimond } from "../Types/Daiamond";
-import { User } from "../Types/User";
-import { Vendor } from "../Types/Vendor";
-import { countries } from "country-flag-icons";
+
 
 type Countries = {
   [key: string]: string;
@@ -25,32 +22,16 @@ const countriesCode: Countries = { USA: "US", Israel: "IL" };
 export const ProductPage = () => {
   const str = "http://purecatamphetamine.github.io/country-flag-icons/3x2/";
   const navigation = useNavigate();
-  const currentUser = useSelector((state: any) => state.user.currentUser);
-  const [selected, setSelected] = useState<string>("");
-  const [isClick, setClick] = useState<boolean>(false);
-  const [currentDiamond, setCurrentDiamond] = useState<Daimond>();
-  const currentUUIDDaimond = useSelector(
+  const currentDiamond = useSelector(
     (state: any) => state.daimond.currentDaimond
-  ).id.uuid;
-  const cerentC = String(currentDiamond?.data.attributes?.publicData?.Country);
-  const [currentUUIDVendor, setUUIdVendor] = useState();
-  const [currentVendor, setVendor] = useState<Vendor>();
+  );
+  const [selected, setSelected] = useState<string>(
+    currentDiamond.included
+      ? currentDiamond.included[1].attributes.variants.default.url
+      : ""
+  );
+  const [isClick, setClick] = useState<boolean>(false);
 
-  const getCurentDaimond = async () => {
-    sdk.listings
-      .show({ id: currentUUIDDaimond, include: ["author", "images"] })
-      .then((res: any) => {
-        setCurrentDiamond(res.data);
-        setSelected(res.data.included[1].attributes.variants.default.url);
-        setVendor(res.data.included[0]);
-        console.log(res.data);
-      });
-  };
-  useEffect(() => {
-    getCurentDaimond();
-  }, []);
-  useEffect(() => {}, [currentUUIDVendor]);
-  
   return (
     <>
       <div className="page">
@@ -143,7 +124,7 @@ export const ProductPage = () => {
                   </div>
                   <div className="priceDiv">
                     <Typography className="priceHeader">Discount</Typography>
-                    <Typography className="priceAmount">??</Typography>
+                    <Typography className="priceAmount">0%</Typography>
                   </div>
                   <div className="priceDiv">
                     <Typography className="priceHeader">Total</Typography>
@@ -192,7 +173,10 @@ export const ProductPage = () => {
                     ></img>
                     <div className="vendorDeatails">
                       <Typography variant="subtitle2">
-                        {currentVendor?.attributes.profile.displayName}
+                        {
+                          currentDiamond?.data.attributes?.publicData.Profil
+                            ?.displayName
+                        }
                       </Typography>
                       <Typography variant="body1">
                         {currentDiamond?.data.attributes.publicData.Email}
@@ -209,13 +193,7 @@ export const ProductPage = () => {
                     <b>Vendor’s Notes</b>
                   </Typography>
                 </div>
-                <p className="pVendor">
-                  {/* Ullamcorper eget nulla facilisi etiam dignissim diam quis.
-                Accumsan sit amet nulla facilisi morbi. Dignissim convallis
-                aenean et tortor at risus viverra adipiscing at. Pellentesque id
-                nibh tortor id aliquet lectus proin nibh nisl. Neque viverra
-                justo nec ultrices dui sapien. Gravida dictum fusce ut placerat
-                orci nulla. Eget aliquet nibh... */}
+                <p className="pVendor">                 
                   ??
                 </p>
                 <img src={arrowDount}></img>
@@ -232,7 +210,6 @@ export const ProductPage = () => {
             </div>
           </div>
         </div>
-
         <Outlet></Outlet>
       </div>
     </>
