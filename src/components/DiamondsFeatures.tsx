@@ -44,7 +44,7 @@ export const DiamodFeaters = () => {
               {propsCol1.map((p) => (
                 <div style={{ display: "flex" }}>
                   <div className="right-header-chart">{p.toUpperCase()}</div>
-                  <div className="props">{currentDaimond.attributes.publicData[p]}</div>
+                  <div className="props">{currentDaimond.data.attributes?.publicData[p]}</div>
                 </div>
               ))}
             </div>
@@ -52,7 +52,7 @@ export const DiamodFeaters = () => {
               {propsCol2.map((p) => (
                 <div style={{ display: "flex" }}>
                   <div className="left-header-chart">{p.toUpperCase()}</div>
-                  <div className="props">{currentDaimond.attributes.publicData[p]}</div>
+                  <div className="props">{currentDaimond.data.attributes.publicData[p]}</div>
                 </div>
               ))}
             </div>
