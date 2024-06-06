@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductPage.css";
 import { sdk } from "../config/sharetribeSDK.config";
 import { useSelector } from "react-redux";
-import {  IconButton, Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import back from "../assets/icons/product-icons/back.svg";
 import madalya from "../assets/icons/product-icons/Madalya.svg";
@@ -11,7 +11,8 @@ import fullLove from "../assets/icons/product-icons/fullLike.png";
 import emptyLove from "../assets/icons/product-icons/EmptyLike.png";
 import { DiamodFeaters } from "./DiamondsFeatures";
 import { SecuretyProtection } from "./Securety & Protection";
-
+import { setIsCheckOut } from "../app/slices/CheckOutSlice";
+import { useDispatch } from "react-redux";
 
 type Countries = {
   [key: string]: string;
@@ -30,8 +31,12 @@ export const ProductPage = () => {
       ? currentDiamond.included[1].attributes.variants.default.url
       : ""
   );
+  const dispatch = useDispatch();
   const [isClick, setClick] = useState<boolean>(false);
-
+  const navigateToCheckOut = () => {
+    navigation("/CheckOut");
+    dispatch(setIsCheckOut(true));
+  };
   return (
     <>
       <div className="page">
@@ -193,11 +198,11 @@ export const ProductPage = () => {
                     <b>Vendor’s Notes</b>
                   </Typography>
                 </div>
-                <p className="pVendor">                 
-                  ??
-                </p>
+                <p className="pVendor">??</p>
                 <img src={arrowDount}></img>
-                <button className="buttonCheckout">Check-Out</button>
+                <button onClick={navigateToCheckOut} className="buttonCheckout">
+                  Check-Out
+                </button>
               </div>
               <div
                 style={{
