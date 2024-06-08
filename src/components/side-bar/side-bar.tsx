@@ -8,10 +8,13 @@ import setting from "../../assets/icons/side-bar-icons/settings.svg";
 import logOut from "../../assets/icons/side-bar-icons/log-out.svg";
 import logo from "../../assets/icons/side-bar-icons/logo/logo.svg";
 import { Outlet, Link, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const SideBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const location = useLocation();
+  const myLocation = location.pathname;
+  const selector = useSelector((state: any) => state.checkOut.isCheckout);
   const handleMouseEnter = () => {
     setIsExpanded(true);
   };
@@ -50,9 +53,6 @@ export const SideBar = () => {
     },
   ];
 
-  const location = useLocation();
-  const myLocation = location.pathname;
-
   return (
     <>
       <div
@@ -71,14 +71,22 @@ export const SideBar = () => {
           {TopIcons.map((icon, i) => (
             <div key={i} className="myDiv">
               <div
-                className={`side ${myLocation == `/${icon.to}` ? "true" : ""}`}
+                className={`side ${
+                  myLocation == `/${icon.to}` || myLocation.includes(icon.to)
+                    ? "true"
+                    : ""
+                }`}
               />
               <img className="img" src={icon.src} />
               <div>
                 {isExpanded ? (
-                  <Link to={`/${icon.to}`} className="name">
-                    {icon.to}
-                  </Link>
+                  icon.to === "CheckOut" && selector === false ? (
+                    <div className="name">{icon.to}</div>
+                  ) : (
+                    <Link to={`/${icon.to}`} className="name">
+                      {icon.to}
+                    </Link>
+                  )
                 ) : null}
               </div>
             </div>

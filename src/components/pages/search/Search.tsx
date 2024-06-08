@@ -109,7 +109,6 @@ export const Search: React.FC = () => {
     }
   };
   const getCurentDaimond = async (listing: any) => {
-    debugger;
     sdk.listings
       .show({ id: listing?.id?.uuid, include: ["author", "images"] })
       .then((res: any) => {
