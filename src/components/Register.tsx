@@ -97,7 +97,7 @@ export function Register() {
   }
   //Password validation
   const validatePass = (event: any) => {
-    var passw = /^[A-Za-z0-9!-*]\w{7,256}$/;
+    var passw = /^(?=.*[0-9a-zA-Z])[\w\d\W]{8,257}$/;
     if (event.target.value.match(passw)) {
       setErrors({ ...Errors, PassError: 'Correct!' });
       setStyleErrors({
