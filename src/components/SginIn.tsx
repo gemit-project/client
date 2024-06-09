@@ -63,12 +63,10 @@ export default function SignIn() {
   }
   //Password validation
   const validatePass = (event: any) => {
-    var passw = /^[A-Za-z0-9!-*]\w{7,256}$/;
-    if (event.target.value.match(passw)) {
-      if (!dissable) {
+    var passw =  /^(?=.*[0-9a-zA-Z])[\w\d\W]{8,256}$/;
+    if (event.target.value.match(passw)) {     
         setDissable(true)
-        setUser({ ...myUser, pass: event.target.value })
-      }
+        setUser({ ...myUser, pass: event.target.value })     
     }
     else {
       if (dissable)

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductPage.css";
 import { sdk } from "../config/sharetribeSDK.config";
 import { useSelector } from "react-redux";
-import { IconButton, Typography } from "@mui/material";
+import { Button, IconButton, Typography } from "@mui/material";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import back from "../assets/icons/product-icons/back.svg";
 import madalya from "../assets/icons/product-icons/Madalya.svg";
@@ -130,6 +130,7 @@ export const ProductPage = () => {
                   <div className="priceDiv">
                     <Typography className="priceHeader">Discount</Typography>
                     <Typography className="priceAmount">0%</Typography>
+                    <Typography className="priceAmount">0%</Typography>
                   </div>
                   <div className="priceDiv">
                     <Typography className="priceHeader">Total</Typography>
@@ -178,6 +179,10 @@ export const ProductPage = () => {
                     ></img>
                     <div className="vendorDeatails">
                       <Typography variant="subtitle2">
+                        {
+                          currentDiamond?.data.attributes?.publicData.Profil
+                            ?.displayName
+                        }
                         {
                           currentDiamond?.data.attributes?.publicData.Profil
                             ?.displayName
