@@ -120,7 +120,7 @@ export const Search: React.FC = () => {
   return (
     <>
       <Button_Section></Button_Section>
-      <div className="scrollBar">
+      <div className="scrollBarSaerch">
         <section className="section">
           <div className="allView">
             {data &&

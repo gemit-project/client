@@ -21,10 +21,10 @@ export const Frame2: React.FC = () => {
       {labels.map((i) => (
         <>
           <Button variant="text" className="label">{i.name}</Button>
-          <img src={pas}></img>
+          <img src={pas} className="pasAmong"></img>
         </>
       ))}
-      <Button variant="contained" className="blueB">
+      <Button className="blueB" variant="contained" >
        <Link to="/addDimond">ADD</Link>
         <img className="addImg" src={add} />
       </Button>

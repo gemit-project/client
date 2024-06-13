@@ -62,7 +62,7 @@ export const SideBar = () => {
       >
         <div>
           {isExpanded ? (
-            <img src={logo} className="logo" />
+            <img src={logo} className="logoSide" />
           ) : (
             <div style={{ height: "27vh" }} />
           )}
@@ -77,13 +77,13 @@ export const SideBar = () => {
                     : ""
                 }`}
               />
-              <img className="img" src={icon.src} />
+              <img className="imgSide" src={icon.src} />
               <div>
                 {isExpanded ? (
                   icon.to === "CheckOut" && selector === false ? (
-                    <div className="name">{icon.to}</div>
+                    <div className="nameComponent">{icon.to}</div>
                   ) : (
-                    <Link to={`/${icon.to}`} className="name">
+                    <Link to={`/${icon.to}`} className="nameComponent">
                       {icon.to}
                     </Link>
                   )
@@ -99,10 +99,10 @@ export const SideBar = () => {
                     myLocation == `/${icon.to}` ? "true" : ""
                   }`}
                 />
-                <img className="img" src={icon.src} />
+                <img className="imgSide" src={icon.src} />
                 <div>
                   {isExpanded ? (
-                    <Link to={`/${icon.to}`} className="name">
+                    <Link to={`/${icon.to}`} className="nameComponent">
                       {icon.to}
                     </Link>
                   ) : null}

@@ -25,9 +25,11 @@ export const Frame1: React.FC = () => {
         <div className="whitediv"></div>
         <div className="selectDiv">
           <div className="whiteSelect"> All Statuses </div>
-          <button className="blueSelect" onClick = {PopSelect}>
-            <img src={arrow}/>
-          </button>
+          {/* <button className="blueSelect" onClick = {PopSelect}> */}
+          <div className="blueSelect">
+            <img src={arrow} />
+          </div>
+          {/* </button> */}
         </div>
         <div className={Selected?`pop`:""}></div>
         <div className="selectDiv">
