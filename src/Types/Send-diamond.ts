@@ -1,7 +1,7 @@
 import React from "react"
 import { sdk } from "../config/sharetribeSDK.config";
 const { UUID, LatLng, Money ,availabilityPlan,publicData,privateData} = require("sharetribe-flex-sdk").types;
-export type Diamond={
+export type SDiamond={
      title:string,
      price?:typeof Money,
      privateData?:typeof privateData,
