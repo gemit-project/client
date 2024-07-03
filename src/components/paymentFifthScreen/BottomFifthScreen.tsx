@@ -151,7 +151,7 @@ export const BottomFifthScreen: React.FC = () => {
                 backgroundColor: "rgba(0, 0, 255, 0.8)",
                 wordWrap: "break-word",
               }}
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/Dashboard")}
             >
               Back to Marketplace{" "}
             </Button>
