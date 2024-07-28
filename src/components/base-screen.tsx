@@ -17,7 +17,6 @@ export const BaseScreen: React.FC = () => {
           }}
         >
           <TopHeader />
-          <FormProduct/>
           <Routing />
         </div>
       </div>
