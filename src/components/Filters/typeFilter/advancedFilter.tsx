@@ -26,7 +26,6 @@ export default function RangeSlider() {
     const handleChange1 = (event: Event, newValue: number | number[]) => {
         setValue1(newValue as number[]);
         updateValue(newValue);
-        alert(newValue)
     };
     const handleChange2 = (event: Event, newValue: number | number[]) => {
         setValue2(newValue as number[]);
@@ -40,6 +39,8 @@ export default function RangeSlider() {
 
     return (
         <>
+         <div className="scrollBar">
+        <section className="section">
             <br />
             <div className='IWrap'>
                 <Box className="box" >
@@ -114,6 +115,7 @@ export default function RangeSlider() {
                     <input placeholder='Inscription (e.g. GIA7241171554)' className='input'></input>
                 </div>
             </div>
+            </section></div>
         </>
     );
 }
