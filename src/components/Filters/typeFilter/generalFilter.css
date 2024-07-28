@@ -1,37 +1,47 @@
 .switch {
-    margin-left: 5vw;
-    margin-top: 12vh;
+  margin-left: 5vw;
+  margin-top: 12vh;
 }
-.lab{
-    color: rgb(108, 106, 106);
-    margin-left: 3vh;
+.lab {
+  color: rgb(108, 106, 106);
+  margin-left: 3vh;
 }
-.lab2{
-    color: rgb(108, 106, 106);
-    margin-left: 4vh;
+.lab2 {
+  color: rgb(108, 106, 106);
+  margin-left: 4vh;
 }
 .inputs {
-    margin-top: 10vh;
-    display: flex;
-    flex-direction: row;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
 }
-.buttomInputs{
-    margin-left: 12vw;
+.buttomInputs {
+  margin-left: 12vw;
 }
-p{
-    margin: auto;
+p {
+  margin: auto;
 }
-.pchecked{
-    margin-left: 5vi;
+.pchecked {
+  margin-left: 5vi;
 }
-.punchecked{
-    margin-left: -5vi;
+.punchecked {
+  margin-left: -5vi;
 }
-.inpo{
-    margin-left: 1.5vw;
-    text-indent: 0.2vw;
-    width: 10vw;
-    border: 2px solid #00B2FF;
-    border-radius: 0.2vi;
-    padding: 0.1vi;
+.inpo {
+  margin-left: 1.5vw;
+  text-indent: 0.2vw;
+  width: 10vw;
+  border: 2px solid #00b2ff;
+  border-radius: 0.2vi;
+  padding: 0.1vi;
+}
+.scrollBar {
+  scrollbar-color: #b6f0fc #ffffff;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 64vh;
+}
+.section {
+  height: 100vh;
+  margin-left: 2px;
 }

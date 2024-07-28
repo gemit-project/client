@@ -1,4 +1,4 @@
-import FilterTopComponent from "../../../Filters/filterTop/filterTopComponent";
+import { FilterTopComponent } from "../../../Filters/filterTop/filterTopComponent";
 
 export const Filter: React.FC = () => {
     return(<>
