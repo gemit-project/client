@@ -51,6 +51,8 @@ export const Compare = (prop: any) => {
                   src={emptyLove}
                 ></img>
 
+
+
                 <img style={{ width: "25px", height: "25px" }} src={deleted} />
               </div>
               <div>
