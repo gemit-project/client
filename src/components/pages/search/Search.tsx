@@ -65,6 +65,7 @@ export const Search: React.FC = () => {
   };
 
   const CompareDiamonds = (id: string, key: number) => {
+    console.log(id)
     const newData = [...data];
     const ind = newData.findIndex((x) => x.id.uuid === id);
     if (ind !== -1) {
@@ -129,9 +130,7 @@ export const Search: React.FC = () => {
                 <div className="allDiv" key={i}>
                   <div
                     className="greyDiv"
-                    onClick={() => {
-                      getCurentDaimond(listing);
-                    }}
+                    
                   >
                     <div className="among">
                       <img
@@ -156,6 +155,9 @@ export const Search: React.FC = () => {
                       ) {
                         return (
                           <img
+                            onClick={() => {
+                              getCurentDaimond(listing);
+                            }}
                             key={img.id.uuid}
                             className="diamondImg"
                             src={img.attributes.variants.default.url}
