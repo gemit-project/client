@@ -66,6 +66,7 @@ export const Dashboard = () => {
                 </div>
             )}
         </div>
-        <Outlet></Outlet>
+        <Listing></Listing>
+         
     </>)
 }

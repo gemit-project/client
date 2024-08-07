@@ -5,6 +5,7 @@ import pas from "../../../../assets/Pas.svg";
 import add from "../../../../assets/Listing/Button.svg";
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
+import { Listing } from "../listing/Listing";
 
 export const Frame2: React.FC = () => {
   const [counter, setCounter] = useState(25);
@@ -29,5 +30,6 @@ export const Frame2: React.FC = () => {
         <img className="addImg" src={add} />
       </Button>
     </div>
+
   );
 };
