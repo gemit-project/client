@@ -62,12 +62,12 @@
   margin-top: 100px;
   border: 1px solid black;
 }
-button {
+/* button {
   margin-left: 2vw;
   margin-top: 1vh;
   width: 5vw;
   border-width: 0px;
-}
+} */
 .wrap2Buttons {
   display: flex;
 }
