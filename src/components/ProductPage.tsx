@@ -130,7 +130,6 @@ export const ProductPage = () => {
                   <div className="priceDiv">
                     <Typography className="priceHeader">Discount</Typography>
                     <Typography className="priceAmount">0%</Typography>
-                    <Typography className="priceAmount">0%</Typography>
                   </div>
                   <div className="priceDiv">
                     <Typography className="priceHeader">Total</Typography>
@@ -212,7 +211,7 @@ export const ProductPage = () => {
               <div
                 style={{
                   borderLeft: "1px solid rgba(3, 4, 6, 0.50)",
-                  marginLeft: "8vw",
+                  marginLeft: "10vw",
                 }}
               >
                 <SecuretyProtection />
