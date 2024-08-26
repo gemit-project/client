@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import d2 from "../../../../assets/diamonds/2.svg";
 import { Button, IconButton, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ import deleted from "../../../../assets/ButtonSection/delete.svg";
 import lookfor from "../../../../assets/ButtonSection/lookfor.svg";
 import { blue } from "@mui/material/colors";
 import { useSelector } from "react-redux";
+import { sdk } from "../../../../config/sharetribeSDK.config";
 
 export const Compare = (prop: any) => {
   // const [comparsDiamond,setComparesDaimond]=useState(Array<string>)
@@ -21,10 +22,32 @@ export const Compare = (prop: any) => {
   // ];
   const navigation = useNavigate();
   const [isClick, setClick] = useState<boolean>(false);
+  const [images, setImages] = useState<Array<any>>([]);
   const compares = useSelector((state: any) => state.compare.comparesDiamond);
-  console.log(compares)
-  return (
-    <>
+ console.log(compares)
+  const getData = () => {
+    sdk.listings
+      .query({
+        include: ["images"],
+      })
+      .then((res: any) => {      
+        setImages(res.data.included);
+        console.log(res.data)
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  };
+ const getimagebyid=(id:string)=>{
+ const s=images.find(x=> x.id.uuid==id)//.attributes?.variants?.default.url
+console.log(s)
+  // if(s!=null)return s;
+   return s.attributes?.variants?.default.url;
+  }
+  useEffect(() => {
+    getData();
+  }, []);
+  return ( <div style={{marginLeft:"10vw"}}>  
       <div className="backSearch">
         <Typography className="titleBack">Back To All Results</Typography>
         <IconButton
@@ -35,10 +58,12 @@ export const Compare = (prop: any) => {
           <img src={back}></img>
         </IconButton>
       </div>
-      <div style={{ display: "flex" ,gap:"5px" }}>
+      <div style={{ display: "flex" ,gap:"5px" ,alignItems:"center",justifyContent: "flex-start"}}>
         {compares.map((c:any) => {
           return (           
-              <div style={{backgroundColor:" rgba(230, 230, 230, 0.60)", display: "flex",flexDirection:"column", width: "50px",height: "50px",padding:"12px",alignItems: "center",gap:"12px",flexShrink: 0}}>
+              <div style={{backgroundColor:" rgba(230, 230, 230, 0.60)", display: "flex",flexDirection:"column", width: "250px",height: "170px",padding:"12px",alignItems: "center",gap:"12px",flexShrink: 0,justifyContent: "flex-end"
+
+              }}>
                <div
                 style={{
                   display: "flex",
@@ -60,7 +85,7 @@ export const Compare = (prop: any) => {
                 <img style={{ width: "25px", height: "25px" }} src={deleted} />
               </div>
               <div>
-                <img src={d2} style={{ width: "90px", height: "90px" }} />
+                <img src={getimagebyid(c.relationships?.images?.data[0].id.uuid)} style={{ width: "90px", height: "90px" }} />
               </div>
               <div>
                 <Button style={{backgroundColor:"blue",color:"white",width:"250px",fontFamily:"Assistant"}}><img src={lookfor}style={{marginRight:"5px"}}/>    Explorer</Button>
@@ -69,6 +94,6 @@ export const Compare = (prop: any) => {
           );
         })}
       </div>
-    {/* </div> */}</>
+</div>
   );
 };
