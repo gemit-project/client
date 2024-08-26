@@ -25,6 +25,7 @@ import { TopCheckout } from "../components/pages/checkout/topComponent/TopChecko
 import { General } from "../components/Payments/general";
 import { Payment } from "../components/Payments/payment";
 import {Listing} from "../components/pages/dashboard/listing/Listing";
+import {FormProduct} from "../components/form-product";
 
 export const Routing: React.FC = () => {
   return (
@@ -57,6 +58,7 @@ export const Routing: React.FC = () => {
         <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
         <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
         <Route  path="/Product/:uuid" element={<ProductPage/>}/>
+        <Route path="/Dashboard/:listing/:add" element={<FormProduct />}/>
       </Routes>
     </>
   );
