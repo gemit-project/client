@@ -24,6 +24,7 @@ import { FundingOptions } from "../components/Payments/fundingOptions";
 import { TopCheckout } from "../components/pages/checkout/topComponent/TopCheckout";
 import { General } from "../components/Payments/general";
 import { Payment } from "../components/Payments/payment";
+import {FormProduct} from "../components/form-product";
 
 export const Routing: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ export const Routing: React.FC = () => {
         <Route path="/Register" element={<Register/>}/>
         <Route  path="/Reset_Password/:email/:token" element={<PasswordReset/>}/>
         <Route path="/Dashboard" element={<Dashboard />}>
-      
+         
         </Route>
         <Route path="/Search" element={<Search />}>
           <Route path="Compare" element={<Compare />} />
@@ -56,6 +57,7 @@ export const Routing: React.FC = () => {
         <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
         <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
         <Route  path="/Product/:uuid" element={<ProductPage/>}/>
+        <Route path="/Dashboard/:listing/:add" element={<FormProduct />}/>
       </Routes>
     </>
   );

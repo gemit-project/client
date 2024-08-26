@@ -10,7 +10,7 @@ export const TopCheckout: React.FC = () => {
   const currentDaimond = useSelector(
     (state: any) => state.daimond.currentDaimond
   );
-  const TheDiamondPrice = currentDaimond?.attributes.price.amount;
+  const TheDiamondPrice = currentDaimond?.attributes?.price.amount;
   const diamondTitle = currentDaimond?.attributes.title;
   const vendorEmail = currentDaimond?.attributes.publicData?.Email;
   const vendorName = currentDaimond?.attributes.publicData?.Profil.displayName;
