@@ -25,7 +25,7 @@ export const Frame2: React.FC = () => {
         </>
       ))}
       <Button className="blueB" variant="contained" >
-       <Link to="/addDimond">ADD</Link>
+       <Link to="/Dashboard/listing/add">ADD</Link>
         <img className="addImg" src={add} />
       </Button>
     </div>
