@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setCurrentDaimond } from "../../../app/slices/DaimondSlice";
+import { setCompareDiamonds } from "../../../app/slices/CompareSlice";
 
 const { UUID, LatLng, Money } = require("sharetribe-flex-sdk").types;
 
@@ -77,6 +78,7 @@ export const Search: React.FC = () => {
         },
       };
       setData(newData);
+      dispatch(setCompareDiamonds(newData[ind]));
     }
 
     const index = Compares.findIndex((fav) => fav === id);
@@ -141,11 +143,7 @@ export const Search: React.FC = () => {
                         onClick={() => CompareDiamonds(listing?.id?.uuid, i)}
                       />
                       <div className="blueButton" />
-                      {/* <div className='blueButton' style={{backgroundColor:SideButton[diamond.sideButton]?.color, border:SideButton[diamond.sideButton]?.border }}> */}
-                      {/* <div className='blueButtomText' 
-                                        style={{color:SideButton[diamond.sideButton]?.wordColor}} 
-                                        >{SideButton[diamond.sideButton]?.word}</div> */}
-                      {/* </div> */}
+                     
                     </div>
 
                     {images.map((img: any) => {

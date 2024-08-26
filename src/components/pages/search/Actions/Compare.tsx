@@ -8,20 +8,23 @@ import emptyLove from "../../../../assets/icons/product-icons/EmptyLike.png";
 import deleted from "../../../../assets/ButtonSection/delete.svg";
 import lookfor from "../../../../assets/ButtonSection/lookfor.svg";
 import { blue } from "@mui/material/colors";
+import { useSelector } from "react-redux";
 
 export const Compare = (prop: any) => {
   // const [comparsDiamond,setComparesDaimond]=useState(Array<string>)
-  const comparsDiamond = [
-    "664f1446-6cbf-486b-9546-528b3298d87f",
-    "664f16f0-3cd8-4905-9d84-5da9007017ad",
-    "664f16f0-3cd8-4905-9d84-5da9007017ad",
-    "664f1446-6cbf-486b-9546-528b3298d87f",
-  ];
+  const props=["Shape","CARAT","Clarity","Color","cut","polish","Symmetry","Fluor","$List","$/CT","Discount","$total","Location"]
+  // const comparsDiamond = [
+  //   "664f1446-6cbf-486b-9546-528b3298d87f",
+  //   "664f16f0-3cd8-4905-9d84-5da9007017ad",
+  //   "664f16f0-3cd8-4905-9d84-5da9007017ad",
+  //   "664f1446-6cbf-486b-9546-528b3298d87f",
+  // ];
   const navigation = useNavigate();
   const [isClick, setClick] = useState<boolean>(false);
-
+  const compares = useSelector((state: any) => state.compare.comparesDiamond);
+  console.log(compares)
   return (
-    <div style={{}}>
+    <>
       <div className="backSearch">
         <Typography className="titleBack">Back To All Results</Typography>
         <IconButton
@@ -33,11 +36,10 @@ export const Compare = (prop: any) => {
         </IconButton>
       </div>
       <div style={{ display: "flex" ,gap:"5px" }}>
-        {comparsDiamond.map((i: string) => {
-          return (
-            <div style={{backgroundColor:" rgba(230, 230, 230, 0.60)", display: "flex",flexDirection:"column", width: "293px",height: "192px",padding:"12px",alignItems: "center",gap:"12px",flexShrink: 0}}>
-
-              <div
+        {compares.map((c:any) => {
+          return (           
+              <div style={{backgroundColor:" rgba(230, 230, 230, 0.60)", display: "flex",flexDirection:"column", width: "50px",height: "50px",padding:"12px",alignItems: "center",gap:"12px",flexShrink: 0}}>
+               <div
                 style={{
                   display: "flex",
                   gap: "10px",
@@ -67,6 +69,6 @@ export const Compare = (prop: any) => {
           );
         })}
       </div>
-    </div>
+    {/* </div> */}</>
   );
 };
