@@ -1,5 +1,5 @@
 .gemit {
-  margin-left: 2vw;
+  margin-left: 1.5vw;
 }
 
 .top-header {
@@ -10,7 +10,7 @@
   flex-shrink: 0;
   height: 4vw;
   margin-left: -7vw;
-  margin-bottom: 2.5vw;
+  /* margin-bottom: 2.5vw; */
   background-color: #f3f3f3;
   /* gap: 2vw; */
 }

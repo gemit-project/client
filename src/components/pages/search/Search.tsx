@@ -65,6 +65,7 @@ export const Search: React.FC = () => {
   };
 
   const CompareDiamonds = (id: string, key: number) => {
+    console.log(id)
     const newData = [...data];
     const ind = newData.findIndex((x) => x.id.uuid === id);
     if (ind !== -1) {
@@ -109,19 +110,18 @@ export const Search: React.FC = () => {
     }
   };
   const getCurentDaimond = async (listing: any) => {
-    debugger;
     sdk.listings
       .show({ id: listing?.id?.uuid, include: ["author", "images"] })
       .then((res: any) => {
         console.log(res.data);
-        dispatch(setCurrentDaimond(listing));
+        dispatch(setCurrentDaimond(res.data));
         navigate("/Product");
       });
   };
   return (
     <>
       <Button_Section></Button_Section>
-      <div className="scrollBar">
+      <div className="scrollBarSaerch">
         <section className="section">
           <div className="allView">
             {data &&
@@ -130,9 +130,7 @@ export const Search: React.FC = () => {
                 <div className="allDiv" key={i}>
                   <div
                     className="greyDiv"
-                    onClick={() => {
-                      getCurentDaimond(listing);
-                    }}
+                    
                   >
                     <div className="among">
                       <img
@@ -157,6 +155,9 @@ export const Search: React.FC = () => {
                       ) {
                         return (
                           <img
+                            onClick={() => {
+                              getCurentDaimond(listing);
+                            }}
                             key={img.id.uuid}
                             className="diamondImg"
                             src={img.attributes.variants.default.url}

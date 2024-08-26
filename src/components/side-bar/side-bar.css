@@ -8,17 +8,16 @@
   transition: width 0.3s ease; /* Add a smooth transition effect on width change */
   z-index: 20;
 }
-
 .sidebar.expanded {
   width: 25vh; /* Set the expanded width */
 }
-.logo {
+.logoSide {
   fill: #fff;
   width: 15vh;
   height: 10vh;
   flex-shrink: 0;
   margin-top: 12vh;
-  margin-left: 3vh;
+  margin-left: 4vh;
 }
 .side.true {
   border-radius: 0vh 1vh 1vh 0vh;
@@ -33,12 +32,12 @@
   height: 9vh;
   flex-shrink: 0;
 }
-.img {
+.imgSide {
   fill: #fff;
   width: 3vh;
-  margin-left: 1vh;
+  margin-left: 2vh;
 }
-.name {
+.nameComponent {
   color: #fff;
   margin-left: 2vh;
   display: flex;

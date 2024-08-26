@@ -30,3 +30,13 @@ label {
     display: flex;
     flex-direction: row;
 }
+.scrollBar {
+    scrollbar-color: #b6f0fc #ffffff;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 64vh;
+  }
+  .section {
+    height: 100vh;
+    margin-left: 2px;
+  }
