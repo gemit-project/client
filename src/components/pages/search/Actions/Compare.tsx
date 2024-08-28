@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import d2 from "../../../../assets/diamonds/2.svg";
 import { Button, IconButton, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -8,23 +8,40 @@ import emptyLove from "../../../../assets/icons/product-icons/EmptyLike.png";
 import deleted from "../../../../assets/ButtonSection/delete.svg";
 import lookfor from "../../../../assets/ButtonSection/lookfor.svg";
 import { blue } from "@mui/material/colors";
-
-export const Compare = (prop: any) => {
-  // const [comparsDiamond,setComparesDaimond]=useState(Array<string>)
-  const comparsDiamond = [
-    "664f1446-6cbf-486b-9546-528b3298d87f",
-    "664f16f0-3cd8-4905-9d84-5da9007017ad",
-    "664f16f0-3cd8-4905-9d84-5da9007017ad",
-    "664f1446-6cbf-486b-9546-528b3298d87f",
-  ];
+import { useSelector } from "react-redux";
+import { sdk } from "../../../../config/sharetribeSDK.config";
+import './Compare.css';
+export const Compare = () => {
+  const props=["Shape","CARAT","Clarity","Color","cut","polish","Symmetry","Fluor","$List","$/CT","Discount","$total","Location"]
   const navigation = useNavigate();
   const [isClick, setClick] = useState<boolean>(false);
-
-  return (
-    <div style={{}}>
-      <div className="backSearch">
+  const [images, setImages] = useState<Array<any>>([]);
+  const compares = useSelector((state: any) => state.compare.comparesDiamond);
+ console.log(compares)
+  const getData = () => {
+    sdk.listings
+      .query({
+        include: ["images"],
+      })
+      .then((res: any) => {      
+        setImages(res.data.included);
+        console.log(res.data)
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  };
+ const getimagebyid=(id:string)=>{
+ const s=images.find(x=> x.id.uuid==id)
+   return s?.attributes?.variants?.default.url;
+  }
+  useEffect(() => {
+    getData();
+  }, []);
+  return ( <div style={{marginLeft:"10vw"}}>  
+      <div className="backkSearch">
         <Typography className="titleBack">Back To All Results</Typography>
-        <IconButton
+        <IconButton       
           onClick={() => {
             navigation("/Search");
           }}
@@ -32,12 +49,13 @@ export const Compare = (prop: any) => {
           <img src={back}></img>
         </IconButton>
       </div>
-      <div style={{ display: "flex" ,gap:"5px" }}>
-        {comparsDiamond.map((i: string) => {
-          return (
-            <div style={{backgroundColor:" rgba(230, 230, 230, 0.60)", display: "flex",flexDirection:"column", width: "293px",height: "192px",padding:"12px",alignItems: "center",gap:"12px",flexShrink: 0}}>
+      <div style={{ display: "flex" ,gap:"5px" ,alignItems:"center",justifyContent: "flex-start"}}>
+        {compares.map((c:any) => {
+          return (           
+              <div style={{backgroundColor:" rgba(230, 230, 230, 0.60)", display: "flex",flexDirection:"column", width: "250px",height: "170px",padding:"12px",alignItems: "center",gap:"12px",flexShrink: 0,justifyContent: "flex-end"
 
-              <div
+              }}>
+               <div
                 style={{
                   display: "flex",
                   gap: "10px",
@@ -58,7 +76,7 @@ export const Compare = (prop: any) => {
                 <img style={{ width: "25px", height: "25px" }} src={deleted} />
               </div>
               <div>
-                <img src={d2} style={{ width: "90px", height: "90px" }} />
+                <img src={getimagebyid(c.relationships?.images?.data[0].id.uuid)} style={{ width: "90px", height: "90px" }} />
               </div>
               <div>
                 <Button style={{backgroundColor:"blue",color:"white",width:"250px",fontFamily:"Assistant"}}><img src={lookfor}style={{marginRight:"5px"}}/>    Explorer</Button>
@@ -67,6 +85,6 @@ export const Compare = (prop: any) => {
           );
         })}
       </div>
-    </div>
+</div>
   );
 };
