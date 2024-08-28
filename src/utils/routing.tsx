@@ -37,12 +37,11 @@ export const Routing: React.FC = () => {
           <Route path="Listing" element={<Listing />} />
         </Route>
         <Route path="/Search" element={<Search />}>
-          
+          <Route path="Compare" element={<Compare />} />
           <Route path="Reset" element={<Reset />} />
           <Route path="View" element={<View />} />
           <Route path="Sort" element={<Sort />} />
         </Route>
-        <Route path="Compare" element={<Compare />} />
         <Route path="Filter" element={<Filter />} />
         <Route path="/CheckOut" element={< TopCheckout />}>
           <Route path="General" element={< General />} />
@@ -58,6 +57,7 @@ export const Routing: React.FC = () => {
         <Route path="/Shipping&inssurance" element={<ButtomSecondScreen />} />
         <Route path="/GeneralDetails" element={<ButtomFirstScreen />} />
         <Route  path="/Product/:uuid" element={<ProductPage/>}/>
+        <Route path="/Compare" element={<Compare />} />
       </Routes>
     </>
   );

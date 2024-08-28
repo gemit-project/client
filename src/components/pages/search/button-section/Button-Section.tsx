@@ -5,8 +5,10 @@ import reset from "../../../../assets/ButtonSection/reset.svg";
 import sort from "../../../../assets/ButtonSection/sort.svg";
 import filter from "../../../../assets/ButtonSection/filter.svg";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-
-export const Button_Section: React.FC = () => {
+interface ActionProps{
+  handleCompareClick:()=>void;
+}
+export const Button_Section: React.FC<ActionProps> = ( {handleCompareClick }) => {
 const navigation=useNavigate();
 
   return (
@@ -16,11 +18,11 @@ const navigation=useNavigate();
         <div className="leftDiv">Top Ten</div>
         <div className="compare">
           <img src={compare} className="compareImg" />
-          {/* <Link to={"Compare"} className="buttonsWord">
+          <Link onClick={handleCompareClick} to={"/Search/Compare"} className="buttonsWord">
             {" "}
             Compare
-          </Link> */}
-          <button onClick={()=>{navigation("/Compare")}}>Compare</button>
+          </Link>
+          {/* <button onClick={()=>{navigation("/Compare")}}>Compare</button> */}
         </div>
         <div className="view">
           <img src={view} className="viewImg" />
