@@ -123,7 +123,7 @@ export const Search: React.FC = () => {
       });
   };
   const handleCompareClick = () => {
-    setIsShow(false);
+    setIsShow(!isShow);
 };
   return (
     <>

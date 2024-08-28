@@ -10,16 +10,9 @@ import lookfor from "../../../../assets/ButtonSection/lookfor.svg";
 import { blue } from "@mui/material/colors";
 import { useSelector } from "react-redux";
 import { sdk } from "../../../../config/sharetribeSDK.config";
-
-export const Compare = (prop: any) => {
-  // const [comparsDiamond,setComparesDaimond]=useState(Array<string>)
+import './Compare.css';
+export const Compare = () => {
   const props=["Shape","CARAT","Clarity","Color","cut","polish","Symmetry","Fluor","$List","$/CT","Discount","$total","Location"]
-  // const comparsDiamond = [
-  //   "664f1446-6cbf-486b-9546-528b3298d87f",
-  //   "664f16f0-3cd8-4905-9d84-5da9007017ad",
-  //   "664f16f0-3cd8-4905-9d84-5da9007017ad",
-  //   "664f1446-6cbf-486b-9546-528b3298d87f",
-  // ];
   const navigation = useNavigate();
   const [isClick, setClick] = useState<boolean>(false);
   const [images, setImages] = useState<Array<any>>([]);
@@ -46,9 +39,9 @@ export const Compare = (prop: any) => {
     getData();
   }, []);
   return ( <div style={{marginLeft:"10vw"}}>  
-      <div className="backSearch">
+      <div className="backkSearch">
         <Typography className="titleBack">Back To All Results</Typography>
-        <IconButton
+        <IconButton       
           onClick={() => {
             navigation("/Search");
           }}
