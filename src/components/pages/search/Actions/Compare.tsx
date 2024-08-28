@@ -39,10 +39,8 @@ export const Compare = (prop: any) => {
       });
   };
  const getimagebyid=(id:string)=>{
- const s=images.find(x=> x.id.uuid==id)//.attributes?.variants?.default.url
-console.log(s)
-  // if(s!=null)return s;
-   return s.attributes?.variants?.default.url;
+ const s=images.find(x=> x.id.uuid==id)
+   return s?.attributes?.variants?.default.url;
   }
   useEffect(() => {
     getData();

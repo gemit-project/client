@@ -4,10 +4,10 @@ import view from "../../../../assets/ButtonSection/view.svg";
 import reset from "../../../../assets/ButtonSection/reset.svg";
 import sort from "../../../../assets/ButtonSection/sort.svg";
 import filter from "../../../../assets/ButtonSection/filter.svg";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 export const Button_Section: React.FC = () => {
-
+const navigation=useNavigate();
 
   return (
     <>
@@ -16,10 +16,11 @@ export const Button_Section: React.FC = () => {
         <div className="leftDiv">Top Ten</div>
         <div className="compare">
           <img src={compare} className="compareImg" />
-          <Link to={"Compare"} className="buttonsWord">
+          {/* <Link to={"Compare"} className="buttonsWord">
             {" "}
             Compare
-          </Link>
+          </Link> */}
+          <button onClick={()=>{navigation("/Compare")}}>Compare</button>
         </div>
         <div className="view">
           <img src={view} className="viewImg" />
