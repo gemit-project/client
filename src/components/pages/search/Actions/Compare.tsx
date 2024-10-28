@@ -82,17 +82,11 @@ export const Compare = () => {
               return (
                 <TableRow
                   style={{ writingMode: "vertical-lr", whiteSpace: "nowrap", gap:"6px"}}
-                >
-               
-                  <TableCell sx={{  width: 230 ,backgroundColor:pr.color}}>{pr.name}</TableCell>
+                >   
+                  <TableCell sx={{  width: 230 ,backgroundColor:pr.color,color:pr.name=="Vendor num"?"black":"white"}}>{pr.name}</TableCell>
                   {pr.name == "" ? (
                     <Header getimagebyid={getimagebyid} inputString="" />
                   ) : (
-                    // <TableRow  style={{
-                    //   display: "flex",
-                    //   alignItems:"center",
-                    //   gap:"5px"
-                    // }}>
                      <div style={{
                         display: "flex",
                         alignItems:"center",
@@ -106,7 +100,7 @@ export const Compare = () => {
                           </TableCell>
                         );
                       })}</div>
-                    // </TableRow>
+                   
                   )}
              </TableRow>
               );
@@ -145,7 +139,7 @@ const Header = ({
                 flexDirection: "column",
                 width: "230px",
                 height: "170px",
-                padding: "5px",
+                padding: "10px",
                 alignItems: "center",
                 gap: "8px",
                 flexShrink: 0,
