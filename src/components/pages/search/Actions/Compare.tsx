@@ -15,10 +15,11 @@ import emptyLove from "../../../../assets/icons/product-icons/EmptyLike.png";
 import deleted from "../../../../assets/ButtonSection/delete.svg";
 import lookfor from "../../../../assets/ButtonSection/lookfor.svg";
 import { blue } from "@mui/material/colors";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { sdk } from "../../../../config/sharetribeSDK.config";
 import "./Compare.css";
 import { IndexKind } from "typescript";
+import { setIsClose } from "../../../../app/slices/CompareSlice";
 export const Compare = () => {
   const props = [
     {name:"",color:""},
@@ -38,6 +39,7 @@ export const Compare = () => {
    {name:"Location",color: "var(--background-light-blue, #24a4ef)"},
   ];
   const navigation = useNavigate();
+  const dispatch = useDispatch();
   const [isClick, setClick] = useState<boolean>(false);
   const [images, setImages] = useState<Array<any>>([]);
   const compares = useSelector((state: any) => state.compare.comparesDiamond);
@@ -68,6 +70,7 @@ export const Compare = () => {
         <Typography className="titleBack">Back To All Results</Typography>
         <IconButton
           onClick={() => {
+            dispatch(setIsClose(false));
             navigation("/Search");
           }}
         >

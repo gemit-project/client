@@ -8,8 +8,9 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setCurrentDaimond } from "../../../app/slices/DaimondSlice";
-import { setCompareDiamonds } from "../../../app/slices/CompareSlice";
+import { setCompareDiamonds, setIsClose } from "../../../app/slices/CompareSlice";
 import { Compare } from "./Actions/Compare";
+import { useSelector } from "react-redux";
 
 const { UUID, LatLng, Money } = require("sharetribe-flex-sdk").types;
 
@@ -39,7 +40,7 @@ export const Search: React.FC = () => {
   const [images, setImages] = useState<Array<any>>([]);
   const [Compares, setCompares] = useState<Array<string>>([]);
   const [favorites, setFavorites] = useState<Array<string>>([]);
-  const [isShow, setIsShow] = useState<boolean>(true);
+  const isShow=useSelector((state: any) => state.compare.isClose);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -123,12 +124,12 @@ export const Search: React.FC = () => {
       });
   };
   const handleCompareClick = () => {
-    setIsShow(!isShow);
+    dispatch(setIsClose(true))
 };
   return (
     <>
-     {isShow&&<Button_Section handleCompareClick={handleCompareClick}/>} 
-     {isShow?  <div className="scrollBarSaerch">
+     {!isShow&&<Button_Section handleCompareClick={handleCompareClick}/>} 
+     {!isShow?  <div className="scrollBarSaerch">
         <section className="section">
           <div className="allView">
             {data &&
