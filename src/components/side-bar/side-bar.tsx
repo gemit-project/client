@@ -8,11 +8,13 @@ import setting from "../../assets/icons/side-bar-icons/settings.svg";
 import logOut from "../../assets/icons/side-bar-icons/log-out.svg";
 import logo from "../../assets/icons/side-bar-icons/logo/logo.svg";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsClose } from "../../app/slices/CompareSlice";
 
 export const SideBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const location = useLocation();
+  const dispatch = useDispatch();
   const myLocation = location.pathname;
   const selector = useSelector((state: any) => state.checkOut.isCheckout);
   const handleMouseEnter = () => {
@@ -83,7 +85,7 @@ export const SideBar = () => {
                   icon.to === "CheckOut" && selector === false ? (
                     <div className="nameComponent">{icon.to}</div>
                   ) : (
-                    <Link to={`/${icon.to}`} className="nameComponent">
+                    <Link onClick={()=> icon.to=="Search"? dispatch(setIsClose(false)):null} to={`/${icon.to}`} className="nameComponent">
                       {icon.to}
                     </Link>
                   )
@@ -102,7 +104,7 @@ export const SideBar = () => {
                 <img className="imgSide" src={icon.src} />
                 <div>
                   {isExpanded ? (
-                    <Link to={`/${icon.to}`} className="nameComponent">
+                    <Link onClick={()=> icon.to=="Search"? dispatch(setIsClose(false)):null} to={`/${icon.to}`} className="nameComponent">
                       {icon.to}
                     </Link>
                   ) : null}

@@ -1,0 +1,21 @@
+.backkSearch {
+    display: flex;
+    width: 90vw;
+    height: 5vh;
+    padding-right: 108px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+  .scrollBarTabled {
+    scrollbar-color: #aae6e6 #ffffff;
+    overflow: scroll;
+    /* overflow-x: hidden; */
+    height: 83vh;
+    width: 90vw;
+  }
+  /* .cssMuiTableCell-root {
+    padding: 5px;
+    text-align: center;
+  } */
